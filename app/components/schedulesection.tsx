@@ -32,7 +32,7 @@ const ScheduleSection = () => {
         <div className="text-neutral-dark">
           <h1 className="mb-8 text-5xl font-bold text-primary">Run Schedule</h1>
           <div className="space-y-4">
-            <ul>
+            <ul className="text-2xl">
               <li>Trinity Overlook Trail</li>
               <li> 📌 110 W Commerce Street</li>
             </ul>
