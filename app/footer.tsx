@@ -1,7 +1,8 @@
 import React from 'react';
-import DallasSkyline from '@/public/dallas-skyline.jpeg';
+import DallasSkyline from '@/public/Dallas-Skyline.jpeg';
 import Image from 'next/image';
 import { CiInstagram } from 'react-icons/ci';
+
 const Footer = () => {
   return (
     <section className="container mx-auto px-4 py-16">
