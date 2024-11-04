@@ -10,14 +10,22 @@ import {
 } from '@nextui-org/navbar';
 import Link from 'next/link';
 const NavBar = () => {
-  const menuItems = ['La Familia', 'Run Schedule', 'Join Us', 'Donate'];
+  const menuItems = [
+    'La Familia',
+    'Run Schedule',
+    'Join Us',
+    'Donate',
+    'Events',
+  ];
   return (
     <Navbar>
       <NavbarContent className="sm:hidden" justify="start">
         <NavbarMenuToggle />
       </NavbarContent>
       <NavbarBrand>
-        <p className="font-bold text-inherit">RunnersUnidos</p>
+        <Link href={'/'}>
+          <p className="font-bold text-inherit">RunnersUnidos</p>
+        </Link>
       </NavbarBrand>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">

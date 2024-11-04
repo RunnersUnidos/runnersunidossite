@@ -4,6 +4,7 @@ import './globals.css';
 import Providers from './NextUIProvider';
 
 import NavBar from './navbar';
+import Footer from './footer';
 // const inter = Inter({ subsets: ['latin'] });
 const italiana = Italiana({ subsets: ['latin'], weight: '400' });
 
@@ -27,6 +28,7 @@ export default function RootLayout({
         <Providers>
           <NavBar />
           {children}
+          <Footer />
         </Providers>
       </body>
     </html>
