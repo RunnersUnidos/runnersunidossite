@@ -15,6 +15,18 @@ const Footer = () => {
           <CiInstagram className="text-2xl text-orange-400" />
         </a>
       </div>
+      <div className="flex justify-center  mt-10">
+        <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400 hover:text-green-500">
+          © 2024{' '}
+          <a
+            href="https://www.osworld.dev/"
+            className="hover:underline"
+            target="_blank"
+          >
+            Created by Os World
+          </a>
+        </span>
+      </div>
     </section>
   );
 };
