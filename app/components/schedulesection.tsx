@@ -32,6 +32,10 @@ const ScheduleSection = () => {
         <div className="text-neutral-dark">
           <h1 className="mb-8 text-5xl font-bold text-primary">Run Schedule</h1>
           <div className="space-y-4">
+            <ul>
+              <li>Trinity Overlook Trail</li>
+              <li> 📌 110 W Commerce Street</li>
+            </ul>
             <div className="p-4 border-l-4 border-secondary bg-orange-400 shadow-md">
               <h3 className="font-bold text-lg">Tuesday Evening Run</h3>
               <p className="text-neutral">7:00 PM - All levels welcome</p>
