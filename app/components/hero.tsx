@@ -27,7 +27,7 @@ const HomeHero = () => {
             <h1 className="mb-5 text-5xl font-bold text-white">
               RunnersUnidos
             </h1>
-            <p className="text-xl">
+            <p className="text-xl text-white">
               A community of runners who come together to share miles, stories,
               and traditions.
             </p>
