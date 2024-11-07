@@ -30,6 +30,7 @@ const Schedule = () => {
           Feel free to arrive early to socialize and warm up.
         </p>
         {/* new */}
+        {/* new */}
         <ul className="text-2xl text-center">
           <li>Trinity Overlook Trail</li>
           <li> 📌 110 W Commerce Street</li>
