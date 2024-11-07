@@ -5,6 +5,7 @@ import Providers from './NextUIProvider';
 
 import NavBar from './navbar';
 import Footer from './footer';
+import QueryProvider from './QueryProvider';
 // const inter = Inter({ subsets: ['latin'] });
 const italiana = Italiana({ subsets: ['latin'], weight: '400' });
 
@@ -25,11 +26,13 @@ export default function RootLayout({
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
       />
       <body className={italiana.className}>
-        <Providers>
-          <NavBar />
-          {children}
-          <Footer />
-        </Providers>
+        <QueryProvider>
+          <Providers>
+            <NavBar />
+            {children}
+            <Footer />
+          </Providers>
+        </QueryProvider>
       </body>
     </html>
   );

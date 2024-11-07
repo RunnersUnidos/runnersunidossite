@@ -15,6 +15,7 @@ const NavBar = () => {
     'Run Schedule',
     'Join Us',
     'Donate',
+    'Gallery',
     'Events',
   ];
   return (
@@ -54,6 +55,11 @@ const NavBar = () => {
             Donate
           </Link>
         </NavbarItem>
+        <NavbarItem>
+          <Link href="/eventgallery" className="text-foreground">
+            Gallery
+          </Link>
+        </NavbarItem>
       </NavbarContent>
 
       <NavbarMenu className="bg-white text-black flex justify-center text-xl items-center">
@@ -68,7 +74,7 @@ const NavBar = () => {
                   ? 'danger'
                   : 'foreground'
               }
-              href="#"
+              href={`/${item.toLowerCase()}`}
             >
               {item}
             </Link>
