@@ -1,4 +1,5 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
 import {
   Navbar,
   NavbarBrand,
@@ -10,6 +11,8 @@ import {
 } from '@nextui-org/navbar';
 import Link from 'next/link';
 const NavBar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const menuItems = [
     'La Familia',
     'Run Schedule',
@@ -19,9 +22,11 @@ const NavBar = () => {
     'Events',
   ];
   return (
-    <Navbar>
+    <Navbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent className="sm:hidden" justify="start">
-        <NavbarMenuToggle />
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+        />
       </NavbarContent>
       <NavbarBrand>
         <Link href={'/'}>
@@ -56,7 +61,7 @@ const NavBar = () => {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="/eventgallery" className="text-foreground">
+          <Link href="/gallery" className="text-foreground">
             Gallery
           </Link>
         </NavbarItem>
@@ -64,7 +69,10 @@ const NavBar = () => {
 
       <NavbarMenu className="bg-white text-black flex justify-center text-xl items-center">
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
+          <NavbarMenuItem
+            key={`${item}-${index}`}
+            onClick={() => setIsMenuOpen(false)}
+          >
             <Link
               className="w-full"
               color={
