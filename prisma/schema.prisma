@@ -21,3 +21,9 @@ model User {
   email     String
   about     String
 }
+
+model Images {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  title     String
+  imageUrl  String
+}
