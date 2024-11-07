@@ -1,6 +1,7 @@
 import React from 'react';
 import RunnersImage from '@/public/runners.jpg';
 import Image from 'next/image';
+import Link from 'next/link';
 interface Image {
   src: string;
 }
@@ -26,7 +27,9 @@ const LaFamiliaSection = () => {
             with the warmth and support that defines our cultura.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="btn bg-black text-white">View Photos</button>
+            <Link href={'/gallery'} className="btn bg-black text-white">
+              View Photos
+            </Link>
             <button className="btn btn-outline btn-secondary">
               Join Our Next Run
             </button>

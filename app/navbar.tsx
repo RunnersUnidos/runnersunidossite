@@ -15,7 +15,7 @@ const NavBar = () => {
 
   const menuItems = [
     'La Familia',
-    'Run Schedule',
+    'Schedule',
     'Join Us',
     'Donate',
     'Gallery',
@@ -29,7 +29,7 @@ const NavBar = () => {
         />
       </NavbarContent>
       <NavbarBrand>
-        <Link href={'/'}>
+        <Link href={'/'} onClick={() => setIsMenuOpen(false)}>
           <p className="font-bold text-inherit">RunnersUnidos</p>
         </Link>
       </NavbarBrand>
@@ -37,7 +37,7 @@ const NavBar = () => {
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
           <Link href="/schedule" className="text-foreground">
-            Run Schedule
+            Schedule
           </Link>
         </NavbarItem>
         <NavbarItem>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import SkullImage from '@/public/DiaDeLosMuertos.jpg';
+import Link from 'next/link';
 
 interface Image {
   src: string;
@@ -25,9 +26,9 @@ const EventSection = () => {
             a beautiful celebration of life during our 5K event.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="btn bg-black text-white">
+            <Link href={'/gallery'} className="btn bg-black text-white">
               View Event Photos
-            </button>
+            </Link>
             <button className="btn btn-outline btn-secondary">Events</button>
           </div>
         </div>

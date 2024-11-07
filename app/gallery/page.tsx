@@ -27,9 +27,7 @@ const Gallery = () => {
     <div className="min-h-screen bg-neutral-light/5 py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-primary mb-4">
-            La Familia Photo Gallery
-          </h1>
+          <h1 className="text-4xl font-bold text-primary mb-4">Gallery</h1>
           <p className="text-neutral-dark text-lg">
             Capturing moments and memories from our running community
           </p>
