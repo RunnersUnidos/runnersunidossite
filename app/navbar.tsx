@@ -101,7 +101,7 @@ const NavBar = () => {
             onClick={() => setIsMenuOpen(false)}
           >
             <Link
-              className="w-full"
+              className={`w-full ${isActive(`/${item.toLowerCase()}`)}`}
               color={
                 index === 2
                   ? 'warning'
