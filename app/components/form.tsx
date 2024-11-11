@@ -11,7 +11,7 @@ const UserForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Add your API call here to save the user
+
     console.log(formData);
   };
 

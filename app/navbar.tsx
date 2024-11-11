@@ -9,10 +9,11 @@ import {
   NavbarMenu,
   NavbarMenuItem,
 } from '@nextui-org/navbar';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const pathname = usePathname();
   const menuItems = [
     // 'La Familia',
     'Schedule',
@@ -21,6 +22,10 @@ const NavBar = () => {
     'Gallery',
     'Events',
   ];
+  const isActive = (path: string) => {
+    return pathname === path ? 'border-b-2 border-current' : '';
+  };
+
   return (
     <Navbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent className="sm:hidden" justify="start">
@@ -29,45 +34,67 @@ const NavBar = () => {
         />
       </NavbarContent>
       <NavbarBrand>
-        <Link href={'/'} onClick={() => setIsMenuOpen(false)}>
+        <Link
+          href={'/'}
+          onClick={() => setIsMenuOpen(false)}
+          className={`text-foreground ${isActive('/')}`}
+        >
           <p className="font-bold text-inherit">RunnersUnidos</p>
         </Link>
       </NavbarBrand>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link href="/schedule" className="text-foreground">
+          <Link
+            href="/schedule"
+            className={`text-foreground ${isActive('/schedule')}`}
+          >
             Schedule
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="/joinus" className="text-foreground">
+          <Link
+            href="/joinus"
+            className={`text-foreground ${isActive('/joinus')}`}
+          >
             Join Us
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="/familia" className="text-foreground">
+          <Link
+            href="/familia"
+            className={`text-foreground ${isActive('/familia')}`}
+          >
             La Familia
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="/familia" className="text-foreground">
+          <Link
+            href="/events"
+            className={`text-foreground ${isActive('/events')}`}
+          >
             Events
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="/donate" className="text-foreground">
+          <Link
+            href="/donate"
+            className={`text-foreground ${isActive('/donate')}`}
+          >
             Donate
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="/gallery" className="text-foreground">
+          <Link
+            href="/gallery"
+            className={`text-foreground ${isActive('/gallery')}`}
+          >
             Gallery
           </Link>
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarMenu className="bg-white text-black flex justify-center text-xl items-center">
+      <NavbarMenu className="bg-white text-black flex justify-center text-xl items-center gap-5">
         {menuItems.map((item, index) => (
           <NavbarMenuItem
             key={`${item}-${index}`}
