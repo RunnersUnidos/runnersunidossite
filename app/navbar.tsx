@@ -14,10 +14,10 @@ const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    'La Familia',
+    // 'La Familia',
     'Schedule',
     'JoinUs',
-    'Donate',
+    // 'Donate',
     'Gallery',
     'Events',
   ];
