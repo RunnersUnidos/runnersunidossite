@@ -16,7 +16,7 @@ const Footer = () => {
         </a>
       </div>
       <div className="flex justify-center  mt-10">
-        <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400 hover:text-green-500">
+        <span className="text-[10px] text-gray-500 sm:text-center dark:text-gray-400 hover:text-green-500">
           © 2024{' '}
           <a
             href="https://www.osworld.dev/"

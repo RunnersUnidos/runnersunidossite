@@ -2,6 +2,7 @@ import React from 'react';
 import RunnersImage from '@/public/runners.jpg';
 import Image from 'next/image';
 import Link from 'next/link';
+
 interface Image {
   src: string;
 }
@@ -30,9 +31,9 @@ const LaFamiliaSection = () => {
             <Link href={'/gallery'} className="btn bg-black text-white">
               View Photos
             </Link>
-            <button className="btn btn-outline btn-secondary">
+            <Link className="btn btn-outline text-black" href={'/joinus'}>
               Join Our Next Run
-            </button>
+            </Link>
           </div>
         </div>
       </div>

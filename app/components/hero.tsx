@@ -33,7 +33,7 @@ const HomeHero = () => {
             </p>
             <button
               className="btn bg-orange-300 text-black mt-4"
-              // onClick={() => router.push('/joinus')}
+              onClick={() => router.push('/joinus')}
             >
               Join Us
             </button>

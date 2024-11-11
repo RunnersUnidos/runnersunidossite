@@ -1,13 +1,11 @@
 import React from 'react';
+import UserForm from '../components/form';
 
 const JoinUs = () => {
   return (
-    <div className="h-screen flex justify-center items-center">
-      <form className="w-1/2 bg-black text-white p-8 rounded-lg flex flex-col gap-4">
-        <input type="text" placeholder="Name" />
-        <input type="email" placeholder="Email" />
-        <button type="submit">Submit</button>
-      </form>
+    <div className="h-screen flex flex-col justify-center items-center">
+      <h1 className="mb-5 text-5xl font-bold text-white">Form</h1>
+      <UserForm />
     </div>
   );
 };

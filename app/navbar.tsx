@@ -16,7 +16,7 @@ const NavBar = () => {
   const menuItems = [
     'La Familia',
     'Schedule',
-    'Join Us',
+    'JoinUs',
     'Donate',
     'Gallery',
     'Events',
@@ -41,7 +41,7 @@ const NavBar = () => {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="/join" className="text-foreground">
+          <Link href="/joinus" className="text-foreground">
             Join Us
           </Link>
         </NavbarItem>

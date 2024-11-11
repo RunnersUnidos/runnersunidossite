@@ -21,7 +21,7 @@ const Schedule = () => {
   return (
     <div className="h-screen">
       <div className="flex justify-center items-center flex-col gap-4">
-        <h2 className="m-4 text-4xl text-center font-bold">
+        <h2 className="m-4 text-5xl text-center font-extrabold">
           Every Tuesday at 7:00 p.m.
         </h2>
         <p className="text-center text-xl">2 Miles</p>
