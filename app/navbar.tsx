@@ -34,11 +34,7 @@ const NavBar = () => {
         />
       </NavbarContent>
       <NavbarBrand>
-        <Link
-          href={'/'}
-          onClick={() => setIsMenuOpen(false)}
-          className={`text-foreground ${isActive('/')}`}
-        >
+        <Link href={'/'} onClick={() => setIsMenuOpen(false)}>
           <p className="font-bold text-inherit">RunnersUnidos</p>
         </Link>
       </NavbarBrand>
@@ -95,6 +91,11 @@ const NavBar = () => {
       </NavbarContent>
 
       <NavbarMenu className="bg-white text-black flex justify-center text-xl items-center gap-5">
+        <NavbarMenuItem>
+          <Link href="/" onClick={() => setIsMenuOpen(false)}>
+            Home
+          </Link>
+        </NavbarMenuItem>
         {menuItems.map((item, index) => (
           <NavbarMenuItem
             key={`${item}-${index}`}
