@@ -36,7 +36,7 @@ const DiaDelosMuertos = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h1 className="text-3xl font-bold text-primary mb-4">
-            🌙 Fiesta de los Muertos 5k💀
+            🌙 Fiesta de los Muertos 5k 🏃
           </h1>
           <p className="text-neutral-dark text-lg font-sans">
             On the evening of November 1st, runners gathered for the Fiesta de
@@ -46,11 +46,8 @@ const DiaDelosMuertos = () => {
             tribute with each step. After the race, the Runners Unidos familia
             came together to place &quot;ofrendas&quot; on a beautiful community
             altar, celebrating with music, delicious food, and vibrant
-            activities. Local Latino vendors added to the festive atmosphere,
-            while participants enjoyed glow gear, refreshments, and a drink
-            ticket for post-run fun at{' '}
-            <a href="https://www.goodsurf.co/">realgoodsurf.</a> The evening was
-            filled with remembrance, joy, and community spirit!
+            activities. The evening was filled with remembrance, joy, and
+            community spirit!
           </p>
         </div>
 
