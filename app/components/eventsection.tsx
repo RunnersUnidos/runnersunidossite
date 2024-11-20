@@ -26,7 +26,10 @@ const EventSection = () => {
             a beautiful celebration of life during our 5K event.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link href={'/gallery'} className="btn bg-black text-white">
+            <Link
+              href={'/events/diadelosmuertos'}
+              className="btn bg-black text-white"
+            >
               View Event Photos
             </Link>
             <button className="btn btn-outline btn-secondary">Events</button>

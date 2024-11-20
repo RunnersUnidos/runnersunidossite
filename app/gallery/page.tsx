@@ -32,8 +32,6 @@ const Gallery = () => {
             Capturing moments and memories from our running community
           </p>
         </div>
-
-        {/* Gallery Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {images?.map((image: Image) => (
             <div
@@ -56,7 +54,6 @@ const Gallery = () => {
             </div>
           ))}
         </div>
-
         {/* Load More Button (optional)
         <div className="text-center mt-12">
           <button className="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-lg transition-colors duration-200">

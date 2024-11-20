@@ -27,3 +27,8 @@ model Images {
   title     String
   imageUrl  String
 }
+
+model EventDiaDeLosMuertos {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  imageUrl  String
+}

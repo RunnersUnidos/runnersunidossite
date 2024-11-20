@@ -17,7 +17,7 @@ interface EventCardProps {
 
 const EventCard = () => {
   return (
-    <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
+    <div className="rounded-lg overflow-hidden shadow-lg bg-white">
       <div className="relative h-48 w-full">
         <Image
           src={RunnersImage.src}

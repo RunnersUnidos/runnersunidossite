@@ -4,7 +4,7 @@ const nextConfig = {
     serverActions: true,
   },
   images: {
-    domains: ['images.pexels.com'],
+    domains: ['images.pexels.com', 'runnerunidos.s3.us-east-2.amazonaws.com'],
   },
 };
 
