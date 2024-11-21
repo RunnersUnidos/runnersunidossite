@@ -1,5 +1,6 @@
 import React from 'react';
 import EventCard from '../components/pasteventCard';
+import FutureEventCard from '../components/futureeventCard';
 const Events = () => {
   return (
     <div>
@@ -13,7 +14,7 @@ const Events = () => {
           <h2 className="text-4xl font-bold text-primary mb-4 text-center">
             Future Events
           </h2>
-          <EventCard />
+          <FutureEventCard />
           {/* Add more future events here */}
         </div>
         <div className="flex-1 md:mr-4 mb-4 max-w-xs">

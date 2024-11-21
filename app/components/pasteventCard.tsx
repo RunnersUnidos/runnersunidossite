@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getPastEvents } from '../lib/functions';
-
+import dayjs from 'dayjs';
 interface PastEvents {
   id: string;
   title: string;
@@ -31,7 +31,7 @@ const PastEventCard = () => {
           <div className="relative h-48 w-full" key={event.id}>
             <Image
               src={event.imageUrl}
-              alt="RunnersUnidos Members    "
+              alt={event.title}
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -58,7 +58,7 @@ const PastEventCard = () => {
               </svg>
               <span>
                 {event.date
-                  ? event.date.toLocaleDateString()
+                  ? dayjs(event.date).format('MM/DD/YYYY')
                   : 'No date available'}
               </span>
             </div>
@@ -87,11 +87,9 @@ const PastEventCard = () => {
               <span>{event.location}</span>
             </div>
 
-            <p className="text-gray-700 text-base mb-4">{event.location}</p>
-
             <Link
               href={event.link ? event.link : 'No Link Available'}
-              className="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors"
+              className="inline-block bg-pink-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors"
             >
               View Recap
             </Link>

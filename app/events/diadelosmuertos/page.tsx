@@ -29,7 +29,6 @@ const DiaDelosMuertos = () => {
       </div>
     );
   }
-  console.log('these are the new images', images);
 
   return (
     <div className="min-h-screen bg-neutral-light/5 py-16">
@@ -71,7 +70,7 @@ const DiaDelosMuertos = () => {
       <div className="text-center mt-12">
         {!showNewButton ? (
           <button
-            className="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-lg transition-colors duration-200"
+            className="bg-pink-500 hover:bg-primary-dark text-white px-8 py-3 rounded-lg transition-colors duration-200"
             onClick={loadMoreImages}
           >
             Load More Photos
