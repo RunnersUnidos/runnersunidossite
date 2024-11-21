@@ -28,7 +28,7 @@ const LaFamiliaSection = () => {
             with the warmth and support that defines our cultura.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link href={'/gallery'} className="btn bg-black text-white">
+            <Link href={'/gallery'} className="btn bg-pink-500 text-white">
               View Photos
             </Link>
             <Link className="btn btn-outline text-black" href={'/joinus'}>
