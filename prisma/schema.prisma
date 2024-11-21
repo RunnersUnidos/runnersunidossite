@@ -34,8 +34,12 @@ model EventDiaDeLosMuertos {
 }
 
 
-model Events {
+model PastEvents {
     id        String   @id @default(auto()) @map("_id") @db.ObjectId
+    title String
+    date DateTime?
+    location String
     description String
+    link String?
     imageUrl  String
 }

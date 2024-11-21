@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Inter, Italiana } from 'next/font/google';
 import './globals.css';
 import Providers from './NextUIProvider';
-
+import ScrollButton from '../app/components/scrollbutton';
 import NavBar from './navbar';
 import Footer from './footer';
 import QueryProvider from './QueryProvider';
@@ -30,6 +30,7 @@ export default function RootLayout({
           <Providers>
             <NavBar />
             {children}
+            <ScrollButton />
             <Footer />
           </Providers>
         </QueryProvider>

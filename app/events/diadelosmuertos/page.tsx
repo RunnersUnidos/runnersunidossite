@@ -18,14 +18,14 @@ const DiaDelosMuertos = () => {
   const [buttonClicked, setButtonClicked] = useState(false);
   const [showNewButton, setShowNewButton] = useState(false);
   const loadMoreImages = () => {
-    setVisibleImages((prev) => prev + 3);
+    setVisibleImages((prev) => prev + 50);
     setShowNewButton(true);
   };
 
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-screen">
-        <span className="loading loading-dots loading-lg"></span>
+        <span className="loading loading-dots loading-lg text-pink-500"></span>
       </div>
     );
   }

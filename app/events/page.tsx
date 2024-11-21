@@ -1,5 +1,5 @@
 import React from 'react';
-import EventCard from '../components/eventCard';
+import EventCard from '../components/pasteventCard';
 const Events = () => {
   return (
     <div>
@@ -10,7 +10,7 @@ const Events = () => {
         <div className="flex-1 mr-4 mb-4 max-w-xs">
           {' '}
           {/* Added mb-4 for spacing on mobile */}
-          <h2 className="text-4xl font-bold text-primary mb-4">
+          <h2 className="text-4xl font-bold text-primary mb-4 text-center">
             Future Events
           </h2>
           <EventCard />
@@ -19,7 +19,9 @@ const Events = () => {
         <div className="flex-1 md:mr-4 mb-4 max-w-xs">
           {' '}
           {/* Added mb-4 for spacing on mobile */}
-          <h2 className="text-4xl font-bold text-primary mb-4">Past Events</h2>
+          <h2 className="text-4xl font-bold text-primary mb-4 text-center">
+            Past Events
+          </h2>
           <EventCard />
           {/* Add more past events here */}
         </div>
