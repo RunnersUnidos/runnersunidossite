@@ -13,7 +13,7 @@ const EventSection = () => {
         <div className="relative aspect-[4/3] w-full">
           <Image
             src={SkullImage.src}
-            alt="Dia de los Muertos 5K Run"
+            alt="Fiesta De Los Muertos 5K"
             fill
             className="rounded-lg object-cover"
             quality={100}
