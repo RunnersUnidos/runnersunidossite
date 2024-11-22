@@ -1,9 +1,9 @@
 'use client';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getPastEvents } from '../lib/functions';
-
+import { getFutureEvents } from '../lib/functions';
 interface FutureEvents {
   id: string;
   title: string;
@@ -15,6 +15,24 @@ interface FutureEvents {
 }
 
 const FutureEventCard = () => {
+  React.useState<FutureEvents[]>([]);
+  const [futureEvents, setFutureEvents] = React.useState<FutureEvents[]>([]);
+
+  useEffect(() => {
+    const fetchEvents = async () => {
+      const events = await getFutureEvents();
+      setFutureEvents(events);
+    };
+    fetchEvents();
+  }, []);
+
+  if (futureEvents.length === 0) {
+    return (
+      <div className="flex justify-center">
+        <p>Fun Events coming soon!</p>
+      </div>
+    );
+  }
   return (
     <div className="rounded-lg overflow-hidden shadow-lg bg-white">
       <div className="relative h-48 w-full">

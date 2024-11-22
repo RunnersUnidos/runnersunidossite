@@ -20,3 +20,13 @@ export async function getPastEvents() {
     throw error;
   }
 }
+
+export async function getFutureEvents() {
+  try {
+    const futurevents = await prisma.futureEvents.findMany();
+    return futurevents;
+  } catch (error) {
+    console.error('Error fetching future events:', error);
+    throw error;
+  }
+}
