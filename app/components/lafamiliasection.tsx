@@ -20,18 +20,24 @@ const LaFamiliaSection = () => {
           />
         </div>
         <div className="text-black">
-          <h1 className="mb-8 text-5xl font-bold">La Familia</h1>
-          <p className="mb-4 text-xl">
+          <h1 className="mb-4 text-5xl font-bold">La Familia</h1>
+          <p className="font-sans mb-8 text-xl">
             More than just runners, somos familia. Every Tuesday evening, our
             community comes together to share miles, stories, and traditions.
             From first-time runners to seasoned marathoners, we embrace everyone
             with the warmth and support that defines our cultura.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link href={'/gallery'} className="btn bg-pink-500 text-white">
+          <div className="font-sans flex flex-col sm:flex-row gap-4">
+            <Link
+              href={'/gallery'}
+              className="btn bg-transparent border-pink-500 hover:bg-pink-500 text-black"
+            >
               View Photos
             </Link>
-            <Link className="btn btn-outline text-black" href={'/joinus'}>
+            <Link
+              className="font-sans border-pink-500 hover:bg-pink-500 btn btn-outline text-black"
+              href={'/joinus'}
+            >
               Join Our Next Run
             </Link>
           </div>

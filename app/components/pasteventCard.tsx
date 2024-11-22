@@ -89,7 +89,7 @@ const PastEventCard = () => {
 
             <Link
               href={event.link ? event.link : 'No Link Available'}
-              className="inline-block bg-pink-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors"
+              className="btn bg-transparent border-pink-500 font-sans  hover:bg-pink-500 text-black"
             >
               View Recap
             </Link>

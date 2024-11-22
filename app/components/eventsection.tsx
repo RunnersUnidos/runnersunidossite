@@ -20,19 +20,21 @@ const EventSection = () => {
           />
         </div>
         <div className="text-black">
-          <h1 className="mb-8 text-5xl font-bold">Dia de los Muertos 5K</h1>
-          <p className="mb-4 text-xl">
+          <h1 className="mb-4 text-5xl font-bold">Dia de los Muertos 5K</h1>
+          <p className="font-sans mb-8 text-xl">
             Our community came together to honor and remember our loved ones in
             a beautiful celebration of life during our 5K event.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href={'/events/diadelosmuertos'}
-              className="btn bg-black text-white"
+              className="font-sans btn bg-transparent hover:bg-pink-500 text-black"
             >
               View Event Photos
             </Link>
-            <button className="btn btn-outline btn-secondary">Events</button>
+            <button className="btn font-sans btn-outline btn-secondary">
+              Events
+            </button>
           </div>
         </div>
       </div>

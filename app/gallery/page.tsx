@@ -18,7 +18,7 @@ const Gallery = () => {
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-screen">
-        <span className="loading loading-dots loading-lg"></span>
+        <span className="loading loading-dots loading-lg text-pink-500"></span>
       </div>
     );
   }
@@ -28,7 +28,7 @@ const Gallery = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-primary mb-4">Gallery</h1>
-          <p className="text-neutral-dark text-lg">
+          <p className="font-sans text-neutral-dark text-lg">
             Capturing moments and memories from our running community
           </p>
         </div>
@@ -54,12 +54,11 @@ const Gallery = () => {
             </div>
           ))}
         </div>
-        {/* Load More Button (optional)
         <div className="text-center mt-12">
-          <button className="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-lg transition-colors duration-200">
+          <button className="bg-pink-500 hover:bg-primary-dark text-white px-8 py-3 rounded-lg transition-colors duration-200">
             Load More Photos
           </button>
-        </div> */}
+        </div>
       </div>
     </div>
   );

@@ -34,7 +34,7 @@ const HeroVideo = () => {
             and traditions.
           </p>
           <button
-            className="btn bg-transparent hover:text-pink-500 border-pink-500 text-white mt-4 text-center"
+            className="btn bg-transparent hover:text-pink-500 hover:bg-pink-500 hover:text-black border-pink-500 text-white mt-4 text-center"
             onClick={() => router.push('/joinus')}
           >
             Join Us

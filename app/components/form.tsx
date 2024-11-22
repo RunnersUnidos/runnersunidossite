@@ -26,7 +26,10 @@ const UserForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-4 p-4">
+    <form
+      onSubmit={handleSubmit}
+      className="font-sans max-w-md mx-auto space-y-4 p-4"
+    >
       <div>
         <label htmlFor="name" className="block text-sm font-medium mb-1">
           First Name
@@ -89,7 +92,7 @@ const UserForm = () => {
 
       <button
         type="submit"
-        className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600"
+        className="btn w-auto bg-transparent border-pink-500 hover:bg-pink-500 text-black"
       >
         Submit
       </button>

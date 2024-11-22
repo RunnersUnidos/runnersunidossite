@@ -20,26 +20,31 @@ const Schedule = () => {
   };
   return (
     <div className="h-screen">
-      <div className="flex justify-around items-center flex-col gap-4">
+      <div className="flex justify-around items-center flex-col gap-6">
+        {' '}
         <h2 className="m-4 text-5xl text-center font-extrabold">
           Every Tuesday at 7:00 p.m.
         </h2>
-        <p className="text-center text-xl">2 Miles</p>
-        <p className="text-center text-xl">All Skills Welcome!</p>
-        <p className="text-center text-xl m-4">
+        <p className="text-center text-xl font-sans mb-2">🏃 2 Miles 🏃‍♀️</p>
+        <p className="font-sans text-center text-xl mb-2">
+          {' '}
+          All Skills Welcome!
+        </p>
+        <p className="font-sans text-center text-xl mb-4">
+          {' '}
           Feel free to arrive early to socialize and warm up.
         </p>
-        <ul className="text-2xl text-center">
+        <ul className="font-sans text-2xl text-center mb-4">
+          {' '}
           <li>Trinity Overlook Trail</li>
           <li> 📌 110 W Commerce Street</li>
         </ul>
         <button
-          className="bg-primary m-2 hover:bg-primary-dark text-white px-6 py-3 rounded-lg transition-colors duration-200 w-auto"
+          className="btn bg-pink-500 m-2 font-sans hover:bg-transparent text-black px-6 py-3 rounded-lg transition-colors duration-200 w-auto"
           onClick={handleGetDirections}
         >
           Get Directions
         </button>
-
         <Image
           src={Trail.src}
           alt="Trinity Overlook Trail"
@@ -53,5 +58,3 @@ const Schedule = () => {
 };
 
 export default Schedule;
-
-//new

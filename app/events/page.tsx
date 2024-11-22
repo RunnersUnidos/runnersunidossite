@@ -4,10 +4,10 @@ import FutureEventCard from '../components/futureeventCard';
 const Events = () => {
   return (
     <div>
-      <div className="text-center mb-12">
+      {/* <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-primary mb-4">Events</h1>
-      </div>
-      <div className="flex flex-col items-center md:flex-row justify-center">
+      </div> */}
+      <div className=" mt-12 flex flex-col items-center md:flex-row justify-center">
         <div className="flex-1 mr-4 mb-4 max-w-xs">
           {' '}
           {/* Added mb-4 for spacing on mobile */}

@@ -31,7 +31,7 @@ const ScheduleSection = () => {
         {/* First Column */}
         <div className="text-neutral-dark">
           <h1 className="mb-8 text-5xl font-bold text-primary">Run Schedule</h1>
-          <div className="space-y-4">
+          <div className="font-sans space-y-4">
             <ul className="text-2xl">
               <li>Trinity Overlook Trail</li>
               <li> 📌 110 W Commerce Street</li>
@@ -41,7 +41,7 @@ const ScheduleSection = () => {
               <p className="text-neutral">7:00 PM - All levels welcome</p>
             </div>
             <button
-              className="bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg transition-colors duration-200 w-full"
+              className="bg-pink-500 font-sans btn  hover:bg-transparent border border-pink-500 text-black px-6 py-3 rounded-lg transition-colors duration-200 w-full"
               onClick={handleGetDirections}
             >
               Get Directions
