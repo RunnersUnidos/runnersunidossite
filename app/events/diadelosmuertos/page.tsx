@@ -70,14 +70,14 @@ const DiaDelosMuertos = () => {
       <div className="text-center mt-12">
         {!showNewButton ? (
           <button
-            className="bg-pink-500 hover:bg-primary-dark text-white px-8 py-3 rounded-lg transition-colors duration-200"
+            className="bg-pink-500 hover:bg-primary-dark text-black px-8 py-3 rounded-lg  duration-200"
             onClick={loadMoreImages}
           >
             Load More Photos
           </button>
         ) : (
           <Link
-            className="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-lg transition-colors duration-200"
+            className="bg-pink-500 font-sans text-black px-8 py-3 rounded-lg transition-colors duration-200"
             href="/"
           >
             Back Home
