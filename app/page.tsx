@@ -9,9 +9,9 @@ export default function Home() {
     <main>
       <HeroVideo />
       {/* <HomeHero /> */}
-      <EventSection />
       <ScheduleSection />
       <LaFamiliaSection />
+      <EventSection />
     </main>
   );
 }
