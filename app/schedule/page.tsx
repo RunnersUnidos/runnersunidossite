@@ -19,7 +19,7 @@ const Schedule = () => {
     );
   };
   return (
-    <div className="h-screen">
+    <div className="">
       <div className="flex justify-around items-center flex-col gap-6">
         {' '}
         <h2 className="m-4 text-5xl text-center font-extrabold">

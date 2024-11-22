@@ -10,6 +10,8 @@ import {
   NavbarMenuItem,
 } from '@nextui-org/navbar';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
+import Logo from '@/public/LOGOLONG.png';
 import Link from 'next/link';
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,7 +37,14 @@ const NavBar = () => {
       </NavbarContent>
       <NavbarBrand>
         <Link href={'/'} onClick={() => setIsMenuOpen(false)}>
-          <p className="font-bold text-inherit">RunnersUnidos</p>
+          <Image
+            src={Logo.src}
+            alt="Logo"
+            width={150}
+            height={50}
+            className="rounded-lg object-cover"
+            quality={100}
+          />
         </Link>
       </NavbarBrand>
 

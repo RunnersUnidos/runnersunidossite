@@ -2,15 +2,20 @@ import React from 'react';
 import DallasSkyline from '@/public/Dallas-Skyline.jpeg';
 import Image from 'next/image';
 import { CiInstagram } from 'react-icons/ci';
-
+import Logo from '@/public/LOGOLONG.png';
 const Footer = () => {
   return (
-    <section className="container mx-auto px-4 py-16">
+    <section className="container bg-white mx-auto px-4 py-16">
       <Image src={DallasSkyline} alt="logo" className="w-full" />
       <div className="flex justify-center flex-row items-center gap-4 mt-4">
-        <h3 className="text-xl font-bold text-center text-black">
-          RunnersUnidos
-        </h3>
+        <Image
+          src={Logo.src}
+          alt="Logo"
+          width={150}
+          height={50}
+          className="rounded-lg object-cover"
+          quality={100}
+        />
         <a href="https://www.instagram.com/runnersunidos" target="_blank">
           <CiInstagram className="text-2xl text-orange-400" />
         </a>
