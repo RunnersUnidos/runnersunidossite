@@ -35,7 +35,7 @@ const LaFamiliaSection = () => {
               View Photos
             </Link>
             <Link
-              className="font-sans border-pink-500 hover:bg-pink-500 btn btn-outline text-black"
+              className="font-sans border-black bg-pink-500 btn btn-outline text-black"
               href={'/joinus'}
             >
               Join Our Next Run
