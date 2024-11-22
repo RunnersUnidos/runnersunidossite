@@ -70,7 +70,7 @@ const DiaDelosMuertos = () => {
       <div className="text-center mt-12">
         {!showNewButton ? (
           <button
-            className="bg-pink-500 hover:bg-primary-dark text-black px-8 py-3 rounded-lg  duration-200"
+            className="bg-pink-500 font-sans hover:bg-primary-dark text-black px-8 py-3 rounded-lg  duration-200"
             onClick={loadMoreImages}
           >
             Load More Photos
