@@ -65,14 +65,14 @@ const NavBar = () => {
             Join Us
           </Link>
         </NavbarItem>
-        <NavbarItem>
+        {/* <NavbarItem>
           <Link
             href="/familia"
             className={`text-foreground ${isActive('/familia')}`}
           >
             La Familia
           </Link>
-        </NavbarItem>
+        </NavbarItem> */}
         <NavbarItem>
           <Link
             href="/events"
@@ -81,14 +81,14 @@ const NavBar = () => {
             Events
           </Link>
         </NavbarItem>
-        <NavbarItem>
+        {/* <NavbarItem>
           <Link
             href="/donate"
             className={`text-foreground ${isActive('/donate')}`}
           >
             Donate
           </Link>
-        </NavbarItem>
+        </NavbarItem> */}
         <NavbarItem>
           <Link
             href="/gallery"

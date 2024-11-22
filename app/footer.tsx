@@ -7,12 +7,12 @@ const Footer = () => {
   return (
     <section className="container bg-white mx-auto px-4 py-16">
       <Image src={DallasSkyline} alt="logo" className="w-full" />
-      <div className="flex justify-center flex-row items-center gap-4 mt-4">
+      <div className="flex justify-center flex-col items-center gap-2 mt-4">
         <Image
           src={Logo.src}
           alt="Logo"
-          width={150}
-          height={50}
+          width={200}
+          height={100}
           className="rounded-lg object-cover"
           quality={100}
         />
