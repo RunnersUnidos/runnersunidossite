@@ -40,7 +40,7 @@ const Gallery = () => {
             >
               <Image
                 src={image.imageUrl}
-                alt={image.title}
+                alt="Runners"
                 fill
                 className="object-cover  group-hover:scale-110"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
