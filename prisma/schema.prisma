@@ -33,6 +33,10 @@ model EventDiaDeLosMuertos {
   imageUrl  String
 }
 
+model EventBeerRun {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  imageUrl  String
+}
 
 model PastEvents {
     id        String   @id @default(auto()) @map("_id") @db.ObjectId

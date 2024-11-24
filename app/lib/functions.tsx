@@ -11,6 +11,10 @@ export async function getDiaImages() {
   return diaImages;
 }
 
+export async function getBeerRunImages() {
+  const beerImages = await prisma.eventBeerRun.findMany();
+  return beerImages;
+}
 export async function getPastEvents() {
   try {
     const pastevents = await prisma.pastEvents.findMany();

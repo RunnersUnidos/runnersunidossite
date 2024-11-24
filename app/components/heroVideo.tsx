@@ -33,12 +33,20 @@ const HeroVideo = () => {
             A community of runners who come together to share miles, stories,
             and traditions.
           </p>
-          <button
-            className="btn font-sans bg-transparent  hover:bg-pink-500 hover:text-black border-pink-500 text-white mt-4 text-center"
-            onClick={() => router.push('/joinus')}
-          >
-            Join Us
-          </button>
+          <div className="flex flex-row gap-4">
+            <button
+              className="btn font-sans bg-transparent  hover:bg-pink-500 hover:text-black border-pink-500 text-white mt-4 text-center"
+              onClick={() => router.push('/schedule')}
+            >
+              Schedule
+            </button>
+            <button
+              className="btn font-sans bg-transparent  hover:bg-pink-500 hover:text-black border-pink-500 text-white mt-4 text-center"
+              onClick={() => router.push('/joinus')}
+            >
+              Join Us
+            </button>
+          </div>
         </div>
       </div>
     </div>
