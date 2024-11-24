@@ -9,10 +9,11 @@ import { useEffect, useState } from 'react';
 export default function Home() {
 
   const [isMobile, setIsMobile] = useState(false);
-
+  const [isPortrait, setIsPortrait] = useState(true);
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768); 
+      setIsPortrait(window.matchMedia("(orientation: portrait)").matches);
     };
 
     handleResize(); 
@@ -25,7 +26,7 @@ export default function Home() {
 
   return (
     <main>
-        {isMobile ? <HeroVideo /> : <HomeHero />}
+        {isMobile && isPortrait ? <HeroVideo /> : <HomeHero />}
       <LaFamiliaSection />
       <ScheduleSection />
       <EventSection />
