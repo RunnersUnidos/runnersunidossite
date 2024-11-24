@@ -69,7 +69,7 @@ const PastEventCard = () => {
                     d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
                   />
                 </svg>
-                <span>
+                <span className='font-sans'>
                   {event.date
                     ? dayjs(event.date).format('MM/DD/YYYY')
                     : 'No date available'}
@@ -97,7 +97,7 @@ const PastEventCard = () => {
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
-                <span>{event.location}</span>
+                <span className='font-sans'>{event.location}</span>
               </div>
 
               <Link

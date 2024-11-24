@@ -22,7 +22,7 @@ const Gallery = () => {
       </div>
     );
   }
-  console.log('these are the new images', images);
+
   return (
     <div className="min-h-screen bg-neutral-light/5 py-16">
       <div className="container mx-auto px-4">
@@ -42,15 +42,9 @@ const Gallery = () => {
                 src={image.imageUrl}
                 alt={image.title}
                 fill
-                className="object-cover transition-transform group-hover:scale-110"
+                className="object-cover  group-hover:scale-110"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
-
-              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                <h3 className="text-white text-lg font-semibold">
-                  {image.title}
-                </h3>
-              </div>
             </div>
           ))}
         </div>
