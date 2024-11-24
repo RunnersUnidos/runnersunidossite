@@ -3,7 +3,7 @@ import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { getImages } from '../lib/functions';
 import Image from 'next/image';
-
+import Link from 'next/link';
 interface Image {
   id: string;
   title: string;
@@ -55,9 +55,9 @@ const Gallery = () => {
           ))}
         </div>
         <div className="text-center mt-12">
-          <button className="bg-pink-500 hover:bg-primary-dark text-white px-8 py-3 rounded-lg transition-colors duration-200">
-            Load More Photos
-          </button>
+          <Link className="font-sans bg-pink-500 btn hover:bg-primary-dark text-white px-8 py-3 rounded-lg transition-colors duration-200" href={'/'}>
+            Back Home
+          </Link>
         </div>
       </div>
     </div>
