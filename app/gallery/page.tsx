@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 interface Image {
   id: string;
-  title: string;
+  title: string | null;
   imageUrl: string;
 }
 const Gallery = () => {
