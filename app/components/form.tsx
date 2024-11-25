@@ -20,12 +20,10 @@ const UserForm = () => {
 
   const { mutateAsync: addRunner, isSuccess } = useMutation({
     mutationFn: addUser,
-    onSuccess: () => {
-      toast.success('Thank you for Joining Runners Unidos!');
-    },
   });
 
   if (isSuccess) {
+    toast.success('Thank you for Joining Runners Unidos!');
     return (
       <div className="h-screen flex flex-col justify-center items-center gap-4">
         <h2>Thank you for Joining Runners Unidos! See you soon!</h2>
