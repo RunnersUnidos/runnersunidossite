@@ -20,7 +20,9 @@ const HomeHero = () => {
 
       <div className="absolute inset-0 bg-black/60 z-10"></div>
 
-      <div className="flex flex-col justify-start items-center z-20 relative gap-4"> {/* Changed to justify-center */}
+      <div className="flex flex-col justify-start items-center z-20 relative gap-4">
+        {' '}
+        {/* Changed to justify-center */}
         <Image
           src={LogoImage.src}
           alt="Logo Image"
@@ -29,8 +31,8 @@ const HomeHero = () => {
           className=""
         />
         <p className="text-xl text-white text-center">
-          A community of runners who come together to share miles, stories,
-          and traditions.
+          A community of runners who come together to share miles, stories, and
+          traditions.
         </p>
         <div className="flex flex-row gap-4">
           <button
@@ -41,11 +43,17 @@ const HomeHero = () => {
           </button>
           <button
             className="btn font-sans bg-transparent hover:bg-pink-500 hover:text-black border-pink-500 text-white mt-4 text-center"
-            onClick={() => router.push('/joinus')}
+            onClick={() => router.push('/events')}
           >
-            Join Us
+            Events
           </button>
         </div>
+        <button
+          className="btn font-sans bg-transparent hover:bg-pink-500 hover:text-black border-pink-500 text-white mt-4 text-center"
+          onClick={() => router.push('/joinus')}
+        >
+          JoinUs
+        </button>
       </div>
     </div>
   );

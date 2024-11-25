@@ -35,18 +35,24 @@ const HeroVideo = () => {
           </p>
           <div className="flex flex-row gap-4">
             <button
-              className="btn font-sans bg-transparent  hover:bg-pink-500 hover:text-black border-pink-500 text-white mt-4 text-center"
+              className="btn font-sans bg-transparent hover:bg-pink-500 hover:text-black border-pink-500 text-white mt-4 text-center"
               onClick={() => router.push('/schedule')}
             >
               Schedule
             </button>
             <button
-              className="btn font-sans bg-transparent  hover:bg-pink-500 hover:text-black border-pink-500 text-white mt-4 text-center"
-              onClick={() => router.push('/joinus')}
+              className="btn font-sans bg-transparent hover:bg-pink-500 hover:text-black border-pink-500 text-white mt-4 text-center"
+              onClick={() => router.push('/events')}
             >
-              Join Us
+              Events
             </button>
           </div>
+          <button
+            className="btn font-sans hover:bg-transparent bg-pink-500 hover:text-black border-pink-500 text-white mt-2 text-center"
+            onClick={() => router.push('/joinus')}
+          >
+            JoinUs
+          </button>
         </div>
       </div>
     </div>
