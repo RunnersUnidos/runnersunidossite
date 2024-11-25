@@ -118,6 +118,7 @@ const UserForm = () => {
               about,
               name,
             });
+            window.scrollTo(0, 0);
             setAbout('');
             setName('');
             setEmail('');
