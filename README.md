@@ -24,8 +24,8 @@ Runners Unidos is a full-stack web application I built to serve as an informatio
 
 ## Desktop
 
-![DesktopRunnersUnidos]( ![RunnersUnidosGif](https://github.com/user-attachments/assets/f771b4b5-4f2f-4b08-85f0-d17c6ec72d91)
- )
+![RunnersUnidosGif](https://github.com/user-attachments/assets/f771b4b5-4f2f-4b08-85f0-d17c6ec72d91)
+
 
 ## Mobile View
 
