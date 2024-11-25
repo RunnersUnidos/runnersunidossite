@@ -41,7 +41,7 @@ const HeroVideo = () => {
               Schedule
             </button>
             <button
-              className="btn font-sans hover:bg-transparent bg-pink-500 hover:text-black border-pink-500 text-white mt-2 text-center"
+              className="btn font-sans hover:bg-transparent bg-pink-500 hover:text-black border-pink-500 text-white mt-4 text-center"
               onClick={() => router.push('/joinus')}
             >
               JoinUs
