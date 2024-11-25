@@ -41,18 +41,12 @@ const HeroVideo = () => {
               Schedule
             </button>
             <button
-              className="btn font-sans bg-transparent hover:bg-pink-500 hover:text-black border-pink-500 text-white mt-4 text-center"
-              onClick={() => router.push('/events')}
+              className="btn font-sans hover:bg-transparent bg-pink-500 hover:text-black border-pink-500 text-white mt-2 text-center"
+              onClick={() => router.push('/joinus')}
             >
-              Events
+              JoinUs
             </button>
           </div>
-          <button
-            className="btn font-sans hover:bg-transparent bg-pink-500 hover:text-black border-pink-500 text-white mt-2 text-center"
-            onClick={() => router.push('/joinus')}
-          >
-            JoinUs
-          </button>
         </div>
       </div>
     </div>
