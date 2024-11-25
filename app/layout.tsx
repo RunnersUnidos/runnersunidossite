@@ -5,6 +5,7 @@ import Providers from './NextUIProvider';
 import ScrollButton from '../app/components/scrollbutton';
 import NavBar from './navbar';
 import Footer from './footer';
+import { Toaster } from 'react-hot-toast';
 import QueryProvider from './QueryProvider';
 // const inter = Inter({ subsets: ['latin'] });
 const italiana = Italiana({ subsets: ['latin'], weight: '400' });
@@ -28,6 +29,7 @@ export default function RootLayout({
       <body className={italiana.className}>
         <QueryProvider>
           <Providers>
+          <Toaster position="top-center" toastOptions={{ duration: 3000 }} />
             <NavBar />
             {children}
             <ScrollButton />

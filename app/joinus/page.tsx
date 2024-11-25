@@ -5,7 +5,6 @@ import UserForm from '../components/form';
 const JoinUs = () => {
   return (
     <div className="h-screen flex flex-col items-center justify-evenly">
-      <h1 className="mb-5 text-5xl font-bold text-black">Run With Us!</h1>
       {/* <Image
         src={Logo.src}
         alt="Logo"

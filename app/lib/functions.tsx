@@ -34,3 +34,25 @@ export async function getFutureEvents() {
     throw error;
   }
 }
+
+export async function addUser(user: {
+  name: string;
+  email: string;
+  lastName: string;
+  about: string;
+}) {
+  try {
+    const newUser = await prisma.user.create({
+      data: {
+        email: user.email,
+        name: user.name,
+        lastName: user.lastName,
+        about: user.about,
+      },
+    });
+    return newUser;
+  } catch (error) {
+    console.error('Error creating User', error);
+    throw error;
+  }
+}

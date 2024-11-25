@@ -1,36 +1,54 @@
 'use client';
 import React, { useState } from 'react';
-
+import { addUser } from '../lib/functions';
+import { useMutation } from '@tanstack/react-query';
+import toast from 'react-hot-toast';
+import Image from 'next/image';
+import LogoImage from '@/public/WHITELOGOPNG.png';
+import Link from 'next/link';
+interface User {
+  email: string;
+  name: string;
+  lastName: string;
+  about: string;
+}
 const UserForm = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    lastName: '',
-    email: '',
-    about: '',
+  const [name, setName] = useState('');
+  const [lastname, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [about, setAbout] = useState('');
+
+  const { mutateAsync: addRunner, isSuccess } = useMutation({
+    mutationFn: addUser,
+    onSuccess: () => {
+      toast.success('Thank you for Joining Runners Unidos!');
+    },
   });
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    console.log(formData);
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
+  if (isSuccess) {
+    return (
+      <div className="h-screen flex flex-col justify-center items-center gap-4">
+        <h2>Thank you for Joining Runners Unidos! See you soon!</h2>
+        <Link
+          className="font-sans bg-pink-500 btn hover:bg-primary-dark text-white px-8 py-3 rounded-lg transition-colors duration-200"
+          href={'/gallery'}
+        >
+          View Gallery
+        </Link>
+        <Image
+          src={LogoImage.src}
+          alt="Logo Image"
+          width={200}
+          height={200}
+          className=""
+        />
+      </div>
+    );
+  }
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="font-sans max-w-md mx-auto space-y-4 p-4"
-    >
+    <form className=" max-w-md mx-auto space-y-4 p-4 bg-pink-200 rounded-sm">
       <div>
+        <h1 className="mb-5 text-5xl font-bold text-black">Run With Us!</h1>
         <label htmlFor="name" className="block text-sm font-medium mb-1">
           First Name
         </label>
@@ -38,8 +56,8 @@ const UserForm = () => {
           type="text"
           id="name"
           name="name"
-          value={formData.name}
-          onChange={handleChange}
+          value={name}
+          onChange={(e) => setName(e.target.value)}
           className="w-full px-3 py-2 border rounded-md"
           required
         />
@@ -53,8 +71,8 @@ const UserForm = () => {
           type="text"
           id="lastName"
           name="lastName"
-          value={formData.lastName}
-          onChange={handleChange}
+          value={lastname}
+          onChange={(e) => setLastName(e.target.value)}
           className="w-full px-3 py-2 border rounded-md"
           required
         />
@@ -68,8 +86,8 @@ const UserForm = () => {
           type="email"
           id="email"
           name="email"
-          value={formData.email}
-          onChange={handleChange}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           className="w-full px-3 py-2 border rounded-md"
           required
         />
@@ -82,8 +100,8 @@ const UserForm = () => {
         <textarea
           id="about"
           name="about"
-          value={formData.about}
-          onChange={handleChange}
+          value={about}
+          onChange={(e) => setAbout(e.target.value)}
           className="w-full px-3 py-2 border rounded-md"
           rows={4}
           required
@@ -92,7 +110,24 @@ const UserForm = () => {
 
       <button
         type="submit"
-        className="btn w-auto bg-transparent border-pink-500 hover:bg-pink-500 text-black"
+        className="btn font-sans w-auto bg-transparent border-pink-500 hover:bg-pink-500 text-black"
+        onClick={async (e) => {
+          e.preventDefault();
+          try {
+            await addRunner({
+              email,
+              lastName: lastname,
+              about,
+              name,
+            });
+            setAbout('');
+            setName('');
+            setEmail('');
+            setLastName('');
+          } catch (e) {
+            toast.error('Failed to add User');
+          }
+        }}
       >
         Submit
       </button>
