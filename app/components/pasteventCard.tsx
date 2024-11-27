@@ -107,7 +107,6 @@ const PastEventList = () => {
               <div className="flex flex-row justify-evenly gap-2">
                 <Link
                   href={event.link ? event.link : '/'}
-                  target="_blank"
                   className="bg-pink-600 text-black hover:bg-pink-700 transition duration-200 ease-in-out py-3 px-8 rounded-lg font-semibold shadow-md transform hover:scale-105"
                 >
                   {event.link
