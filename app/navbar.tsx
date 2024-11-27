@@ -99,7 +99,7 @@ const NavBar = () => {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarMenu className="bg-transparent text-black flex justify-center text-3xl items-end gap-2">
+      <NavbarMenu className="bg-transparent text-black flex justify-center text-3xl items-end gap-2 ">
         <NavbarMenuItem>
           <Link href="/" onClick={() => setIsMenuOpen(false)}>
             Home
@@ -109,9 +109,10 @@ const NavBar = () => {
           <NavbarMenuItem
             key={`${item}-${index}`}
             onClick={() => setIsMenuOpen(false)}
+            className="hover:scale-125"
           >
             <Link
-              className={`w-full ${isActive(`/${item.toLowerCase()}`)}`}
+              className={`w-full  ${isActive(`/${item.toLowerCase()}`)}`}
               color={
                 index === 2
                   ? 'warning'
