@@ -5,9 +5,9 @@ import { CiInstagram } from 'react-icons/ci';
 import Logo from '@/public/LOGOLONG.png';
 const Footer = () => {
   return (
-    <section className="container bg-white mx-auto lg:max-w-none px-4 ">
+    <section className="container bg-white mx-auto lg:max-w-none px-4 py-6 ">
       <Image src={DallasSkyline} alt="logo" className="w-full" />
-      <div className="flex justify-center flex-col items-center gap-2 mt-4">
+      <div className="flex justify-evenly flex-row items-center gap-2 mt-4">
         <Image
           src={Logo.src}
           alt="Logo"
@@ -17,10 +17,10 @@ const Footer = () => {
           quality={100}
         />
         <a href="https://www.instagram.com/runnersunidos" target="_blank">
-          <CiInstagram className="text-2xl text-orange-400" />
+          <CiInstagram className="text-4xl text-orange-400" />
         </a>
       </div>
-      <div className="flex justify-center  mt-10">
+      <div className="flex justify-center  mb-10 mt-8">
         <span className="text-[10px] text-gray-500 sm:text-center dark:text-gray-400 hover:text-green-500">
           © 2024{' '}
           <a

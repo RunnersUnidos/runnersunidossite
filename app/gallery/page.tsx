@@ -42,14 +42,17 @@ const Gallery = () => {
                 src={image.imageUrl}
                 alt="Runners"
                 fill
-                className="object-cover  group-hover:scale-110"
+                className="object-cover  transform hover:scale-105 transition duration-300 ease-in-out"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
           ))}
         </div>
         <div className="text-center mt-12">
-          <Link className="font-sans bg-pink-500 btn hover:bg-primary-dark text-white px-8 py-3 rounded-lg transition-colors duration-200" href={'/'}>
+          <Link
+            className="font-sans bg-pink-500 btn hover:bg-primary-dark text-white px-8 py-3 rounded-lg transition-colors duration-200"
+            href={'/'}
+          >
             Back Home
           </Link>
         </div>
