@@ -2,7 +2,7 @@
 import React from 'react';
 import Trail from '@/public/TrailStrava.jpg';
 import Image from 'next/image';
-
+import Trail2 from '@/public/StraveRun2.jpg';
 interface Image {
   src: string;
 }
@@ -45,8 +45,20 @@ const Schedule = () => {
         >
           Get Directions
         </button>
+        <h3 className="m-4 text-3xl text-center font-extrabold">
+          Two Options, same Trail!
+        </h3>
+      </div>
+      <div className="flex flex-col justify-center lg:flex-row md:flex-row">
         <Image
           src={Trail.src}
+          alt="Trinity Overlook Trail"
+          className="rounded-md shadow-md m-4 p-4"
+          height={400}
+          width={400}
+        />
+        <Image
+          src={Trail2.src}
           alt="Trinity Overlook Trail"
           className="rounded-md shadow-md m-4 p-4"
           height={400}
