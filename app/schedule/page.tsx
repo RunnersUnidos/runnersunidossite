@@ -16,7 +16,7 @@ const Schedule = () => {
 
   const handleGetDirections = () => {
     window.open(
-      `https://www.google.com/maps/dir/?api=1&destination=${center.lat},${center.lng}`,
+      `google.maps://www.google.com/maps/dir/?api=1&destination=${center.lat},${center.lng}`,
       '_blank'
     );
   };
