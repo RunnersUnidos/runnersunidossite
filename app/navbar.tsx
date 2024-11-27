@@ -99,7 +99,7 @@ const NavBar = () => {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarMenu className="bg-transparent text-white flex justify-center text-5xl items-end gap-3 ">
+      <NavbarMenu className="bg-transparent text-black flex justify-center text-5xl items-end gap-3 ">
         <NavbarMenuItem>
           <Link href="/" onClick={() => setIsMenuOpen(false)}>
             Home
