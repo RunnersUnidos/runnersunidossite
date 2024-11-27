@@ -112,7 +112,7 @@ const PastEventList = () => {
                 >
                   {event.link
                     ? 'Event Photos'
-                    : `Happening ${dayjs(event.date).format('MM/DD/YYYY')} !`}
+                    : `${dayjs(event.date).format('MM/DD/YYYY')} !`}
                 </Link>
                 <Link
                   href={event.instagramUrl ? event.instagramUrl : '/'}
