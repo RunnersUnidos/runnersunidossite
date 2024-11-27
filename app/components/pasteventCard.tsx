@@ -47,7 +47,7 @@ const PastEventList = () => {
                 src={event.imageUrl}
                 alt={event.title}
                 fill
-                className="object-cover"
+                className="object-cover transition-transform group-hover:scale-110"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
@@ -105,10 +105,10 @@ const PastEventList = () => {
 
               <Link
                 href={event.link ? event.link : '/'}
-                className="inline-block py-2 px-4 bg-pink-500 text-white font-sans hover:bg-pink-600"
+                className="bg-pink-600 text-black hover:bg-pink-700 transition duration-200 ease-in-out py-3 px-8 rounded-lg font-semibold shadow-md transform hover:scale-105"
               >
                 {event.link
-                  ? 'Show Recap'
+                  ? 'Event Photos'
                   : `Happening ${dayjs(event.date).format('MM/DD/YYYY')} !`}
               </Link>
             </div>

@@ -43,10 +43,17 @@ const DiaDelosMuertos = () => {
             tradition. Participants honored the memories of loved ones who’ve
             passed by dedicating their run to them, creating a meaningful
             tribute with each step. After the race, the Runners Unidos familia
-            came together to place &quot;ofrendas&quot; on a beautiful community
-            altar, celebrating with music, delicious food, and vibrant
-            activities. The evening was filled with remembrance, joy, and
-            community spirit!
+            came together at{' '}
+            <a
+              href="https://www.goodsurf.co/"
+              target="_blank"
+              className="text-blue-500"
+            >
+              @realgoodsurf
+            </a>{' '}
+            , to place &quot;ofrendas&quot; on a beautiful community altar,
+            celebrating with music, delicious food, and vibrant activities. The
+            evening was filled with remembrance, joy, and community spirit!
           </p>
         </div>
 
@@ -70,14 +77,14 @@ const DiaDelosMuertos = () => {
       <div className="text-center mt-12">
         {!showNewButton ? (
           <button
-            className="bg-pink-500 font-sans hover:bg-primary-dark text-black px-8 py-3 rounded-lg  duration-200"
+            className="bg-pink-600 text-black hover:bg-pink-700 transition duration-200 ease-in-out py-3 px-8 rounded-lg font-semibold shadow-md transform hover:scale-105"
             onClick={loadMoreImages}
           >
             Load More Photos
           </button>
         ) : (
           <Link
-            className="bg-pink-500 font-sans text-black px-8 py-3 rounded-lg transition-colors duration-200"
+            className="bg-pink-600 text-black hover:bg-pink-700 transition duration-200 ease-in-out py-3 px-8 rounded-lg font-semibold shadow-md transform hover:scale-105"
             href="/"
           >
             Back Home

@@ -75,14 +75,14 @@ const BeerRun = () => {
       <div className="text-center mt-12">
         {!showNewButton ? (
           <button
-            className="bg-pink-500 font-sans hover:bg-primary-dark text-black px-8 py-3 rounded-lg  duration-200"
+            className="bg-pink-600 text-black hover:bg-pink-700 transition duration-200 ease-in-out py-3 px-8 rounded-lg font-semibold shadow-md transform hover:scale-105"
             onClick={loadMoreImages}
           >
             Load More Photos
           </button>
         ) : (
           <Link
-            className="bg-pink-500 font-sans text-black px-8 py-3 rounded-lg transition-colors duration-200"
+            className="bg-pink-600 text-black hover:bg-pink-700 transition duration-200 ease-in-out py-3 px-8 rounded-lg font-semibold shadow-md transform hover:scale-105"
             href="/"
           >
             Back Home
