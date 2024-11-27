@@ -19,10 +19,10 @@ const NavBar = () => {
   const menuItems = [
     // 'La Familia',
     'Schedule',
-    'JoinUs',
+    'Events',
     // 'Donate',
     'Gallery',
-    'Events',
+    'JoinUs',
   ];
   const isActive = (path: string) => {
     return pathname === path ? 'border-b-2 border-current' : '';
@@ -99,7 +99,7 @@ const NavBar = () => {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarMenu className="bg-white text-black flex justify-center text-xl items-center gap-5">
+      <NavbarMenu className="bg-transparent text-black flex justify-center text-3xl items-end gap-2">
         <NavbarMenuItem>
           <Link href="/" onClick={() => setIsMenuOpen(false)}>
             Home
