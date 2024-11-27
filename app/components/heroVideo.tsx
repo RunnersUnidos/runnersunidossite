@@ -25,8 +25,8 @@ const HeroVideo = () => {
           <Image
             src={LogoImage.src}
             alt="Logo Image"
-            width={500}
-            height={500}
+            width={600}
+            height={600}
             className="object-contain"
           />
           <p className="text-xl text-white text-center">
