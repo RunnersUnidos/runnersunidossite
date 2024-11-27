@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getPastEvents } from '../lib/functions';
 import dayjs from 'dayjs';
+
 interface PastEvents {
   id: string;
   title: string;
@@ -14,9 +15,10 @@ interface PastEvents {
   description: string;
 }
 
-const PastEventCard = () => {
+const PastEventList = () => {
   const [pastEvents, setPastEvents] = React.useState<PastEvents[]>([]);
   const [loading, setLoading] = useState(false);
+
   useEffect(() => {
     const fetchEvents = async () => {
       setLoading(true);
@@ -34,12 +36,13 @@ const PastEventCard = () => {
       </div>
     );
   }
+
   return (
-    <div className="rounded-lg overflow-hidden shadow-lg bg-white">
+    <div className="flex flex-wrap justify-between gap-6 mt-12">
       {pastEvents.map((event: PastEvents) => (
-        <>
-          <div className="m-3" key={event.id}>
-            <div className="relative h-48 w-full">
+        <div key={event.id} className="w-full md:w-1/3 lg:w-1/4">
+          <div className="flex flex-col">
+            <div className="relative w-full h-48 mb-4 flex justify-center">
               <Image
                 src={event.imageUrl}
                 alt={event.title}
@@ -49,12 +52,12 @@ const PastEventCard = () => {
               />
             </div>
 
-            <div className="px-6 py-4">
-              <h3 className="font-bold text-xl mb-2 text-black">
+            <div className="flex flex-col items-start">
+              <h3 className="font-bold text-2xl text-black mb-2">
                 {event.title}
               </h3>
 
-              <div className="flex items-center gap-2 text-gray-600 mb-2">
+              <div className="flex items-start gap-2 text-gray-600 mb-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5"
@@ -69,14 +72,14 @@ const PastEventCard = () => {
                     d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
                   />
                 </svg>
-                <span className='font-sans'>
+                <span className="font-sans">
                   {event.date
                     ? dayjs(event.date).format('MM/DD/YYYY')
                     : 'No date available'}
                 </span>
               </div>
 
-              <div className="flex items-center gap-2 text-gray-600 mb-3">
+              <div className="flex items-start gap-2 text-gray-600 mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5"
@@ -97,21 +100,23 @@ const PastEventCard = () => {
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
-                <span className='font-sans'>{event.location}</span>
+                <span className="font-sans">{event.location}</span>
               </div>
 
               <Link
-                href={event.link ? event.link : 'No Link Available'}
-                className="btn bg-transparent border-pink-500 font-sans  hover:bg-pink-500 text-black"
+                href={event.link ? event.link : '/'}
+                className="inline-block py-2 px-4 bg-pink-500 text-white font-sans hover:bg-pink-600"
               >
-                View Recap
+                {event.link
+                  ? 'Show Recap'
+                  : `Happening ${dayjs(event.date).format('MM/DD/YYYY')} !`}
               </Link>
             </div>
           </div>
-        </>
+        </div>
       ))}
     </div>
   );
 };
 
-export default PastEventCard;
+export default PastEventList;

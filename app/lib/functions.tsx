@@ -17,7 +17,11 @@ export async function getBeerRunImages() {
 }
 export async function getPastEvents() {
   try {
-    const pastevents = await prisma.pastEvents.findMany();
+    const pastevents = await prisma.pastEvents.findMany({
+      orderBy: {
+        date: 'desc',
+      },
+    });
     return pastevents;
   } catch (error) {
     console.error('Error fetching past events:', error);
