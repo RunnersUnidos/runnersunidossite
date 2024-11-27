@@ -1,14 +1,11 @@
-'use client';
 import React from 'react';
 import Image from 'next/image';
 import LogoImage from '@/public/WHITELOGOPNG.png';
-import { useRouter } from 'next/navigation';
 
 interface Image {
   src: string;
 }
-const HeroVideo = () => {
-  const router = useRouter();
+export default async function HeroVideo() {
   return (
     <div className="relative w-full h-screen overflow-hidden">
       <video
@@ -33,24 +30,8 @@ const HeroVideo = () => {
             A community of runners who come together to share miles, stories,
             and traditions.
           </p>
-          {/* <div className="flex flex-row gap-4">
-            <button
-              className="btn font-sans bg-transparent hover:bg-pink-500 hover:text-black border-pink-500 text-white mt-4 text-center"
-              onClick={() => router.push('/schedule')}
-            >
-              Schedule
-            </button>
-            <button
-              className="btn font-sans hover:bg-transparent bg-pink-500 hover:text-black border-pink-500 text-white mt-4 text-center"
-              onClick={() => router.push('/joinus')}
-            >
-              JoinUs
-            </button>
-          </div> */}
         </div>
       </div>
     </div>
   );
-};
-
-export default HeroVideo;
+}
