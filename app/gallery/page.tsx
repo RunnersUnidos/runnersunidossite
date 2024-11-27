@@ -50,7 +50,7 @@ const Gallery = () => {
         </div>
         <div className="text-center mt-12">
           <Link
-            className="font-sans bg-pink-500 btn hover:bg-primary-dark text-white px-8 py-3 rounded-lg transition-colors duration-200"
+            className="bg-pink-600 text-black hover:bg-pink-700 transition duration-200 ease-in-out py-3 px-8 rounded-lg font-semibold shadow-md transform hover:scale-105"
             href={'/'}
           >
             Back Home
