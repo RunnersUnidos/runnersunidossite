@@ -5,7 +5,7 @@ import { CiInstagram } from 'react-icons/ci';
 import Logo from '@/public/LOGOLONG.png';
 const Footer = () => {
   return (
-    <section className="container bg-white mx-auto lg:max-w-none px-4 py-16">
+    <section className="container bg-white mx-auto lg:max-w-none px-4 ">
       <Image src={DallasSkyline} alt="logo" className="w-full" />
       <div className="flex justify-center flex-col items-center gap-2 mt-4">
         <Image

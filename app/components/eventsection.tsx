@@ -28,12 +28,12 @@ const EventSection = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href={'/events/diadelosmuertos'}
-              className="font-sans btn bg-pink-500 hover:bg-transparent text-black"
+              className="btn font-sans btn-outline btn-secondary"
             >
               View Event Photos
             </Link>
             <Link
-              className="btn font-sans btn-outline btn-secondary"
+              className="font-sans btn bg-pink-500 hover:bg-transparent text-black"
               href={'/events'}
             >
               Events
