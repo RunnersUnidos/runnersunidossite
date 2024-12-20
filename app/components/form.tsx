@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { addUser } from '../lib/functions';
+import { addUser } from '../[locale]/lib/functions';
 import { useMutation } from '@tanstack/react-query';
 import toast from 'react-hot-toast';
 import Image from 'next/image';

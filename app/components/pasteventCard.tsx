@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { getPastEvents } from '../lib/functions';
+import { getPastEvents } from '../[locale]/lib/functions';
 import dayjs from 'dayjs';
 
 interface PastEvents {

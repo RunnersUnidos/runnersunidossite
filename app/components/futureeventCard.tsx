@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { getPastEvents } from '../lib/functions';
-import { getFutureEvents } from '../lib/functions';
+import { getPastEvents } from '../[locale]/lib/functions';
+import { getFutureEvents } from '../[locale]/lib/functions';
 interface FutureEvents {
   id: string;
   title: string;

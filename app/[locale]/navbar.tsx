@@ -12,7 +12,7 @@ import {
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import Logo from '@/public/LOGOLONG.png';
-import Link from 'next/link';
+import { Link } from '@/app/navigation';
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -99,7 +99,7 @@ const NavBar = () => {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarMenu className="bg-transparent text-black flex justify-center text-5xl items-end gap-3 ">
+      {/* <NavbarMenu className="bg-transparent text-black flex justify-center text-5xl items-end gap-3 ">
         <NavbarMenuItem>
           <Link href="/" onClick={() => setIsMenuOpen(false)}>
             Home
@@ -126,7 +126,7 @@ const NavBar = () => {
             </Link>
           </NavbarMenuItem>
         ))}
-      </NavbarMenu>
+      </NavbarMenu> */}
     </Navbar>
   );
 };

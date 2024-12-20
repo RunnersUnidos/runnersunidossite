@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { getBeerRunImages } from '../../lib/functions';
+import { getBeerRunImages } from '../../[locale]/lib/functions';
 import Image from 'next/image';
 import Link from 'next/link';
 interface Image {

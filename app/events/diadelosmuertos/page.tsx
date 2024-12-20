@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { getDiaImages } from '../../lib/functions';
+import { getDiaImages } from '../../[locale]/lib/functions';
 import Image from 'next/image';
 import Link from 'next/link';
 interface Image {

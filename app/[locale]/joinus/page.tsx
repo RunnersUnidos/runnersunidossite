@@ -1,5 +1,5 @@
 import React from 'react';
-import UserForm from '../components/form';
+import UserForm from '../../components/form';
 // import Logo from '@/public/LOGOLONG.png';
 // import Image from 'next/image';
 const JoinUs = () => {
