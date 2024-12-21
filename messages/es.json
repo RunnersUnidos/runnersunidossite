@@ -1,0 +1,16 @@
+{
+  "welcome": "Bienvenido",
+  "logout": "Cerrar sesión",
+  "home": "Inicio",
+  "about": "Acerca de",
+  "contact": "Contacto",
+  "services": "Servicios",
+  "learnMore": "Saber más",
+  "bookNow": "Reservar ahora",
+  "navbar": {
+    "home": "Inicio",
+    "schedule": "Horario",
+    "events": "Eventos",
+    "gallery": "Galería"
+  }
+}

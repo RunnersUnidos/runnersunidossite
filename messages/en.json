@@ -1,0 +1,10 @@
+{
+  "welcome": "Welcome",
+  "logout": "Log out",
+  "navbar": {
+    "home": "Home",
+    "schedule": "Schedule",
+    "events": "Events",
+    "gallery": "Gallery"
+  }
+}

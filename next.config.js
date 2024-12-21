@@ -1,6 +1,10 @@
-/** @type {import('next').NextConfig} */
+const createNextIntlPlugin = require('next-intl/plugin');
+const withVideos = require('next-videos');
 
-const nextConfig = {
+const withNextIntl = createNextIntlPlugin();
+
+/** @type {import('next').NextConfig} */
+const baseConfig = {
   experimental: {
     serverActions: true,
   },
@@ -9,6 +13,5 @@ const nextConfig = {
   },
 };
 
-const withVideos = require('next-videos');
-
-module.exports = withVideos(nextConfig);
+// Apply next-intl first, then next-videos
+module.exports = withVideos(withNextIntl(baseConfig));

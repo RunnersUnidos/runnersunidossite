@@ -2,14 +2,18 @@ import type { Metadata } from 'next';
 import { Inter, Italiana } from 'next/font/google';
 import './globals.css';
 import Providers from '../NextUIProvider';
-import ScrollButton from '../../app/components/scrollbutton';
+import ScrollButton from '../components/scrollbutton';
 import NavBar from './navbar';
 import Footer from './footer';
 import { Toaster } from 'react-hot-toast';
 import QueryProvider from '../QueryProvider';
-import { getMessages } from 'next-intl/server';
 import { ReactNode } from 'react';
 import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import config from '../../../next.config';
+
+import { routing } from '../../i18n/routing';
 // const inter = Inter({ subsets: ['latin'] });
 const italiana = Italiana({ subsets: ['latin'], weight: '400' });
 
@@ -22,11 +26,17 @@ type Props = {
   children: ReactNode;
   params: { locale: string };
 };
-export default async function RootLayout({
+export default async function LocaleLayout({
   children,
   params: { locale },
-}: Props) {
-  const messages = await getMessages({ locale });
+}: {
+  children: React.ReactNode;
+  params: { locale: string };
+}) {
+  if (!routing.locales.includes(locale as any)) {
+    notFound();
+  }
+  const messages = await getMessages();
   return (
     <html lang={locale} suppressHydrationWarning>
       <meta
