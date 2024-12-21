@@ -8,6 +8,8 @@ export const pathnames = {
   '/schedule': '/schedule',
   '/joinus': '/joinus',
   '/events': '/events',
+  '/events/diadelosmuertos': '/events/diadelosmuertos',
+  '/events/beerun': '/events/beerrun',
   '/gallery': '/gallery',
   // Add translations for Spanish routes if needed
   '/es/schedule': '/horario',

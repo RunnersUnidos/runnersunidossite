@@ -1,17 +1,17 @@
 'use client';
 import React, { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { getDiaImages } from '../../[locale]/lib/functions';
+import { getBeerRunImages } from '../lib/functions';
 import Image from 'next/image';
 import Link from 'next/link';
 interface Image {
   id: string;
   imageUrl: string;
 }
-const DiaDelosMuertos = () => {
+const BeerRun = () => {
   const { data: images, isLoading } = useQuery({
-    queryKey: ['diaimages'],
-    queryFn: () => getDiaImages(),
+    queryKey: ['beerimages'],
+    queryFn: () => getBeerRunImages(),
   });
 
   const [visibleImages, setVisibleImages] = useState(3);
@@ -35,15 +35,10 @@ const DiaDelosMuertos = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h1 className="text-3xl font-bold text-primary mb-4">
-            🌙 Fiesta de los Muertos 5k 🏃
+            🍺 2 Mile Beer Run 🏃
           </h1>
           <p className="text-neutral-dark text-lg font-sans">
-            On the evening of November 1st, runners gathered for the Fiesta de
-            los Muertos 5k Night Run, a special event that blended fitness with
-            tradition. Participants honored the memories of loved ones who’ve
-            passed by dedicating their run to them, creating a meaningful
-            tribute with each step. After the race, the Runners Unidos familia
-            came together at{' '}
+            What an amazing day, runners! On October 5th, we teamed up with{' '}
             <a
               href="https://www.goodsurf.co/"
               target="_blank"
@@ -51,9 +46,12 @@ const DiaDelosMuertos = () => {
             >
               @realgoodsurf
             </a>{' '}
-            , to place &quot;ofrendas&quot; on a beautiful community altar,
-            celebrating with music, delicious food, and vibrant activities. The
-            evening was filled with remembrance, joy, and community spirit!
+            for the 2-Mile Beer Dash, and it was a blast! Whether you were
+            sprinting or strolling, the event was all about having fun, enjoying
+            good company, and savoring a well-deserved brew at the finish line.
+            Thanks to everyone who joined us for this unforgettable
+            experience—lets keep the good vibes rolling until next time! Cheers
+            to running, sipping, and riding the wave together!
           </p>
         </div>
 
@@ -95,4 +93,4 @@ const DiaDelosMuertos = () => {
   );
 };
 
-export default DiaDelosMuertos;
+export default BeerRun;

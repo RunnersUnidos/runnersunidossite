@@ -9,7 +9,7 @@ const config: Config = {
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
     './src/app/**/*.{js,ts,jsx,tsx}', // Catch app directory
     './src/app/[locale]/**/*.{js,ts,jsx,tsx}', // Add [locale] folder
-    './src/components/**/*.{js,ts,jsx,tsx}', // Shared components
+    './src/app/components/**/*.{js,ts,jsx,tsx}', // Shared components
   ],
   theme: {
     extend: {

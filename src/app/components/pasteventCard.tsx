@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getPastEvents } from '../[locale]/lib/functions';
 import dayjs from 'dayjs';
-
+import { useLocale } from 'next-intl';
 interface PastEvents {
   id: string;
   title: string;
@@ -17,6 +17,13 @@ interface PastEvents {
 }
 
 const PastEventList = () => {
+  const locale = useLocale();
+
+  const getLocalizedLink = (link: string | null) => {
+    if (!link) return `/${locale}/`; // Fallback to the home page of the current locale
+    return `/${locale}${link}`;
+  };
+
   const [pastEvents, setPastEvents] = React.useState<PastEvents[]>([]);
   const [loading, setLoading] = useState(false);
 
@@ -106,7 +113,7 @@ const PastEventList = () => {
 
               <div className="flex flex-row justify-evenly gap-2">
                 <Link
-                  href={event.link ? event.link : '/'}
+                  href={getLocalizedLink(event.link)}
                   className="bg-pink-600 text-black hover:bg-pink-700 transition duration-200 ease-in-out py-3 px-8 rounded-lg font-semibold shadow-md transform hover:scale-105"
                 >
                   {event.link
@@ -114,7 +121,11 @@ const PastEventList = () => {
                     : `${dayjs(event.date).format('MM/DD/YYYY')}`}
                 </Link>
                 <Link
-                  href={event.instagramUrl ? event.instagramUrl : '/'}
+                  href={
+                    event.instagramUrl
+                      ? `/${locale}${event.instagramUrl}`
+                      : `/${locale}/`
+                  }
                   className="bg-transparent text-black border-2 border-pink-700 transition duration-200 ease-in-out py-3 px-8 rounded-lg font-semibold shadow-md transform hover:scale-105 hover:bg-pink-700 hover:text-white"
                   target="_blank"
                 >
