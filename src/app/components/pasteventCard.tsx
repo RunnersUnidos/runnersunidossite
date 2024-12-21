@@ -20,7 +20,7 @@ const PastEventList = () => {
   const locale = useLocale();
 
   const getLocalizedLink = (link: string | null) => {
-    if (!link) return `/${locale}/`; // Fallback to the home page of the current locale
+    if (!link) return `/${locale}/`;
     return `/${locale}${link}`;
   };
 
