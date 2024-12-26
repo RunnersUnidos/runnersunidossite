@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { getPastEvents } from '../[locale]/lib/functions';
 import dayjs from 'dayjs';
 import { useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
 interface PastEvents {
   id: string;
   title: string;
@@ -18,6 +19,7 @@ interface PastEvents {
 
 const PastEventList = () => {
   const locale = useLocale();
+  const t = useTranslations('Events');
 
   const getLocalizedLink = (link: string | null) => {
     if (!link) return `/${locale}/`;
@@ -117,7 +119,7 @@ const PastEventList = () => {
                   className="bg-pink-600 text-black hover:bg-pink-700 transition duration-200 ease-in-out py-3 px-8 rounded-lg font-semibold shadow-md transform hover:scale-105"
                 >
                   {event.link
-                    ? 'Event Photos'
+                    ? `${t('button1')}`
                     : `${dayjs(event.date).format('MM/DD/YYYY')}`}
                 </Link>
                 <Link
@@ -129,7 +131,7 @@ const PastEventList = () => {
                   className="bg-transparent text-black border-2 border-pink-700 transition duration-200 ease-in-out py-3 px-8 rounded-lg font-semibold shadow-md transform hover:scale-105 hover:bg-pink-700 hover:text-white"
                   target="_blank"
                 >
-                  View Post on Insta
+                  {t('button2')}
                 </Link>
               </div>
             </div>

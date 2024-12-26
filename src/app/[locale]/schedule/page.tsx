@@ -3,7 +3,7 @@ import React from 'react';
 import Trail from '@/public/TrailStrava.jpg';
 import Image from 'next/image';
 import Trail2 from '@/public/StraveRun2.jpg';
-
+import { useTranslations } from 'next-intl';
 interface Image {
   src: string;
 }
@@ -13,7 +13,7 @@ const Schedule = () => {
     lat: 32.774678231491606,
     lng: -96.82203693078834,
   };
-
+  const t = useTranslations('ShedulePage');
   const handleGetDirections = () => {
     window.open(
       `https://www.google.com/maps/dir/?api=1&destination=${center.lat},${center.lng}`,
@@ -25,14 +25,16 @@ const Schedule = () => {
     <div className="max-w-7xl mx-auto px-6 py-12">
       <div className="text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-2">
-          Every Tuesday at 7:00 p.m.
+          {t('title')}
         </h2>
-        <p className="text-lg md:text-xl text-gray-600 mb-2">🏃 2 Miles 🏃‍♀️</p>
-        <p className="text-lg md:text-xl text-gray-600 mb-4">
-          All skills welcome!
+        <p className="text-lg md:text-xl text-gray-600 mb-2">
+          🏃 {t('paragraph1')} 🏃‍♀️
         </p>
         <p className="text-lg md:text-xl text-gray-600 mb-4">
-          Feel free to arrive early to socialize and warm up.
+          {t('paragraph2')}
+        </p>
+        <p className="text-lg md:text-xl text-gray-600 mb-4">
+          {t('paragraph3')}
         </p>
         <ul className="text-lg text-gray-700 mb-6">
           <li>Trinity Overlook Trail</li>
@@ -42,13 +44,13 @@ const Schedule = () => {
           className="bg-pink-600 text-white hover:bg-pink-700 transition duration-200 ease-in-out py-3 px-8 rounded-lg font-semibold shadow-md transform hover:scale-105"
           onClick={handleGetDirections}
         >
-          Get Directions
+          {t('button')}
         </button>
       </div>
 
       <div className="text-center mb-12">
         <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-          Two Options, Same Trail!
+          {t('title2')}
         </h3>
         <div className="flex flex-col lg:flex-row md:flex-row justify-center gap-6">
           <div className="relative w-full md:w-1/2 lg:w-1/3">

@@ -13,19 +13,20 @@ import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import Logo from '@/public/LOGOLONG.png';
 import { Link } from '@/src/app/navigation';
+import { useLocale } from 'next-intl';
+import { AppPathnames } from '@/config';
+
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
-  const menuItems = [
-    // 'La Familia',
-    'Schedule',
-    'Events',
-    // 'Donate',
-    'Gallery',
-    'JoinUs',
-  ];
+  const menuItems = ['Schedule', 'Events', 'Gallery', 'JoinUs'];
+
   const isActive = (path: string) => {
     return pathname === path ? 'border-b-2 border-current' : '';
+  };
+
+  const generateLocalizedPath = (item: string) => {
+    return `/${item.toLowerCase()}` as AppPathnames;
   };
 
   return (
@@ -65,14 +66,6 @@ const NavBar = () => {
             Join Us
           </Link>
         </NavbarItem>
-        {/* <NavbarItem>
-          <Link
-            href="/familia"
-            className={`text-foreground ${isActive('/familia')}`}
-          >
-            La Familia
-          </Link>
-        </NavbarItem> */}
         <NavbarItem>
           <Link
             href="/events"
@@ -81,14 +74,6 @@ const NavBar = () => {
             Events
           </Link>
         </NavbarItem>
-        {/* <NavbarItem>
-          <Link
-            href="/donate"
-            className={`text-foreground ${isActive('/donate')}`}
-          >
-            Donate
-          </Link>
-        </NavbarItem> */}
         <NavbarItem>
           <Link
             href="/gallery"
@@ -112,7 +97,7 @@ const NavBar = () => {
             className="hover:scale-125"
           >
             <Link
-              className={`w-full  ${isActive(`/${item.toLowerCase()}`)}`}
+              className={`w-full ${isActive(`/${item.toLowerCase()}`)}`}
               color={
                 index === 2
                   ? 'warning'
@@ -120,7 +105,7 @@ const NavBar = () => {
                   ? 'danger'
                   : 'foreground'
               }
-              href={`/${item.toLowerCase()}`}
+              href={generateLocalizedPath(item)}
             >
               {item}
             </Link>

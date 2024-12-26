@@ -4,6 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import { getDiaImages } from '../lib/functions';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 interface Image {
   id: string;
   imageUrl: string;
@@ -13,7 +14,7 @@ const DiaDelosMuertos = () => {
     queryKey: ['diaimages'],
     queryFn: () => getDiaImages(),
   });
-
+  const t = useTranslations('DiaDelosMuertos');
   const [visibleImages, setVisibleImages] = useState(3);
   const [buttonClicked, setButtonClicked] = useState(false);
   const [showNewButton, setShowNewButton] = useState(false);
@@ -35,15 +36,10 @@ const DiaDelosMuertos = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h1 className="text-3xl font-bold text-primary mb-4">
-            🌙 Fiesta de los Muertos 5k 🏃
+            🌙 {t('title')} 🏃
           </h1>
           <p className="text-neutral-dark text-lg font-sans">
-            On the evening of November 1st, runners gathered for the Fiesta de
-            los Muertos 5k Night Run, a special event that blended fitness with
-            tradition. Participants honored the memories of loved ones who’ve
-            passed by dedicating their run to them, creating a meaningful
-            tribute with each step. After the race, the Runners Unidos familia
-            came together at{' '}
+            {t('paragraph1')}{' '}
             <a
               href="https://www.goodsurf.co/"
               target="_blank"
@@ -51,9 +47,7 @@ const DiaDelosMuertos = () => {
             >
               @realgoodsurf
             </a>{' '}
-            , to place &quot;ofrendas&quot; on a beautiful community altar,
-            celebrating with music, delicious food, and vibrant activities. The
-            evening was filled with remembrance, joy, and community spirit!
+            {t('paragraph2')}
           </p>
         </div>
 

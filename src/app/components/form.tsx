@@ -6,6 +6,7 @@ import toast from 'react-hot-toast';
 import Image from 'next/image';
 import LogoImage from '@/public/WHITELOGOPNG.png';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 interface User {
   email: string;
   name: string;
@@ -17,7 +18,7 @@ const UserForm = () => {
   const [lastname, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [about, setAbout] = useState('');
-
+  const t = useTranslations('JoinUs');
   const { mutateAsync: addRunner, isSuccess } = useMutation({
     mutationFn: addUser,
   });
@@ -46,9 +47,9 @@ const UserForm = () => {
   return (
     <form className=" max-w-md mx-auto space-y-4 p-4 bg-pink-200 rounded-sm">
       <div>
-        <h1 className="mb-5 text-5xl font-bold text-black">Run With Us!</h1>
+        <h1 className="mb-5 text-5xl font-bold text-black">{t('title')}</h1>
         <label htmlFor="name" className="block text-sm font-medium mb-1">
-          First Name
+          {t('firstname')}
         </label>
         <input
           type="text"
@@ -63,7 +64,7 @@ const UserForm = () => {
 
       <div>
         <label htmlFor="lastName" className="block text-sm font-medium mb-1">
-          Last Name
+          {t('lastname')}
         </label>
         <input
           type="text"
@@ -78,7 +79,7 @@ const UserForm = () => {
 
       <div>
         <label htmlFor="email" className="block text-sm font-medium mb-1">
-          Email
+          {t('email')}
         </label>
         <input
           type="email"
@@ -93,7 +94,7 @@ const UserForm = () => {
 
       <div>
         <label htmlFor="about" className="block text-sm font-medium mb-1">
-          About
+          {t('about')}
         </label>
         <textarea
           id="about"
@@ -128,7 +129,7 @@ const UserForm = () => {
           }
         }}
       >
-        Submit
+        {t('submit')}
       </button>
     </form>
   );

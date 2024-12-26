@@ -1,16 +1,68 @@
 {
-  "welcome": "Bienvenido",
-  "logout": "Cerrar sesión",
-  "home": "Inicio",
-  "about": "Acerca de",
-  "contact": "Contacto",
-  "services": "Servicios",
-  "learnMore": "Saber más",
-  "bookNow": "Reservar ahora",
-  "navbar": {
-    "home": "Inicio",
-    "schedule": "Horario",
-    "events": "Eventos",
-    "gallery": "Galería"
+  "NavBar": {
+    "Home": "Inicio",
+    "Schedule": "Horario",
+    "Join Us": "Únete",
+    "Events": "Eventos",
+    "Gallery": "Galería"
+  },
+  "Hero": {
+    "HeroTitle": "Una comunidad de corredores que se unen para compartir millas, historias y tradiciones."
+  },
+  "LaFamilia": {
+    "title": "La Familia",
+    "paragraph": "Más que corredores, somos familia. Cada martes por la tarde, nuestra comunidad se reúne para compartir millas, historias y tradiciones. Desde corredores principiantes hasta maratonistas experimentados, recibimos a todos con la calidez y el apoyo que define nuestra cultura.",
+    "button1": "Ver Fotos",
+    "button2": "Únete a Nuestra Próxima Carrera"
+  },
+  "RunSchedule": {
+    "title": "Programa de Ejecución",
+    "address": "Trinity Overlook Trail 110 W Commerce Street",
+    "blocktitle": "Carrera de los Martes",
+    "blockparagraph": "7:00 PM - Todos los niveles son bienvenidos",
+    "button": "Obtener Direcciones"
+  },
+  "DiaDeLosMuertos": {
+    "title": "Día de los Muertos 5K",
+    "paragraph": "Nuestra comunidad se reunió para honrar y recordar a nuestros seres queridos en una hermosa celebración de la vida durante nuestro evento 5K.",
+    "button1": "Ver Fotos del Evento",
+    "button2": "Eventos"
+  },
+  "ShedulePage": {
+    "title": "Todos los Martes a las 7:00 p.m.",
+    "paragraph1": "2 Millas",
+    "paragraph2": "¡Todos los niveles son bienvenidos!",
+    "paragraph3": "Siéntete libre de llegar temprano para socializar y calentar.",
+    "address1": "Trinity Overlook Trail",
+    "address2": "110 W Commerce Street",
+    "button": "Obtener Direcciones",
+    "title2": "¡Dos Opciones, Mismo Camino!"
+  },
+  "JoinUs": {
+    "title": "Corre con nosotros!",
+    "firstname": "Nombre",
+    "lastname": "Apellido",
+    "email": "Correo Electrónico",
+    "about": "Acerca de",
+    "submit": "Enviar"
+  },
+  "Events": {
+    "button1": "Fotos del Evento",
+    "button2": "Ver Publicación en Insta"
+  },
+  "Gallery": {
+    "title": "Galería",
+    "paragraph": "Capturando momentos y memorias de nuestra comunidad de corredores",
+    "backhome": "Pagina de Inicio"
+  },
+  "DiaDelosMuertos": {
+    "title": "Día de los Muertos 5K",
+    "paragraph1": "En la noche del 1 de noviembre, los corredores se reunieron para la Fiesta de los Muertos 5k Night Run, un evento especial que combinó el ejercicio con la tradición. Los participantes honraron la memoria de sus seres queridos que han partido dedicándoles su carrera, creando un significativo tributo con cada paso. Después de la carrera, la familia de Runners Unidos se reunió en",
+    "paragraph2": "para colocar ofrendas en un hermoso altar comunitario, celebrando con música, deliciosa comida y actividades vibrantes. ¡La noche estuvo llena de recuerdos, alegría y espíritu comunitario!"
+  },
+  "BeerRun": {
+    "title": "Carrera de Cerveza de 2 Millas",
+    "paragraph1": "¡Qué día tan increíble, corredores! El 5 de octubre, nos unimos con",
+    "paragraph2": "para la Carrera de Cerveza de 2 Millas, ¡y fue increíble! Ya sea que estuvieras corriendo o caminando, el evento fue todo sobre divertirse, disfrutar de buena compañía y saborear una merecida cerveza en la meta. ¡Gracias a todos los que se unieron a nosotros para esta experiencia inolvidable—mantengamos las buenas vibras hasta la próxima vez! ¡Salud por correr, beber y disfrutar juntos!"
   }
 }

@@ -1,11 +1,13 @@
+'use client';
 import React from 'react';
 import Image from 'next/image';
 import LogoImage from '@/public/WHITELOGOPNG.png';
-
+import { useTranslations } from 'next-intl';
 interface Image {
   src: string;
 }
-export default async function HeroVideo() {
+const HeroVideo = () => {
+  const t = useTranslations('Hero');
   return (
     <div className="relative w-full h-screen overflow-hidden">
       <video
@@ -26,12 +28,11 @@ export default async function HeroVideo() {
             height={600}
             className="object-contain"
           />
-          <p className="text-xl text-white text-center">
-            A community of runners who come together to share miles, stories,
-            and traditions.
-          </p>
+          <p className="text-xl text-white text-center">{t('HeroTitle')}</p>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default HeroVideo;

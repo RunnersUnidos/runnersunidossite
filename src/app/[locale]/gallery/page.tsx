@@ -4,6 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import { getImages } from '../lib/functions';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 interface Image {
   id: string;
   title: string | null;
@@ -14,7 +15,7 @@ const Gallery = () => {
     queryKey: ['images'],
     queryFn: () => getImages(),
   });
-
+  const t = useTranslations('Gallery');
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-screen">
@@ -27,9 +28,9 @@ const Gallery = () => {
     <div className="min-h-screen bg-neutral-light/5 py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-primary mb-4">Gallery</h1>
+          <h1 className="text-4xl font-bold text-primary mb-4">{t('title')}</h1>
           <p className="font-sans text-neutral-dark text-lg">
-            Capturing moments and memories from our running community
+            {t('paragraph')}
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -53,7 +54,7 @@ const Gallery = () => {
             className="bg-pink-600 text-black hover:bg-pink-700 transition duration-200 ease-in-out py-3 px-8 rounded-lg font-semibold shadow-md transform hover:scale-105"
             href={'/'}
           >
-            Back Home
+           {t('backhome')}
           </Link>
         </div>
       </div>

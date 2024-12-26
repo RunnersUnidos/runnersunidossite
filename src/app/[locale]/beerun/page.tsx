@@ -4,6 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import { getBeerRunImages } from '../lib/functions';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 interface Image {
   id: string;
   imageUrl: string;
@@ -13,6 +14,8 @@ const BeerRun = () => {
     queryKey: ['beerimages'],
     queryFn: () => getBeerRunImages(),
   });
+
+  const t = useTranslations('BeerRun');
 
   const [visibleImages, setVisibleImages] = useState(3);
   const [buttonClicked, setButtonClicked] = useState(false);
@@ -35,10 +38,10 @@ const BeerRun = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h1 className="text-3xl font-bold text-primary mb-4">
-            🍺 2 Mile Beer Run 🏃
+            🍺 {t('title')} 🏃
           </h1>
           <p className="text-neutral-dark text-lg font-sans">
-            What an amazing day, runners! On October 5th, we teamed up with{' '}
+            {t('paragraph1')}{' '}
             <a
               href="https://www.goodsurf.co/"
               target="_blank"
@@ -46,12 +49,7 @@ const BeerRun = () => {
             >
               @realgoodsurf
             </a>{' '}
-            for the 2-Mile Beer Dash, and it was a blast! Whether you were
-            sprinting or strolling, the event was all about having fun, enjoying
-            good company, and savoring a well-deserved brew at the finish line.
-            Thanks to everyone who joined us for this unforgettable
-            experience—lets keep the good vibes rolling until next time! Cheers
-            to running, sipping, and riding the wave together!
+            {t('paragraph2')}
           </p>
         </div>
 

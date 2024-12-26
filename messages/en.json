@@ -1,10 +1,68 @@
 {
-  "welcome": "Welcome",
-  "logout": "Log out",
-  "navbar": {
-    "home": "Home",
-    "schedule": "Schedule",
-    "events": "Events",
-    "gallery": "Gallery"
+  "NavBar": {
+    "Home": "Home",
+    "Schedule": "Schedule",
+    "Join Us": "Join Us",
+    "Events": "Events",
+    "Gallery": "Gallery"
+  },
+  "Hero": {
+    "HeroTitle": "A community of runners who come together to share miles, stories, and traditions."
+  },
+  "LaFamilia": {
+    "title": "La Famila",
+    "paragraph": "More than just runners, somos familia. Every Tuesday evening, our community comes together to share miles, stories, and traditions. From first-time runners to seasoned marathoners, we embrace everyone with the warmth and support that defines our cultura.",
+    "button1": "View Photos",
+    "button2": "Join Our Next Run"
+  },
+  "RunSchedule": {
+    "title": "Run Schedule",
+    "address": "Trinity Overlook Trail 110 W Commerce Street",
+    "blocktitle": "Tuesday Evening Run",
+    "blockparagraph": "7:00 PM - All levels welcome",
+    "button": "Get Directions"
+  },
+  "DiaDeLosMuertos": {
+    "title": "Dia de los Muertos 5K",
+    "paragraph": "Our community came together to honor and remember our loved ones in a beautiful celebration of life during our 5K event.",
+    "button1": "View Event Photos",
+    "button2": "Events"
+  },
+  "ShedulePage": {
+    "title": "Every Tuesday at 7:00 p.m.",
+    "paragraph1": "2 Miles",
+    "paragraph2": "All skills welcome!",
+    "paragraph3": "Feel free to arrive early to socialize and warm up.",
+    "address1": "Trinity Overlook Trail",
+    "address2": "110 W Commerce Street",
+    "button": "Get Directions",
+    "title2": "Two Options, Same Trail!"
+  },
+  "JoinUs": {
+    "title": "Run With Us!",
+    "firstname": "First Name",
+    "lastname": "Last Name",
+    "email": "Email",
+    "about": "About",
+    "submit": "Submit"
+  },
+  "Events": {
+    "button1": "Event Photos",
+    "button2": "View Post on Insta"
+  },
+  "Gallery": {
+    "title": "Gallery",
+    "paragraph": "Capturing moments and memories from our running community",
+    "backhome": "Home"
+  },
+  "DiaDelosMuertos": {
+    "title": "Dia de los Muertos 5K",
+    "paragraph1": "On the evening of November 1st, runners gathered for the Fiesta de los Muertos 5k Night Run, a special event that blended fitness with tradition. Participants honored the memories of loved ones who’ve passed by dedicating their run to them, creating a meaningful tribute with each step. After the race, the Runners Unidos familia came together at",
+    "paragraph2": "to place ofrendas on a beautiful community altar, celebrating with music, delicious food, and vibrant activities. The evening was filled with remembrance, joy, and community spirit!"
+  },
+  "BeerRun": {
+    "title": "2 Mile Beer Run",
+    "paragraph1": "What an amazing day, runners! On October 5th, we teamed up with",
+    "paragraph2": "for the 2-Mile Beer Dash, and it was a blast! Whether you were sprinting or strolling, the event was all about having fun, enjoying good company, and savoring a well-deserved brew at the finish line. Thanks to everyone who joined us for this unforgettable experience—lets keep the good vibes rolling until next time! Cheers to running, sipping, and riding the wave together!"
   }
 }
