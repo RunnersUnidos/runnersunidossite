@@ -15,6 +15,7 @@ import Logo from '@/public/LOGOLONG.png';
 import { Link } from '@/src/app/navigation';
 import { useLocale } from 'next-intl';
 import { AppPathnames } from '@/config';
+import LocaleSwitcher from '../components/LocaleSwitcher';
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,6 +36,7 @@ const NavBar = () => {
         <NavbarMenuToggle
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
         />
+        <LocaleSwitcher />
       </NavbarContent>
       <NavbarBrand>
         <Link href={'/'} onClick={() => setIsMenuOpen(false)}>
