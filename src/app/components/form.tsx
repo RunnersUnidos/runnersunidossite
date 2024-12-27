@@ -59,7 +59,7 @@ const UserForm = () => {
   }
 
   return (
-    <div className="w-full max-w-2xl mx-auto px-4 py-8 md:py-12">
+    <div className="w-full max-w-2xl mx-auto px-4 py-8 md:py-12 z-[301]">
       <form className="space-y-6 bg-gradient-to-b from-pink-200 to-pink-100 p-6 md:p-8 rounded-lg shadow-lg">
         <div className="text-center mb-8">
           <h1 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4">
