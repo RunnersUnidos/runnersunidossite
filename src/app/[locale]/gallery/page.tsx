@@ -4,13 +4,14 @@ import { useQuery } from '@tanstack/react-query';
 import { getImages } from '../lib/functions';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 interface Image {
   id: string;
   title: string | null;
   imageUrl: string;
 }
 const Gallery = () => {
+  const locale = useLocale();
   const { data: images, isLoading } = useQuery({
     queryKey: ['images'],
     queryFn: () => getImages(),
@@ -51,10 +52,10 @@ const Gallery = () => {
         </div>
         <div className="text-center mt-12">
           <Link
-            className="bg-pink-600 text-black hover:bg-pink-700 transition duration-200 ease-in-out py-3 px-8 rounded-lg font-semibold shadow-md transform hover:scale-105"
-            href={'/'}
+            className="bg-pink-300 text-black hover:bg-pink-700 transition duration-200 ease-in-out py-3 px-8 rounded-lg font-semibold shadow-md transform hover:scale-105"
+            href="/events"
           >
-           {t('backhome')}
+            {t('moreevents')}
           </Link>
         </div>
       </div>
