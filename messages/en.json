@@ -44,7 +44,10 @@
     "lastname": "Last Name",
     "email": "Email",
     "about": "About",
-    "submit": "Submit"
+    "submit": "Submit",
+    "thankyou": "  Thank you for Joining Runners Unidos! See you soon!",
+    "button1": "Gallery",
+    "error": "Email has been submitted once already!"
   },
   "Events": {
     "button1": "Event Photos",

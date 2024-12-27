@@ -7,131 +7,183 @@ import Image from 'next/image';
 import LogoImage from '@/public/WHITELOGOPNG.png';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+
 interface User {
   email: string;
   name: string;
   lastName: string;
   about: string;
 }
+
 const UserForm = () => {
   const [name, setName] = useState('');
   const [lastname, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [about, setAbout] = useState('');
   const t = useTranslations('JoinUs');
-  const { mutateAsync: addRunner, isSuccess } = useMutation({
+
+  const {
+    mutateAsync: addRunner,
+    isSuccess,
+    isError,
+    error,
+  } = useMutation({
     mutationFn: addUser,
   });
 
   if (isSuccess) {
-    toast.success('Thank you for Joining Runners Unidos!');
     return (
-      <div className="h-screen flex flex-col justify-center items-center gap-4">
-        <h2>Thank you for Joining Runners Unidos! See you soon!</h2>
+      <div className="min-h-[80vh] flex flex-col justify-center items-center gap-6 px-4">
+        <h2 className="text-2xl md:text-3xl text-center font-bold">
+          {t('thankyou')}
+        </h2>
         <Link
-          className="font-sans bg-pink-500 btn hover:bg-primary-dark text-white px-8 py-3 rounded-lg transition-colors duration-200"
+          className="font-sans bg-pink-500 btn hover:bg-pink-600 text-white px-8 py-3 rounded-lg transition-colors duration-200"
           href={'/gallery'}
         >
-          View Gallery
+          {t('button1')}
         </Link>
         <Image
           src={LogoImage.src}
           alt="Logo Image"
           width={200}
           height={200}
-          className=""
+          className="mt-4"
         />
       </div>
     );
   }
+
+  if (isError && error) {
+    toast.error(`${t('error')}`);
+  }
+
   return (
-    <form className=" max-w-md mx-auto space-y-4 p-4 bg-pink-200 rounded-sm">
-      <div>
-        <h1 className="mb-5 text-5xl font-bold text-black">{t('title')}</h1>
-        <label htmlFor="name" className="block text-sm font-medium mb-1">
-          {t('firstname')}
-        </label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          className="w-full px-3 py-2 border rounded-md"
-          required
-        />
-      </div>
+    <div className="w-full max-w-2xl mx-auto px-4 py-8 md:py-12">
+      <form className="space-y-6 bg-gradient-to-b from-pink-200 to-pink-100 p-6 md:p-8 rounded-lg shadow-lg">
+        <div className="text-center mb-8">
+          <h1 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4">
+            {t('title')}
+          </h1>
+          <div className="w-20 h-1 bg-pink-500 mx-auto"></div>
+        </div>
 
-      <div>
-        <label htmlFor="lastName" className="block text-sm font-medium mb-1">
-          {t('lastname')}
-        </label>
-        <input
-          type="text"
-          id="lastName"
-          name="lastName"
-          value={lastname}
-          onChange={(e) => setLastName(e.target.value)}
-          className="w-full px-3 py-2 border rounded-md"
-          required
-        />
-      </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="form-group">
+            <label
+              htmlFor="name"
+              className="block text-gray-700 font-semibold mb-2"
+            >
+              {t('firstname')}
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-200"
+              required
+            />
+          </div>
 
-      <div>
-        <label htmlFor="email" className="block text-sm font-medium mb-1">
-          {t('email')}
-        </label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="w-full px-3 py-2 border rounded-md"
-          required
-        />
-      </div>
+          <div className="form-group">
+            <label
+              htmlFor="lastName"
+              className="block text-gray-700 font-semibold mb-2"
+            >
+              {t('lastname')}
+            </label>
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              value={lastname}
+              onChange={(e) => setLastName(e.target.value)}
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-200"
+              required
+            />
+          </div>
+        </div>
 
-      <div>
-        <label htmlFor="about" className="block text-sm font-medium mb-1">
-          {t('about')}
-        </label>
-        <textarea
-          id="about"
-          name="about"
-          value={about}
-          onChange={(e) => setAbout(e.target.value)}
-          className="w-full px-3 py-2 border rounded-md"
-          rows={4}
-          required
-        />
-      </div>
+        <div className="form-group">
+          <label
+            htmlFor="email"
+            className="block text-gray-700 font-semibold mb-2"
+          >
+            {t('email')}
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-200"
+            required
+          />
+        </div>
 
-      <button
-        type="submit"
-        className="btn font-sans w-auto bg-transparent border-pink-500 hover:bg-pink-500 text-black"
-        onClick={async (e) => {
-          e.preventDefault();
-          try {
-            await addRunner({
-              email,
-              lastName: lastname,
-              about,
-              name,
-            });
-            window.scrollTo(0, 0);
-            setAbout('');
-            setName('');
-            setEmail('');
-            setLastName('');
-          } catch (e) {
-            toast.error('Failed to add User');
-          }
-        }}
-      >
-        {t('submit')}
-      </button>
-    </form>
+        <div className="form-group">
+          <label
+            htmlFor="about"
+            className="block text-gray-700 font-semibold mb-2"
+          >
+            {t('about')}
+          </label>
+          <textarea
+            id="about"
+            name="about"
+            value={about}
+            onChange={(e) => setAbout(e.target.value)}
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-200"
+            rows={4}
+            required
+          />
+        </div>
+
+        <button
+          type="submit"
+          className="w-full md:w-auto px-8 py-3 bg-pink-500 hover:bg-pink-600 text-white font-semibold rounded-lg transition-colors duration-200 transform hover:scale-105"
+          onClick={async (e) => {
+            e.preventDefault();
+            if (!name) {
+              toast.error('Please enter your first name');
+              return;
+            }
+            if (!lastname) {
+              toast.error('Please enter your last name');
+              return;
+            }
+            if (!email) {
+              toast.error('Please enter your email');
+              return;
+            }
+            try {
+              const response = await addRunner({
+                email,
+                lastName: lastname,
+                about,
+                name,
+              });
+              if ('error' in response) {
+                toast.error(response.error);
+                return;
+              }
+              window.scrollTo(0, 0);
+              setAbout('');
+              setName('');
+              setEmail('');
+              setLastName('');
+            } catch (e) {
+              toast.error('Failed to add User');
+            }
+          }}
+        >
+          {t('submit')}
+        </button>
+      </form>
+    </div>
   );
 };
 

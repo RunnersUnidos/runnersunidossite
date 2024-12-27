@@ -28,7 +28,7 @@ const EventSection = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href={`${locale}/diadelosmuertos`}
-              className="btn font-sans btn-outline btn-secondary"
+              className="btn text-black font-sans btn-outline"
             >
               {t('button1')}
             </Link>

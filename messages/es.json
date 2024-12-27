@@ -44,7 +44,10 @@
     "lastname": "Apellido",
     "email": "Correo Electrónico",
     "about": "Acerca de",
-    "submit": "Enviar"
+    "submit": "Enviar",
+    "thankyou": "¡Gracias por unirte a Runners Unidos! ¡Nos vemos pronto!",
+    "button1": "Galería",
+    "error": "Correo electrónico ya se envió una vez!"
   },
   "Events": {
     "button1": "Fotos del Evento",

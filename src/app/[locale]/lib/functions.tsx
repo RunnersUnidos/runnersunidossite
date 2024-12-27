@@ -46,6 +46,14 @@ export async function addUser(user: {
   about: string;
 }) {
   try {
+    const member = await prisma.user.findUnique({
+      where: { email: user.email },
+    });
+
+    if (member) {
+      throw new Error('User with this email already exists');
+    }
+
     const newUser = await prisma.user.create({
       data: {
         email: user.email,
@@ -54,9 +62,10 @@ export async function addUser(user: {
         about: user.about,
       },
     });
+
     return newUser;
   } catch (error) {
-    console.error('Error creating User', error);
+    console.error('Error creating user:', error);
     throw error;
   }
 }

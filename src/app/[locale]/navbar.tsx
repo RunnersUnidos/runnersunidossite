@@ -28,7 +28,7 @@ const NavBar = () => {
   };
 
   const generateLocalizedPath = (item: string) => {
-    return `/${item.toLowerCase()}` as AppPathnames;
+    return `/${item.toLowerCase().replace(/\s+/g, '')}` as AppPathnames;
   };
 
   return (

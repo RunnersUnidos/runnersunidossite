@@ -31,7 +31,7 @@ const ScheduleSection = () => {
       <div className="grid lg:grid-cols-2 gap-8 items-center">
         {/* First Column */}
         <div className="text-neutral-dark">
-          <h1 className="mb-8 text-5xl font-bold text-primary">{t('title')}</h1>
+          <h1 className="mb-8 text-5xl font-bold">{t('title')}</h1>
           <div className="font-sans space-y-4">
             <ul className="text-2xl">
               <li>Trinity Overlook Trail</li>
