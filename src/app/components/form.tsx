@@ -37,12 +37,12 @@ const UserForm = () => {
         <h2 className="text-2xl md:text-3xl text-center font-bold">
           {t('thankyou')}
         </h2>
-        <Link
+        {/* <Link
           className="font-sans bg-pink-500 btn hover:bg-pink-600 text-white px-8 py-3 rounded-lg transition-colors duration-200"
           href={'/gallery'}
         >
           {t('button1')}
-        </Link>
+        </Link> */}
         <Image
           src={LogoImage.src}
           alt="Logo Image"
