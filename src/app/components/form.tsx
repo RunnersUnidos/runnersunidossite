@@ -148,15 +148,15 @@ const UserForm = () => {
           onClick={async (e) => {
             e.preventDefault();
             if (!name) {
-              toast.error('Please enter your first name' as string);
+              toast.error(`${t('namerror')}` as string);
               return;
             }
             if (!lastname) {
-              toast.error('Please enter your last name' as string);
+              toast.error(`${t('lasterror')}` as string);
               return;
             }
             if (!email) {
-              toast.error('Please enter your email' as string);
+              toast.error(`${t('emailerror')}` as string);
               return;
             }
             try {

@@ -47,7 +47,10 @@
     "submit": "Enviar",
     "thankyou": "¡Gracias por unirte a Runners Unidos! ¡Nos vemos pronto!",
     "button1": "Galería",
-    "error": "Correo electrónico ya se envió una vez!"
+    "error": "Correo electrónico ya se envió una vez!",
+    "namerror": "Por favor, ingrese su nombre",
+    "lasterror": "Por favor, ingrese su apellido",
+    "emailerror": "Por favor, ingrese su correo electrónico"
   },
   "Events": {
     "button1": "Fotos del Evento",

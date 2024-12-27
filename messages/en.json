@@ -47,7 +47,10 @@
     "submit": "Submit",
     "thankyou": "  Thank you for Joining Runners Unidos! See you soon!",
     "button1": "Gallery",
-    "error": "Email has been submitted once already!"
+    "error": "Email has been submitted once already!",
+    "namerror": "Please input your first Name",
+    "lasterror": "Please input your last Name",
+    "emailerror": "Please input your email"
   },
   "Events": {
     "button1": "Event Photos",
