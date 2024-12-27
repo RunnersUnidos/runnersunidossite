@@ -58,11 +58,15 @@
   "DiaDelosMuertos": {
     "title": "Día de los Muertos 5K",
     "paragraph1": "En la noche del 1 de noviembre, los corredores se reunieron para la Fiesta de los Muertos 5k Night Run, un evento especial que combinó el ejercicio con la tradición. Los participantes honraron la memoria de sus seres queridos que han partido dedicándoles su carrera, creando un significativo tributo con cada paso. Después de la carrera, la familia de Runners Unidos se reunió en",
-    "paragraph2": "para colocar ofrendas en un hermoso altar comunitario, celebrando con música, deliciosa comida y actividades vibrantes. ¡La noche estuvo llena de recuerdos, alegría y espíritu comunitario!"
+    "paragraph2": "para colocar ofrendas en un hermoso altar comunitario, celebrando con música, deliciosa comida y actividades vibrantes. ¡La noche estuvo llena de recuerdos, alegría y espíritu comunitario!",
+    "button1": "Cargar más fotos",
+    "button2": "Pagina de Inicio"
   },
   "BeerRun": {
     "title": "Carrera de Cerveza de 2 Millas",
     "paragraph1": "¡Qué día tan increíble, corredores! El 5 de octubre, nos unimos con",
-    "paragraph2": "para la Carrera de Cerveza de 2 Millas, ¡y fue increíble! Ya sea que estuvieras corriendo o caminando, el evento fue todo sobre divertirse, disfrutar de buena compañía y saborear una merecida cerveza en la meta. ¡Gracias a todos los que se unieron a nosotros para esta experiencia inolvidable—mantengamos las buenas vibras hasta la próxima vez! ¡Salud por correr, beber y disfrutar juntos!"
+    "paragraph2": "para la Carrera de Cerveza de 2 Millas, ¡y fue increíble! Ya sea que estuvieras corriendo o caminando, el evento fue todo sobre divertirse, disfrutar de buena compañía y saborear una merecida cerveza en la meta. ¡Gracias a todos los que se unieron a nosotros para esta experiencia inolvidable—mantengamos las buenas vibras hasta la próxima vez! ¡Salud por correr, beber y disfrutar juntos!",
+    "button1": "Cargar más fotos",
+    "button2": "Pagina de Inicio"
   }
 }

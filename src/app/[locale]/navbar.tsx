@@ -16,12 +16,13 @@ import { Link } from '@/src/app/navigation';
 import { useLocale } from 'next-intl';
 import { AppPathnames } from '@/config';
 import LocaleSwitcher from '../components/LocaleSwitcher';
+import { useTranslations } from 'next-intl';
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
-  const menuItems = ['Schedule', 'Events', 'Gallery', 'JoinUs'];
-
+  const menuItems = ['Schedule', 'Events', 'Gallery', 'Join Us'];
+  const t = useTranslations('NavBar');
   const isActive = (path: string) => {
     return pathname === path ? 'border-b-2 border-current' : '';
   };
@@ -57,7 +58,7 @@ const NavBar = () => {
             href="/schedule"
             className={`text-foreground ${isActive('/schedule')}`}
           >
-            Schedule
+            {t('Schedule')}
           </Link>
         </NavbarItem>
         <NavbarItem>
@@ -65,7 +66,7 @@ const NavBar = () => {
             href="/joinus"
             className={`text-foreground ${isActive('/joinus')}`}
           >
-            Join Us
+            {t('Join Us')}
           </Link>
         </NavbarItem>
         <NavbarItem>
@@ -73,7 +74,7 @@ const NavBar = () => {
             href="/events"
             className={`text-foreground ${isActive('/events')}`}
           >
-            Events
+            {t('Events')}
           </Link>
         </NavbarItem>
         <NavbarItem>
@@ -81,7 +82,7 @@ const NavBar = () => {
             href="/gallery"
             className={`text-foreground ${isActive('/gallery')}`}
           >
-            Gallery
+            {t('Gallery')}
           </Link>
         </NavbarItem>
       </NavbarContent>
@@ -89,7 +90,7 @@ const NavBar = () => {
       <NavbarMenu className="bg-transparent text-black flex justify-center text-5xl items-end gap-3 ">
         <NavbarMenuItem>
           <Link href="/" onClick={() => setIsMenuOpen(false)}>
-            Home
+            {t('Home')}
           </Link>
         </NavbarMenuItem>
         {menuItems.map((item, index) => (
@@ -109,7 +110,7 @@ const NavBar = () => {
               }
               href={generateLocalizedPath(item)}
             >
-              {item}
+              {t(item)}
             </Link>
           </NavbarMenuItem>
         ))}
