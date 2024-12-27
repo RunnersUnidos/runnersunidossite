@@ -20,7 +20,7 @@ const LocaleSwitcher = () => {
     <div>
       <button
         onClick={handleLocaleChange}
-        className="btn bg-transparent text-black"
+        className="btn bg-transparent hover:bg-pink-500 text-black"
       >
         {locale === 'en' ? 'Cambiar a español' : 'Switch to English'}
       </button>

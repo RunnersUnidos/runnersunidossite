@@ -54,6 +54,9 @@ const NavBar = () => {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
+          <LocaleSwitcher />
+        </NavbarItem>
+        <NavbarItem>
           <Link
             href="/schedule"
             className={`text-foreground ${isActive('/schedule')}`}
