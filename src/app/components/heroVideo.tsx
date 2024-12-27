@@ -11,7 +11,7 @@ const HeroVideo = () => {
   return (
     <div className="relative w-full h-screen overflow-hidden">
       <video
-        src="https://runnerunidos.s3.us-east-2.amazonaws.com/RunnersUnidosEdited.mp4"
+        src="https://runnerunidos.s3.us-east-2.amazonaws.com/BeerRun/RunnersUnidosEdited.mp4"
         autoPlay
         playsInline
         loop

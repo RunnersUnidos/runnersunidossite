@@ -16,7 +16,11 @@ const Footer = () => {
           className="rounded-lg object-cover"
           quality={100}
         />
-        <a href="https://www.instagram.com/runnersunidos" target="_blank">
+        <a
+          href="https://www.instagram.com/runnersunidos"
+          aria-label="Running Club Instagram Account"
+          target="_blank"
+        >
           <CiInstagram className="text-4xl text-orange-400" />
         </a>
       </div>
@@ -27,6 +31,7 @@ const Footer = () => {
             href="https://www.osworld.dev/"
             className="hover:underline"
             target="_blank"
+            aria-label="Developers Website"
           >
             Created by Os World
           </a>

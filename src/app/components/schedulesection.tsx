@@ -38,7 +38,7 @@ const ScheduleSection = () => {
               <li> 📌 110 W Commerce Street</li>
             </ul>
             <div className="p-4 border-l-4 border-secondary bg-orange-400 shadow-md">
-              <h3 className="font-bold text-lg">{t('blocktitle')}</h3>
+              <h2 className="font-bold text-lg">{t('blocktitle')}</h2>
               <p className="text-neutral">{t('blockparagraph')}</p>
             </div>
             <button
