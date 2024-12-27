@@ -55,7 +55,7 @@ const UserForm = () => {
   }
 
   if (isError && error) {
-    toast.error(`${t('error')}`);
+    toast.error(t('error') as string);
   }
 
   return (
@@ -148,15 +148,15 @@ const UserForm = () => {
           onClick={async (e) => {
             e.preventDefault();
             if (!name) {
-              toast.error('Please enter your first name');
+              toast.error('Please enter your first name' as string);
               return;
             }
             if (!lastname) {
-              toast.error('Please enter your last name');
+              toast.error('Please enter your last name' as string);
               return;
             }
             if (!email) {
-              toast.error('Please enter your email');
+              toast.error('Please enter your email' as string);
               return;
             }
             try {
@@ -167,7 +167,7 @@ const UserForm = () => {
                 name,
               });
               if ('error' in response) {
-                toast.error(response.error);
+                toast.error(response.error as string);
                 return;
               }
               window.scrollTo(0, 0);
@@ -176,7 +176,7 @@ const UserForm = () => {
               setEmail('');
               setLastName('');
             } catch (e) {
-              toast.error('Failed to add User');
+              toast.error('Failed to add User' as string);
             }
           }}
         >
