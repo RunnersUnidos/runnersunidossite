@@ -10,6 +10,30 @@ interface Image {
   title: string | null;
   imageUrl: string;
 }
+
+export const metadata = {
+  title: 'Gallery - Runners Unidos',
+  description:
+    'Explore the moments captured at Runners Unidos events. Check out our gallery filled with vibrant photos of our running community in action!',
+  openGraph: {
+    title: 'Gallery - Runners Unidos',
+    description:
+      'Step into the world of Runners Unidos through our gallery. Browse photos showcasing the energy, passion, and camaraderie of our running events!',
+    url: 'https://runnersunidos.com/gallery',
+    type: 'website',
+    images: [
+      {
+        url: 'https://runnerunidos.s3.us-east-2.amazonaws.com/Run/run29.jpg',
+        alt: 'Gallery Preview of Runners Unidos Events',
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: 'en_US',
+    siteName: 'Runners Unidos',
+  },
+};
+
 const Gallery = () => {
   const { data: images, isLoading } = useQuery({
     queryKey: ['images'],
