@@ -9,7 +9,12 @@ const nextConfig = {
     serverActions: true,
   },
   images: {
-    domains: ['images.pexels.com', 'runnerunidos.s3.us-east-2.amazonaws.com'],
+    domains: [
+      'images.pexels.com',
+      'runnerunidos.s3.us-east-2.amazonaws.com',
+      'beerunevent.s3.amazonaws.com',
+      'diademuertosevent.s3.amazonaws.com',
+    ],
   },
   env: {
     _next_intl_trailing_slash: '',

@@ -54,14 +54,14 @@ const BeerRun = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {images?.slice(0, visibleImages).map((image: Image) => (
+          {images?.slice(2, visibleImages).map((image) => (
             <div
-              key={image.id}
+              key={image.imageUrl}
               className="group relative aspect-square overflow-hidden rounded-lg shadow-lg transition-transform hover:scale-[1.02]"
             >
               <Image
                 src={image.imageUrl}
-                alt="Dia De Los Muertos Images"
+                alt="Beer Run Images"
                 fill
                 className="object-cover transition-transform group-hover:scale-110"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

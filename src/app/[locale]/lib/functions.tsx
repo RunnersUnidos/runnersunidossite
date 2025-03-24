@@ -1,20 +1,59 @@
 'use server';
 import prisma from '../../prisma';
+import { S3Client, ListObjectsV2Command } from '@aws-sdk/client-s3';
 
+const s3 = new S3Client({ region: `${process.env.AWS_REGION}` });
+
+const folderPrefix = 'Images/';
+
+export async function getBeerRunImages() {
+  const command = new ListObjectsV2Command({
+    Bucket: 'beerunevent',
+    Prefix: folderPrefix,
+  });
+
+  try {
+    const response = await s3.send(command);
+    return (
+      response.Contents?.map((file) => ({
+        id: file.Key,
+        imageUrl: `https://beerunevent.s3.amazonaws.com/${file.Key}`,
+      })) || []
+    );
+  } catch (error) {
+    console.error('Error fetching S3 images:', error);
+    return [];
+  }
+}
 export async function getImages() {
   const images = await prisma.images.findMany();
   return images;
 }
 
 export async function getDiaImages() {
-  const diaImages = await prisma.eventDiaDeLosMuertos.findMany();
-  return diaImages;
+  const command = new ListObjectsV2Command({
+    Bucket: 'diademuertosevent',
+    Prefix: folderPrefix,
+  });
+
+  try {
+    const response = await s3.send(command);
+    return (
+      response.Contents?.map((file) => ({
+        id: file.Key,
+        imageUrl: `https://diademuertosevent.s3.amazonaws.com/${file.Key}`,
+      })) || []
+    );
+  } catch (error) {
+    console.error('Error fetching S3 images:', error);
+    return [];
+  }
 }
 
-export async function getBeerRunImages() {
-  const beerImages = await prisma.eventBeerRun.findMany();
-  return beerImages;
-}
+// export async function getBeerRunImages() {
+//   const beerImages = await prisma.eventBeerRun.findMany();
+//   return beerImages;
+// }
 export async function getPastEvents() {
   try {
     const pastevents = await prisma.pastEvents.findMany({
