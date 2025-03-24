@@ -11,7 +11,7 @@ export async function getBeerRunImages() {
     Bucket: 'beerunevent',
     Prefix: folderPrefix,
   });
-
+  //new
   try {
     const response = await s3.send(command);
     return (
