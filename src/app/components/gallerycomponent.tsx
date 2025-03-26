@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { getImages } from '../[locale]/lib/functions';
+import { getGalleryImages } from '../[locale]/lib/functions';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations, useLocale } from 'next-intl';
@@ -14,7 +14,7 @@ interface Image {
 const GalleryComponent = () => {
   const { data: images, isLoading } = useQuery({
     queryKey: ['images'],
-    queryFn: () => getImages(),
+    queryFn: () => getGalleryImages(),
   });
   const t = useTranslations('Gallery');
   const locale = useLocale();
@@ -36,7 +36,7 @@ const GalleryComponent = () => {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {images?.map((image: Image) => (
+          {images?.slice(2).map((image) => (
             <div
               key={image.id}
               className="group relative aspect-square overflow-hidden rounded-lg shadow-lg transition-transform hover:scale-[1.02]"

@@ -25,9 +25,29 @@ export async function getBeerRunImages() {
     return [];
   }
 }
-export async function getImages() {
-  const images = await prisma.images.findMany();
-  return images;
+// export async function getImages() {
+//   const images = await prisma.images.findMany();
+//   return images;
+// }
+
+export async function getGalleryImages() {
+  const command = new ListObjectsV2Command({
+    Bucket: 'galleryevent',
+    Prefix: folderPrefix,
+  });
+  //new
+  try {
+    const response = await s3.send(command);
+    return (
+      response.Contents?.map((file) => ({
+        id: file.Key,
+        imageUrl: `https://galleryevent.s3.amazonaws.com/${file.Key}`,
+      })) || []
+    );
+  } catch (error) {
+    console.error('Error fetching S3 images:', error);
+    return [];
+  }
 }
 
 export async function getDiaImages() {
