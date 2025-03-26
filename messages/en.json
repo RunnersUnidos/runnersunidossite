@@ -15,6 +15,11 @@
     "button1": "View Photos",
     "button2": "Join Our Next Run"
   },
+  "PurchaseShirt": {
+    "title": "Get Your Runners Unidos Shirt Today!",
+    "paragraph": " It's as easy as filling out our quick form – we'll take it from there and get in touch with you!",
+    "button1": "Google Form"
+  },
   "RunSchedule": {
     "title": "Run Schedule",
     "address": "Trinity Overlook Trail 110 W Commerce Street",

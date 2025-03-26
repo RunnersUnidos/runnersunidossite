@@ -22,6 +22,11 @@
     "blockparagraph": "7:00 PM - Todos los niveles son bienvenidos",
     "button": "Obtener Direcciones"
   },
+  "PurchaseShirt": {
+    "title": "¡Consigue tu camiseta de Runners Unidos hoy!",
+    "paragraph": "Es tan fácil como completar nuestro breve formulario – ¡nosotros nos encargamos del resto y nos pondremos en contacto contigo!",
+    "button1": "Formulario de Google"
+  },
   "DiaDeLosMuertos": {
     "title": "Día de los Muertos 5K",
     "paragraph": "Nuestra comunidad se reunió para honrar y recordar a nuestros seres queridos en una hermosa celebración de la vida durante nuestro evento 5K.",

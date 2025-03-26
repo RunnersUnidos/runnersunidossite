@@ -25,7 +25,7 @@ export const metadata = {
 
 const Events = () => {
   return (
-    <div className="m-4">
+    <div className="h-screen m-2 flex flex-col items-center justify-evenly">
       <EventCard />
     </div>
   );

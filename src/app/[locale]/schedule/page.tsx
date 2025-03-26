@@ -26,7 +26,7 @@ export const metadata = {
 
 const Schedule = () => {
   return (
-    <div>
+    <div className="h-screen flex flex-col items-center justify-evenly">
       <SchedulePageComponent />
     </div>
   );

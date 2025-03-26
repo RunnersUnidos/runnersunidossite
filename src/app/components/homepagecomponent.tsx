@@ -8,6 +8,7 @@ import LaFamiliaSection from '../components/lafamiliasection';
 import HeroVideo from '../components/heroVideo';
 import { useEffect, useState } from 'react';
 import { Suspense } from 'react';
+import PurchaseShirt from './puchaseshirt';
 
 const HomePageComponent = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -37,6 +38,7 @@ const HomePageComponent = () => {
       )}
       <LaFamiliaSection />
       <ScheduleSection />
+      <PurchaseShirt />
       <EventSection />
     </main>
   );
