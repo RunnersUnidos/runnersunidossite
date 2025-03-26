@@ -7,9 +7,6 @@ const GoogleFormShirt = () => {
         src="https://docs.google.com/forms/d/e/1FAIpQLSf0JQJf9ZQdOtxtzh8O9hY8bEwgmx6Zb2RmQKkc2y8stq1P0g/viewform?embedded=true"
         width="640"
         height="382"
-        frameBorder="0"
-        marginHeight="0"
-        marginwidth="0"
       >
         Loading…
       </iframe>
