@@ -2,7 +2,7 @@ import React from 'react';
 import GoogleFormShirt from '../../components/googleformshirt';
 const Shop = () => {
   return (
-    <div className="h-screen py-[72px] flex flex-col items-center justify-evenly">
+    <div className=" py-[72px] flex flex-col items-center justify-evenly">
       <GoogleFormShirt />
     </div>
   );
