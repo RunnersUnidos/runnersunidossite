@@ -18,7 +18,7 @@ const PurchaseShirt = () => {
           <p className="font-sans mb-2 lg:mb-8 text-xl">{t('paragraph')}</p>
           <div className="flex-col sm:flex-row gap-4 hidden lg:flex">
             <Link
-              href={`${locale}/shirtform`}
+              href={`${locale}/shop`}
               className="btn text-black font-sans btn-outline"
             >
               {t('button1')}
