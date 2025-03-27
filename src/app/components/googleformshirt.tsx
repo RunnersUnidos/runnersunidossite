@@ -2,7 +2,7 @@ import React from 'react';
 
 const GoogleFormShirt = () => {
   return (
-    <div className="flex justify-center">
+    <div className="flex py-[72px] justify-center">
       <iframe
         src="https://docs.google.com/forms/d/e/1FAIpQLSf0JQJf9ZQdOtxtzh8O9hY8bEwgmx6Zb2RmQKkc2y8stq1P0g/viewform?embedded=true"
         width="100%"
