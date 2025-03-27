@@ -68,6 +68,16 @@ const DiaDelosMuertos = () => {
                 className="object-cover transition-transform group-hover:scale-110"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
+              <div className="absolute italic font-mono bottom-2 right-2 z-15 text-white text-opacity-60 bg-black bg-opacity-20 px-2 py-1 rounded">
+                <a
+                  href="https://jnyprz.com"
+                  className="hover:text-pink-500"
+                  aria-label="Johnny Perez Portfolio"
+                  target="_blank"
+                >
+                  Taken by Johnny Perez
+                </a>
+              </div>
             </div>
           ))}
         </div>

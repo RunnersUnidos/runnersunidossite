@@ -39,7 +39,7 @@ const GalleryComponent = () => {
           {images?.slice(2).map((image) => (
             <div
               key={image.id}
-              className="group relative aspect-square overflow-hidden rounded-lg shadow-lg transition-transform hover:scale-[1.02]"
+              className="group z-10 relative aspect-square overflow-hidden rounded-lg shadow-lg transition-transform hover:scale-[1.02]"
             >
               <Image
                 src={image.imageUrl}
@@ -48,9 +48,16 @@ const GalleryComponent = () => {
                 className="object-cover  transform hover:scale-105 transition duration-300 ease-in-out"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
-              {/* <div>
-                <p className=" text-5xl text-black">Taken by Juan Soto</p>
-              </div> */}
+              <div className="absolute italic font-mono bottom-2 right-2 z-15 text-white text-opacity-60 bg-black bg-opacity-20 px-2 py-1 rounded">
+                <a
+                  href="https://jnyprz.com"
+                  className="hover:text-pink-500"
+                  aria-label="Johnny Perez Portfolio"
+                  target="_blank"
+                >
+                  Taken by Johnny Perez
+                </a>
+              </div>
             </div>
           ))}
         </div>

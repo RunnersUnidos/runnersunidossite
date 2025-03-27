@@ -69,12 +69,21 @@ const Footer = () => {
 
           {/* Divider */}
           <div className="w-full max-w-xs h-px bg-gradient-to-r from-transparent via-pink-500/30 to-transparent" />
-          <div className="flex justify-center  mb-10 mt-8">
+          <div className="flex flex-col justify-center  mb-10 mt-8">
+            <span className="text-[10px] text-gray-500 sm:text-center dark:text-gray-400 hover:text-pink-500">
+              <a
+                href="https://jnyprz.com"
+                aria-label="Johnny Perez Portfolio"
+                target="_blank"
+              >
+                Photography by Johnny Perez
+              </a>
+            </span>
             <span className="text-[10px] text-gray-500 sm:text-center dark:text-gray-400 hover:text-green-500">
               © 2024{' '}
               <a
                 href="https://www.osworld.dev/"
-                className="underline"
+                className=""
                 target="_blank"
                 aria-label="Developers Website"
               >

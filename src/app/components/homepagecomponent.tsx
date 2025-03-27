@@ -37,8 +37,11 @@ const HomePageComponent = () => {
         <HomeHero />
       )}
       <LaFamiliaSection />
+      <div className=" w-full  h-px bg-gradient-to-r from-transparent via-pink-500/30 to-transparent" />
       <ScheduleSection />
+      <div className="w-full  h-px bg-gradient-to-r from-transparent via-pink-500/30 to-transparent" />
       <PurchaseShirt />
+      <div className="w-full  h-px bg-gradient-to-r from-transparent via-pink-500/30 to-transparent" />
       <EventSection />
     </main>
   );
