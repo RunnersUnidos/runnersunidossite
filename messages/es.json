@@ -7,6 +7,14 @@
     "Events": "Eventos",
     "Gallery": "Galería"
   },
+  "Footer": {
+    "Home": "Inicio",
+    "Schedule": "Horario",
+    "Join Us": "Únete",
+    "Shop": "Tienda",
+    "Events": "Eventos",
+    "Gallery": "Galería"
+  },
   "Hero": {
     "HeroTitle": "Una comunidad de corredores que se unen para compartir millas, historias y tradiciones."
   },

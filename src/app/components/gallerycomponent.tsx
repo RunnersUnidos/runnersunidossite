@@ -48,6 +48,9 @@ const GalleryComponent = () => {
                 className="object-cover  transform hover:scale-105 transition duration-300 ease-in-out"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
+              {/* <div>
+                <p className=" text-5xl text-black">Taken by Juan Soto</p>
+              </div> */}
             </div>
           ))}
         </div>
