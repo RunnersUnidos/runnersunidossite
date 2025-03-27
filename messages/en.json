@@ -3,6 +3,7 @@
     "Home": "Home",
     "Schedule": "Schedule",
     "Join Us": "Join Us",
+    "Shop": "Shop",
     "Events": "Events",
     "Gallery": "Gallery"
   },
@@ -18,7 +19,7 @@
   "PurchaseShirt": {
     "title": "Get Your Runners Unidos Shirt Today!",
     "paragraph": " It's as easy as filling out our quick form – we'll take it from there and get in touch with you!",
-    "button1": "Google Form"
+    "button1": "Order Shirt!"
   },
   "RunSchedule": {
     "title": "Run Schedule",
@@ -30,6 +31,12 @@
   "DiaDeLosMuertos": {
     "title": "Dia de los Muertos 5K",
     "paragraph": "Our community came together to honor and remember our loved ones in a beautiful celebration of life during our 5K event.",
+    "button1": "View Event Photos",
+    "button2": "Events"
+  },
+  "CedarRidge": {
+    "title": "Cedar Ridge Preserve",
+    "paragraph": "Runners Unidos hit the trails at Cedar Ridge Preserve for an energizing and scenic run. The group gathered bright and early at 8 AM, ready to take on the miles surrounded by beautiful nature. Participants enjoyed great company, fresh air, and a solid workout, making it a perfect way to kick off the day. It was an awesome experience for everyone who joined in!",
     "button1": "View Event Photos",
     "button2": "Events"
   },

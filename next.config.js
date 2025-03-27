@@ -15,6 +15,8 @@ const nextConfig = {
       'beerunevent.s3.amazonaws.com',
       'diademuertosevent.s3.amazonaws.com',
       'galleryevent.s3.amazonaws.com',
+      'cedarridge.s3.us-east-2.amazonaws.com',
+      'cedarridge.s3.amazonaws.com',
     ],
   },
   env: {

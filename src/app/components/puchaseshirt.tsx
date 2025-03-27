@@ -15,8 +15,8 @@ const PurchaseShirt = () => {
       <div className="grid lg:grid-cols-2 gap-8 items-center">
         <div className="text-black">
           <h1 className="mb-4 text-5xl font-bold">{t('title')}</h1>
-          <p className="font-sans mb-8 text-xl">{t('paragraph')}</p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <p className="font-sans mb-2 lg:mb-8 text-xl">{t('paragraph')}</p>
+          <div className="flex-col sm:flex-row gap-4 hidden lg:flex">
             <Link
               href={`${locale}/shirtform`}
               className="btn text-black font-sans btn-outline"
@@ -33,6 +33,14 @@ const PurchaseShirt = () => {
             className="rounded-lg object-cover"
             quality={100}
           />
+        </div>
+        <div className="flex-col sm:flex-row gap-4 lg:hidden">
+          <Link
+            href={`${locale}/shop`}
+            className="btn text-black font-sans btn-outline bg-pink-500"
+          >
+            {t('button1')}
+          </Link>
         </div>
       </div>
     </section>

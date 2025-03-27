@@ -4,7 +4,8 @@ import { useQuery } from '@tanstack/react-query';
 import { getDiaImages } from '../lib/functions';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+
+import { useTranslations, useLocale } from 'next-intl';
 interface Image {
   id: string;
   imageUrl: string;
@@ -14,6 +15,9 @@ const DiaDelosMuertos = () => {
     queryKey: ['diaimages'],
     queryFn: () => getDiaImages(),
   });
+
+  const locale = useLocale();
+
   const t = useTranslations('DiaDelosMuertos');
   const [visibleImages, setVisibleImages] = useState(3);
   const [buttonClicked, setButtonClicked] = useState(false);
@@ -79,7 +83,7 @@ const DiaDelosMuertos = () => {
         ) : (
           <Link
             className="bg-pink-300 text-black hover:bg-pink-700 transition duration-200 ease-in-out py-3 px-8 rounded-lg font-semibold shadow-md transform hover:scale-105"
-            href="/"
+            href={`/${locale}/events`}
           >
             {t('button2')}
           </Link>

@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { getBeerRunImages } from '../lib/functions';
+import { getCedarRidgeImages } from '../lib/functions';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations, useLocale } from 'next-intl';
@@ -9,15 +9,13 @@ interface Image {
   id: string;
   imageUrl: string;
 }
-const BeerRun = () => {
+const CedarRidge = () => {
   const locale = useLocale();
   const { data: images, isLoading } = useQuery({
-    queryKey: ['beerimages'],
-    queryFn: () => getBeerRunImages(),
+    queryKey: ['diaimages'],
+    queryFn: () => getCedarRidgeImages(),
   });
-
-  const t = useTranslations('BeerRun');
-
+  const t = useTranslations('CedarRidge');
   const [visibleImages, setVisibleImages] = useState(3);
   const [buttonClicked, setButtonClicked] = useState(false);
   const [showNewButton, setShowNewButton] = useState(false);
@@ -39,18 +37,10 @@ const BeerRun = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h1 className="text-3xl font-bold text-primary mb-4">
-            🍺 {t('title')} 🏃
+            🌲 {t('title')} 🌿
           </h1>
           <p className="text-neutral-dark text-lg font-sans">
-            {t('paragraph1')}{' '}
-            <a
-              href="https://www.goodsurf.co/"
-              target="_blank"
-              className="text-blue-500"
-            >
-              @realgoodsurf
-            </a>{' '}
-            {t('paragraph2')}
+            {t('paragraph')}
           </p>
         </div>
 
@@ -62,7 +52,7 @@ const BeerRun = () => {
             >
               <Image
                 src={image.imageUrl}
-                alt="Beer Run Images"
+                alt="Dia De Los Muertos Images"
                 fill
                 className="object-cover transition-transform group-hover:scale-110"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -92,4 +82,4 @@ const BeerRun = () => {
   );
 };
 
-export default BeerRun;
+export default CedarRidge;

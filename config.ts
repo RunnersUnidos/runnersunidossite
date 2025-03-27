@@ -8,13 +8,15 @@ export const pathnames = {
   '/schedule': '/schedule',
   '/joinus': '/joinus',
   '/events': '/events',
+  '/shop': '/shop',
   '/events/diadelosmuertos': '/events/diadelosmuertos',
+  '/events/cedarridge': '/events/cedarridge',
   '/events/beerun': '/events/beerrun',
   '/gallery': '/gallery',
-  // Add translations for Spanish routes if needed
   '/es/schedule': '/horario',
   '/es/joinus': '/unete',
   '/es/events': '/eventos',
+  '/es/shop': '/tienda',
   '/es/gallery': '/galeria',
 } satisfies Pathnames<typeof locales>;
 

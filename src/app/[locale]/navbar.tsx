@@ -21,7 +21,7 @@ import { useTranslations } from 'next-intl';
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
-  const menuItems = ['Schedule', 'Events', 'Gallery', 'Join Us'];
+  const menuItems = ['Schedule', 'Events', 'Gallery', 'Shop'];
   const t = useTranslations('NavBar');
   const isActive = (path: string) => {
     return pathname === path ? 'border-b-2 border-current' : '';
@@ -66,14 +66,6 @@ const NavBar = () => {
         </NavbarItem>
         <NavbarItem>
           <Link
-            href="/joinus"
-            className={`text-foreground ${isActive('/joinus')}`}
-          >
-            {t('Join Us')}
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
             href="/events"
             className={`text-foreground ${isActive('/events')}`}
           >
@@ -86,6 +78,11 @@ const NavBar = () => {
             className={`text-foreground ${isActive('/gallery')}`}
           >
             {t('Gallery')}
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link href="/shop" className={`text-foreground ${isActive('/shop')}`}>
+            {t('Shop')}
           </Link>
         </NavbarItem>
       </NavbarContent>

@@ -30,6 +30,24 @@ export async function getBeerRunImages() {
 //   return images;
 // }
 
+export async function getCedarRidgeImages() {
+  const command = new ListObjectsV2Command({
+    Bucket: 'cedarridge',
+    Prefix: folderPrefix,
+  });
+  try {
+    const response = await s3.send(command);
+    return (
+      response.Contents?.map((file) => ({
+        id: file.Key,
+        imageUrl: `https://cedarridge.s3.amazonaws.com/${file.Key}`,
+      })) || []
+    );
+  } catch (error) {
+    console.error('Error fetching S3 images:', error);
+    return [];
+  }
+}
 export async function getGalleryImages() {
   const command = new ListObjectsV2Command({
     Bucket: 'galleryevent',

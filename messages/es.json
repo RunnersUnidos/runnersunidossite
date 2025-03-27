@@ -3,6 +3,7 @@
     "Home": "Inicio",
     "Schedule": "Horario",
     "Join Us": "Únete",
+    "Shop": "Tienda",
     "Events": "Eventos",
     "Gallery": "Galería"
   },
@@ -25,12 +26,18 @@
   "PurchaseShirt": {
     "title": "¡Consigue tu camiseta de Runners Unidos hoy!",
     "paragraph": "Es tan fácil como completar nuestro breve formulario – ¡nosotros nos encargamos del resto y nos pondremos en contacto contigo!",
-    "button1": "Formulario de Google"
+    "button1": "¡Ordena tu camisa!"
   },
   "DiaDeLosMuertos": {
     "title": "Día de los Muertos 5K",
     "paragraph": "Nuestra comunidad se reunió para honrar y recordar a nuestros seres queridos en una hermosa celebración de la vida durante nuestro evento 5K.",
     "button1": "Ver Fotos del Evento",
+    "button2": "Eventos"
+  },
+  "CedarRidge": {
+    "title": "Cedar Ridge Preserve",
+    "paragraph": "Runners Unidos se lanzó a los senderos en Cedar Ridge Preserve para una carrera energética y pintoresca. El grupo se reunió temprano a las 8 AM, listos para enfrentar los kilómetros rodeados de naturaleza hermosa. Los participantes disfrutaron de una excelente compañía, aire fresco y un buen entrenamiento, ¡siendo una forma perfecta de comenzar el día! ¡Fue una experiencia increíble para todos los que se unieron!",
+    "button1": "Ver Fotos del Eventos",
     "button2": "Eventos"
   },
   "ShedulePage": {
