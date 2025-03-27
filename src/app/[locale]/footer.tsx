@@ -79,7 +79,7 @@ const Footer = () => {
                 Photography by Johnny Perez
               </a>
             </span>
-            <span className="text-[10px] text-gray-500 sm:text-center dark:text-gray-400 hover:text-green-500">
+            <span className="text-[10px] mt-4 text-gray-500 sm:text-center dark:text-gray-400 hover:text-green-500">
               © 2024{' '}
               <a
                 href="https://www.osworld.dev/"
