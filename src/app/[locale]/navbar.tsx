@@ -24,7 +24,7 @@ const NavBar = () => {
   const menuItems = ['Schedule', 'Events', 'Gallery', 'Shop'];
   const t = useTranslations('NavBar');
   const isActive = (path: string) => {
-    return pathname === path ? 'border-b-2 border-current' : '';
+    return pathname === path ? 'border-b-2 text-hotpink border-current ' : '';
   };
 
   const generateLocalizedPath = (item: string) => {
@@ -57,31 +57,22 @@ const NavBar = () => {
           <LocaleSwitcher />
         </NavbarItem>
         <NavbarItem>
-          <Link
-            href="/schedule"
-            className={`text-foreground ${isActive('/schedule')}`}
-          >
+          <Link href="/schedule" className={`${isActive('/schedule')}`}>
             {t('Schedule')}
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link
-            href="/events"
-            className={`text-foreground ${isActive('/events')}`}
-          >
+          <Link href="/events" className={` ${isActive('/events')}`}>
             {t('Events')}
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link
-            href="/gallery"
-            className={`text-foreground ${isActive('/gallery')}`}
-          >
+          <Link href="/gallery" className={`${isActive('/gallery')}`}>
             {t('Gallery')}
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="/shop" className={`text-foreground ${isActive('/shop')}`}>
+          <Link href="/shop" className={`${isActive('/shop')} `}>
             {t('Shop')}
           </Link>
         </NavbarItem>
@@ -89,7 +80,11 @@ const NavBar = () => {
 
       <NavbarMenu className="bg-transparent text-black flex justify-center text-5xl items-end gap-3 ">
         <NavbarMenuItem>
-          <Link href="/" onClick={() => setIsMenuOpen(false)}>
+          <Link
+            href="/"
+            onClick={() => setIsMenuOpen(false)}
+            className={isActive('/')}
+          >
             {t('Home')}
           </Link>
         </NavbarMenuItem>
