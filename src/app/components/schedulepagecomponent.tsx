@@ -27,11 +27,11 @@ const SchedulePageComponent = () => {
         </h2>
 
         <div className="space-y-4 max-w-2xl mx-auto">
-          <p className="text-xl md:text-2xl text-gray-700 font-medium">
+          <p className="text-xl md:text-2xl text-black font-medium">
             🏃 {t('paragraph1')} 🏃‍♀️
           </p>
-          <p className="text-xl text-gray-600">{t('paragraph2')}</p>
-          <p className="text-lg text-gray-600 italic">{t('paragraph3')}</p>
+          <p className="text-xl text-black">{t('paragraph2')}</p>
+          <p className="text-lg text-black italic">{t('paragraph3')}</p>
         </div>
 
         <div className="bg-pink-50 rounded-xl p-6 mt-8 inline-block">
