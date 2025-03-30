@@ -4,7 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import { getGalleryImages } from '../[locale]/lib/functions';
 import Image from 'next/image';
 import Link from 'next/link';
-import GalleryEffect from './galleryEffect';
+import GalleryEffect from './GalleryEffect';
 import { useInView } from 'react-intersection-observer';
 import { useTranslations, useLocale } from 'next-intl';
 interface Image {

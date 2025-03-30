@@ -4,7 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import { getDiaImages } from '../lib/functions';
 import Image from 'next/image';
 import Link from 'next/link';
-import GalleryEffect from '../../components/galleryEffect';
+import GalleryEffect from '../../components/GalleryEffect';
 import { useTranslations, useLocale } from 'next-intl';
 interface Image {
   id: string;

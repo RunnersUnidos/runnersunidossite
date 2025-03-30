@@ -4,8 +4,8 @@ import { useQuery } from '@tanstack/react-query';
 import { getBeerRunImages } from '../lib/functions';
 import Image from 'next/image';
 import Link from 'next/link';
-import GalleryEffect from '../../components/galleryEffect';
 import { useTranslations, useLocale } from 'next-intl';
+import GalleryEffect from '../../components/GalleryEffect';
 interface Image {
   id: string;
   imageUrl: string;
