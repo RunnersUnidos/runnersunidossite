@@ -1,5 +1,6 @@
 import React from 'react';
 import RunnersImage from '@/public/runners.jpg';
+import RunnersImageBlurred from '@/public/BlurredImages/RunnersBlurred.jpg';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations, useLocale } from 'next-intl';
@@ -19,6 +20,8 @@ const LaFamiliaSection = () => {
             fill
             className="rounded-lg object-cover"
             quality={100}
+            placeholder="blur"
+            blurDataURL={RunnersImageBlurred.src}
           />
         </div>
         <div className="text-black">

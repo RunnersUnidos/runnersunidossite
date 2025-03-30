@@ -4,6 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import { getBeerRunImages } from '../lib/functions';
 import Image from 'next/image';
 import Link from 'next/link';
+import GalleryEffect from '../../components/galleryEffect';
 import { useTranslations, useLocale } from 'next-intl';
 interface Image {
   id: string;
@@ -56,28 +57,11 @@ const BeerRun = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {images?.slice(2, visibleImages).map((image) => (
-            <div
-              key={image.imageUrl}
-              className="group relative aspect-square overflow-hidden rounded-lg shadow-lg transition-transform hover:scale-[1.02]"
-            >
-              <Image
-                src={image.imageUrl}
-                alt="Beer Run Images"
-                fill
-                className="object-cover transition-transform group-hover:scale-110"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              />
-              <div className="absolute italic font-mono bottom-2 right-2 z-15 text-white text-opacity-60 bg-black bg-opacity-20 px-2 py-1 rounded">
-                <a
-                  href="https://jnyprz.com"
-                  className="hover:text-pink-500"
-                  aria-label="Johnny Perez Portfolio"
-                  target="_blank"
-                >
-                  Taken by Johnny Perez
-                </a>
-              </div>
-            </div>
+            <GalleryEffect
+              key={image.id ?? ''}
+              imageUrl={image.imageUrl}
+              id={image.id ?? ''}
+            />
           ))}
         </div>
       </div>

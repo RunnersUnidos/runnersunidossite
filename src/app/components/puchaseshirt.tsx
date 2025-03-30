@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import shirtShowcase from '@/public/ShirtShowcase.jpg';
+import shirtShowcaseBlurred from '@/public/BlurredImages/ShirtShowCaseBlurred.jpg';
 import { useLocale } from 'next-intl';
 interface Image {
   src: string;
@@ -32,6 +33,8 @@ const PurchaseShirt = () => {
             fill
             className="rounded-lg object-cover"
             quality={100}
+            placeholder="blur"
+            blurDataURL={shirtShowcaseBlurred.src}
           />
         </div>
         <div className="flex-col sm:flex-row gap-4 lg:hidden">

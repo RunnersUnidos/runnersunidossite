@@ -1,6 +1,7 @@
 import React, { useTransition } from 'react';
 import Image from 'next/image';
 import SkullImage from '@/public/DiaDeLosMuertos.jpg';
+import SkullImageBlurred from '@/public/BlurredImages/MuertosBlurred.jpg';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { useLocale } from 'next-intl';
@@ -20,6 +21,8 @@ const EventSection = () => {
             fill
             className="rounded-lg object-cover"
             quality={100}
+            placeholder="blur"
+            blurDataURL={SkullImageBlurred.src}
           />
         </div>
         <div className="text-black">

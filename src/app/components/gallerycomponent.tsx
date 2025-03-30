@@ -4,6 +4,8 @@ import { useQuery } from '@tanstack/react-query';
 import { getGalleryImages } from '../[locale]/lib/functions';
 import Image from 'next/image';
 import Link from 'next/link';
+import GalleryEffect from './galleryEffect';
+import { useInView } from 'react-intersection-observer';
 import { useTranslations, useLocale } from 'next-intl';
 interface Image {
   id: string;
@@ -16,8 +18,14 @@ const GalleryComponent = () => {
     queryKey: ['images'],
     queryFn: () => getGalleryImages(),
   });
+
   const t = useTranslations('Gallery');
   const locale = useLocale();
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-screen">
@@ -37,28 +45,11 @@ const GalleryComponent = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {images?.slice(2).map((image) => (
-            <div
-              key={image.id}
-              className="group z-10 relative aspect-square overflow-hidden rounded-lg shadow-lg transition-transform hover:scale-[1.02]"
-            >
-              <Image
-                src={image.imageUrl}
-                alt="Runners"
-                fill
-                className="object-cover  transform hover:scale-105 transition duration-300 ease-in-out"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              />
-              <div className="absolute italic font-mono bottom-2 right-2 z-15 text-white text-opacity-60 bg-black bg-opacity-20 px-2 py-1 rounded">
-                <a
-                  href="https://jnyprz.com"
-                  className="hover:text-pink-500"
-                  aria-label="Johnny Perez Portfolio"
-                  target="_blank"
-                >
-                  Taken by Johnny Perez
-                </a>
-              </div>
-            </div>
+            <GalleryEffect
+              key={image.id ?? ''}
+              imageUrl={image.imageUrl}
+              id={image.id ?? ''}
+            />
           ))}
         </div>
         <div className="text-center mt-12">
