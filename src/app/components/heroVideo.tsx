@@ -28,7 +28,9 @@ const HeroVideo = () => {
             height={600}
             className="object-contain"
           />
-          <p className="text-xl text-white text-center">{t('HeroTitle')}</p>
+          <p className="text-2xl font-extrabold text-white text-center">
+            {t('HeroTitle')}
+          </p>
         </div>
       </div>
     </div>

@@ -30,7 +30,9 @@ const HomeHero = () => {
           height={200}
           className=""
         />
-        <p className="text-xl text-white text-center">{t('HeroTitle')}</p>
+        <p className="text-2xl font-extrabold text-white text-center">
+          {t('HeroTitle')}
+        </p>
       </div>
     </div>
   );
