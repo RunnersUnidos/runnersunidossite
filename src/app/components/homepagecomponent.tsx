@@ -9,6 +9,7 @@ import HeroVideo from '../components/heroVideo';
 import { useEffect, useState } from 'react';
 import { Suspense } from 'react';
 import PurchaseShirt from './puchaseshirt';
+import YoutubeVideo from './youtubevideo';
 
 const HomePageComponent = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -40,9 +41,11 @@ const HomePageComponent = () => {
       <div className=" w-full  h-px bg-gradient-to-r from-transparent via-pink-500/30 to-transparent" />
       <ScheduleSection />
       <div className="w-full  h-px bg-gradient-to-r from-transparent via-pink-500/30 to-transparent" />
-      <PurchaseShirt />
+      <YoutubeVideo />
       <div className="w-full  h-px bg-gradient-to-r from-transparent via-pink-500/30 to-transparent" />
       <EventSection />
+      <div className="w-full  h-px bg-gradient-to-r from-transparent via-pink-500/30 to-transparent" />
+      <PurchaseShirt />
     </main>
   );
 };
