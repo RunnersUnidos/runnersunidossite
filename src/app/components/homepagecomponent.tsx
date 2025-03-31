@@ -41,10 +41,13 @@ const HomePageComponent = () => {
       <div className=" w-full  h-px bg-gradient-to-r from-transparent via-pink-500/30 to-transparent" />
       <ScheduleSection />
       <div className="w-full  h-px bg-gradient-to-r from-transparent via-pink-500/30 to-transparent" />
-      <YoutubeVideo />
+      <div className="bg-[#FFB6C1]">
+        <YoutubeVideo />
+      </div>
       <div className="w-full  h-px bg-gradient-to-r from-transparent via-pink-500/30 to-transparent" />
       <EventSection />
       <div className="w-full  h-px bg-gradient-to-r from-transparent via-pink-500/30 to-transparent" />
+
       <PurchaseShirt />
     </main>
   );
