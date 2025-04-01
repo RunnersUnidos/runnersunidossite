@@ -37,18 +37,22 @@ const HomePageComponent = () => {
       ) : (
         <HomeHero />
       )}
-      <LaFamiliaSection />
-      <div className=" w-full  h-px bg-gradient-to-r from-transparent via-pink-500/30 to-transparent" />
+      <div className="bg-gradient-to-l from-pink-300 to-white/40">
+        <LaFamiliaSection />
+      </div>
+      <div className=" w-full  h-px bg-gradient-to-r from-transparent via-pink-500/30 to-transparent " />
       <ScheduleSection />
       <div className="w-full  h-px bg-gradient-to-r from-transparent via-pink-500/30 to-transparent" />
-      <div className="bg-[#FFB6C1]">
+      <div className="w-full  h-px bg-gradient-to-r from-transparent via-pink-500/30 to-transparent" />
+      <div className="bg-gradient-to-r from-pink-300 to-white/40">
         <YoutubeVideo />
       </div>
       <div className="w-full  h-px bg-gradient-to-r from-transparent via-pink-500/30 to-transparent" />
       <EventSection />
       <div className="w-full  h-px bg-gradient-to-r from-transparent via-pink-500/30 to-transparent" />
-
-      <PurchaseShirt />
+      <div className="bg-gradient-to-l from-pink-300 to-white/40">
+        <PurchaseShirt />
+      </div>
     </main>
   );
 };

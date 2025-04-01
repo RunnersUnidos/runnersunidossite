@@ -9,6 +9,7 @@ import {
   NavbarMenu,
   NavbarMenuItem,
 } from '@nextui-org/navbar';
+import { PiInstagramLogoLight } from 'react-icons/pi';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import Logo from '@/public/LOGOLONG.png';
@@ -82,7 +83,7 @@ const NavBar = () => {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarMenu className="bg-transparent text-black flex justify-center text-5xl items-end gap-3 ">
+      <NavbarMenu className="font-extrabold bg-gradient-to-r from-pink-300 to-white/50 text-black flex justify-center text-5xl items-end gap-3 z-[310] ">
         <NavbarMenuItem>
           <Link
             href="/"
@@ -113,6 +114,19 @@ const NavBar = () => {
             </Link>
           </NavbarMenuItem>
         ))}
+        <NavbarItem className="absolute bottom-2 left-[5%]">
+          <a
+            href="https://www.instagram.com/runnersunidos"
+            aria-label="Running Club Instagram Account"
+            target="_blank"
+            className="flex items-center gap-2 px-3 py-2 rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 hover:shadow-lg hover:shadow-pink-500/50 transition-all duration-300 hover:scale-105"
+          >
+            <PiInstagramLogoLight className="text-[35px] text-white" />
+            <span className="text-base font-medium text-white">
+              Follow us: RunnersUnidos
+            </span>
+          </a>
+        </NavbarItem>
       </NavbarMenu>
     </Navbar>
   );

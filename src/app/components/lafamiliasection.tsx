@@ -11,7 +11,7 @@ const LaFamiliaSection = () => {
   const t = useTranslations('LaFamilia');
   const locale = useLocale();
   return (
-    <section className="container mx-auto px-4 py-16">
+    <section className="container mx-auto px-4 py-16  ">
       <div className="grid lg:grid-cols-2 gap-8 items-center">
         <div className="relative aspect-[4/3] w-full">
           <Image
