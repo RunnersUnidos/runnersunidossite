@@ -37,7 +37,8 @@
     "rollup": "^2.79.2",
     "rollup-plugin-styles": "^4.0.0",
     "tailwind-merge": "^2.5.4",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "tailwindcss-safe-area": "^0.6.0"
   },
   "devDependencies": {
     "@types/node": "^20",

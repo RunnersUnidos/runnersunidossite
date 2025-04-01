@@ -83,7 +83,7 @@ const NavBar = () => {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarMenu className="font-extrabold bg-gradient-to-r from-pink-300 to-white/50 text-black flex justify-center text-5xl items-end gap-3 z-[310] ">
+      <NavbarMenu className="pb-safe font-extrabold bg-gradient-to-r from-pink-300 to-white/50 text-black flex justify-center text-5xl items-end gap-3 z-[310] ">
         <NavbarMenuItem>
           <Link
             href="/"
@@ -114,7 +114,7 @@ const NavBar = () => {
             </Link>
           </NavbarMenuItem>
         ))}
-        <NavbarItem className="absolute bottom-16 left-[5%] mb-safe">
+        <NavbarItem className="absolute bottom-16 left-[5%] mb-safe pb-safe">
           <a
             href="https://www.instagram.com/runnersunidos"
             aria-label="Running Club Instagram Account"

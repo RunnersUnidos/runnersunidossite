@@ -68,6 +68,10 @@ const config: Config = {
       },
     },
   },
-  plugins: [require('tailwindcss-animate'), require('daisyui')],
+  plugins: [
+    require('tailwindcss-animate'),
+    require('daisyui'),
+    require('tailwindcss-safe-area'),
+  ],
 };
 export default config;
