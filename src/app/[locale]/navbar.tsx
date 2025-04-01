@@ -114,7 +114,7 @@ const NavBar = () => {
             </Link>
           </NavbarMenuItem>
         ))}
-        <NavbarItem className="absolute bottom-2 left-[5%]">
+        <NavbarItem className="absolute bottom-8 left-[5%]">
           <a
             href="https://www.instagram.com/runnersunidos"
             aria-label="Running Club Instagram Account"
