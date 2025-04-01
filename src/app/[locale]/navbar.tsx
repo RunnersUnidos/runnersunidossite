@@ -119,9 +119,9 @@ const NavBar = () => {
             href="https://www.instagram.com/runnersunidos"
             aria-label="Running Club Instagram Account"
             target="_blank"
-            className="flex items-center gap-2 px-3 py-2 rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 hover:shadow-lg hover:shadow-pink-500/50 transition-all duration-300 hover:scale-105"
+            className="flex items-center gap-2 px-3 py-2 h-[25px] rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 hover:shadow-lg hover:shadow-pink-500/50 transition-all duration-300 hover:scale-105"
           >
-            <PiInstagramLogoLight className="text-[35px] text-white" />
+            <PiInstagramLogoLight className="text-[15px] text-white" />
             <span className="text-base font-medium text-white">
               Follow us: RunnersUnidos
             </span>
