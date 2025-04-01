@@ -40,7 +40,7 @@ const PurchaseShirt = () => {
         <div className="flex-col sm:flex-row gap-4 lg:hidden">
           <Link
             href={`${locale}/shop`}
-            className="btn text-black font-sans btn-outline bg-pink-500"
+            className="font-sans border-black bg-pink-500 hover:bg-transparent btn btn-outline text-black"
           >
             {t('button1')}
           </Link>
