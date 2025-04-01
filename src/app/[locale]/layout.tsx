@@ -41,7 +41,7 @@ export default async function LocaleLayout({
     <html lang={locale} suppressHydrationWarning>
       <meta
         name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+        content="width=device-width, initial-scale=1, viewport-fit=cover"
       />
       <body className={italiana.className}>
         <NextIntlClientProvider messages={messages}>
