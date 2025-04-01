@@ -37,7 +37,7 @@ const HomePageComponent = () => {
       ) : (
         <HomeHero />
       )}
-      <div className="bg-gradient-to-l from-pink-300 to-white/40">
+      <div className="bg-gradient-to-b from-pink-300 to-white/40">
         <LaFamiliaSection />
       </div>
       <div className=" w-full  h-px bg-gradient-to-r from-transparent via-pink-500/30 to-transparent " />
@@ -50,7 +50,7 @@ const HomePageComponent = () => {
       <div className="w-full  h-px bg-gradient-to-r from-transparent via-pink-500/30 to-transparent" />
       <EventSection />
       <div className="w-full  h-px bg-gradient-to-r from-transparent via-pink-500/30 to-transparent" />
-      <div className="bg-gradient-to-l from-pink-300 to-white/40">
+      <div className="bg-gradient-to-t from-pink-300 to-white/40">
         <PurchaseShirt />
       </div>
     </main>
