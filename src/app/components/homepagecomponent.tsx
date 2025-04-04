@@ -10,6 +10,7 @@ import { useEffect, useState } from 'react';
 import { Suspense } from 'react';
 import PurchaseShirt from './puchaseshirt';
 import YoutubeVideo from './youtubevideo';
+import Calendar from '../components/calendar';
 
 const HomePageComponent = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -37,20 +38,23 @@ const HomePageComponent = () => {
       ) : (
         <HomeHero />
       )}
-      <div className="bg-gradient-to-b from-pink-300 to-white/40">
+      <div className="bg-gradient-to-b from-blue-300 to-white/40">
         <LaFamiliaSection />
       </div>
-      <div className=" w-full  h-px bg-gradient-to-r from-transparent via-pink-500/30 to-transparent " />
+
+      <Calendar />
+
+      <div className=" w-full  h-px bg-gradient-to-r from-transparent via-teal-500/30 to-transparent " />
       <ScheduleSection />
-      <div className="w-full  h-px bg-gradient-to-r from-transparent via-pink-500/30 to-transparent" />
-      <div className="w-full  h-px bg-gradient-to-r from-transparent via-pink-500/30 to-transparent" />
-      <div className="bg-gradient-to-r from-pink-300 to-white/40">
+      <div className="w-full  h-px bg-gradient-to-r from-transparent via-teal-500/30 to-transparent" />
+      <div className="w-full  h-px bg-gradient-to-r from-transparent via-teal-500/30 to-transparent" />
+      <div className="bg-gradient-to-r from-blue-300 to-white/40">
         <YoutubeVideo />
       </div>
-      <div className="w-full  h-px bg-gradient-to-r from-transparent via-pink-500/30 to-transparent" />
+      <div className="w-full  h-px bg-gradient-to-r from-transparent via-teal-500/30 to-transparent" />
       <EventSection />
-      <div className="w-full  h-px bg-gradient-to-r from-transparent via-pink-500/30 to-transparent" />
-      <div className="bg-gradient-to-t from-pink-300 to-white/40">
+      <div className="w-full  h-px bg-gradient-to-r from-transparent via-teal-500/30 to-transparent" />
+      <div className="bg-gradient-to-t from-blue-300 to-white/40">
         <PurchaseShirt />
       </div>
     </main>

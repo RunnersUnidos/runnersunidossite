@@ -36,7 +36,7 @@ const EventSection = () => {
               {t('button1')}
             </Link>
             <Link
-              className="font-sans btn bg-pink-500 hover:bg-transparent text-black"
+              className="font-sans btn bg-blue-500 hover:bg-transparent text-black"
               href={`${locale}/events`}
             >
               {t('button2')}

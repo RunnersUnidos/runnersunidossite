@@ -25,7 +25,7 @@ const NavBar = () => {
   const menuItems = ['Schedule', 'Events', 'Gallery', 'Shop'];
   const t = useTranslations('NavBar');
   const isActive = (path: string) => {
-    return pathname === path ? 'border-b-2 text-hotpink border-current ' : '';
+    return pathname === path ? 'border-b-2 text-brand border-current ' : '';
   };
 
   const generateLocalizedPath = (item: string) => {
@@ -83,7 +83,7 @@ const NavBar = () => {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarMenu className="pb-safe font-extrabold bg-gradient-to-r from-pink-300 to-white/50 text-black flex justify-center text-5xl items-end gap-3 z-[310] ">
+      <NavbarMenu className="pb-safe font-extrabold bg-gradient-to-r from-blue-300 to-white/50 text-black flex justify-center text-5xl items-end gap-3 z-[310] ">
         <NavbarMenuItem>
           <Link
             href="/"

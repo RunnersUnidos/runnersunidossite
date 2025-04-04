@@ -42,7 +42,7 @@ const PastEventList = () => {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-screen">
-        <span className="loading loading-dots loading-lg text-pink-500"></span>
+        <span className="loading loading-dots loading-lg text-brand"></span>
       </div>
     );
   }
@@ -52,12 +52,12 @@ const PastEventList = () => {
       {pastEvents.map((event: PastEvents) => (
         <div key={event.id} className="w-full md:w-1/3 lg:w-1/4">
           <div className="flex flex-col">
-            <div className="relative w-full h-48 mb-4 flex justify-center">
+            <div className="relative w-full h-48 mb-4 flex justify-center ">
               <Image
                 src={event.imageUrl}
                 alt={event.title}
                 fill
-                className="object-cover transition-transform group-hover:scale-110"
+                className="object-cover transition-transform group-hover:scale-110 "
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
@@ -116,7 +116,7 @@ const PastEventList = () => {
               <div className="flex flex-row justify-evenly gap-2">
                 <Link
                   href={getLocalizedLink(event.link)}
-                  className="bg-pink-300 text-black hover:bg-transparent transition duration-200 ease-in-out py-3 px-8 rounded-lg font-semibold shadow-md transform hover:scale-105"
+                  className="bg-blue-300 text-black hover:bg-transparent transition duration-200 ease-in-out py-3 px-8 rounded-lg font-semibold shadow-md transform hover:scale-105"
                 >
                   {event.link
                     ? `${t('button1')}`
@@ -124,7 +124,7 @@ const PastEventList = () => {
                 </Link>
                 <Link
                   href={event.instagramUrl ? `${event.instagramUrl}` : `/`}
-                  className="bg-transparent text-black border-2 border-pink-700 transition duration-200 ease-in-out py-3 px-8 rounded-lg font-semibold shadow-md transform hover:scale-105 hover:bg-pink-700 hover:text-white"
+                  className="bg-transparent text-black border-2 border-teal-700 transition duration-200 ease-in-out py-3 px-8 rounded-lg font-semibold shadow-md transform hover:scale-105 hover:bg-teal-700 hover:text-white"
                   target="_blank"
                 >
                   {t('button2')}

@@ -6,7 +6,7 @@ const ScrollButton = () => {
   return (
     <div className="absolute z-[300]">
       <ScrollToTop showUnder={160}>
-        <FaArrowUp className="icon-[pajamas--scroll-up] text-3xl text-pink-500" />
+        <FaArrowUp className="icon-[pajamas--scroll-up] text-3xl text-brand" />
       </ScrollToTop>
     </div>
   );

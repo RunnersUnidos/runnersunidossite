@@ -37,40 +37,40 @@ const Footer = () => {
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-white/70">
             <Link
               href={'/'}
-              className="hover:text-pink-500 transition-colors duration-300 text-black"
+              className="hover:text-brand transition-colors duration-300 text-black"
             >
               {t('Home')}
             </Link>
             <Link
               href={`/${locale}/schedule`}
-              className="hover:text-pink-500 transition-colors duration-300 text-black"
+              className="hover:text-brand transition-colors duration-300 text-black"
             >
               {t('Schedule')}
             </Link>
             <Link
               href={`/${locale}/events`}
-              className="hover:text-pink-500 transition-colors duration-300 text-black"
+              className="hover:text-brand transition-colors duration-300 text-black"
             >
               {t('Events')}
             </Link>
             <Link
               href={`/${locale}/gallery`}
-              className="hover:text-pink-500 transition-colors duration-300 text-black"
+              className="hover:text-brand transition-colors duration-300 text-black"
             >
               {t('Gallery')}
             </Link>
             <Link
               href={`/${locale}/shop`}
-              className="hover:text-pink-500 transition-colors duration-300 text-black"
+              className="hover:text-brand transition-colors duration-300 text-black"
             >
               {t('Shop')}
             </Link>
           </div>
 
           {/* Divider */}
-          <div className="w-full max-w-xs h-px bg-gradient-to-r from-transparent via-pink-500/30 to-transparent" />
+          <div className="w-full max-w-xs h-px bg-gradient-to-r from-transparent via-teal-500/30 to-transparent" />
           <div className="flex flex-col justify-center  mb-10 mt-8">
-            <span className="text-[10px] text-gray-500 sm:text-center dark:text-gray-400 hover:text-pink-500">
+            <span className="text-[10px] text-gray-500 sm:text-center dark:text-gray-400 hover:text-brand">
               <a
                 href="https://jnyprz.com"
                 aria-label="Johnny Perez Portfolio"

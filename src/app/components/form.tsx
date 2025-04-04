@@ -60,12 +60,12 @@ const UserForm = () => {
 
   return (
     <div className="w-full max-w-2xl mx-auto px-4 py-8 md:py-12 ">
-      <form className="space-y-6 bg-gradient-to-b from-pink-200 to-pink-100 p-6 md:p-8 rounded-lg shadow-lg">
+      <form className="space-y-6 bg-gradient-to-b from-blue-200 to-blue-100 p-6 md:p-8 rounded-lg shadow-lg">
         <div className="text-center mb-8">
           <h1 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4">
             {t('title')}
           </h1>
-          <div className="w-20 h-1 bg-pink-500 mx-auto"></div>
+          <div className="w-20 h-1 bg-blue-500 mx-auto"></div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
@@ -82,7 +82,7 @@ const UserForm = () => {
               name="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-200"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
               required
             />
           </div>
@@ -100,7 +100,7 @@ const UserForm = () => {
               name="lastName"
               value={lastname}
               onChange={(e) => setLastName(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-200"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
               required
             />
           </div>
@@ -119,7 +119,7 @@ const UserForm = () => {
             name="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-200"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
             required
           />
         </div>
@@ -136,7 +136,7 @@ const UserForm = () => {
             name="about"
             value={about}
             onChange={(e) => setAbout(e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-200"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
             rows={4}
             required
           />
@@ -144,7 +144,7 @@ const UserForm = () => {
 
         <button
           type="submit"
-          className="w-full md:w-auto px-8 py-3 bg-pink-500 hover:bg-pink-600 text-white font-semibold rounded-lg transition-colors duration-200 transform hover:scale-105"
+          className="w-full md:w-auto px-8 py-3 bg-blue-500 hover:bg-teal-600 text-white font-semibold rounded-lg transition-colors duration-200 transform hover:scale-105"
           onClick={async (e) => {
             e.preventDefault();
             if (!name) {

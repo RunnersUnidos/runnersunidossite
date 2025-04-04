@@ -21,7 +21,7 @@ const GalleryEffect = ({ imageUrl, id }: ImageProps) => {
   return (
     <div
       ref={ref}
-      style={{ backgroundColor: '#FFB6C1' }}
+      style={{ backgroundColor: '#e0f2fe' }}
       className="group z-10 relative aspect-square overflow-hidden rounded-lg shadow-lg transition-transform hover:scale-[1.02]"
     >
       <Image
@@ -38,7 +38,7 @@ const GalleryEffect = ({ imageUrl, id }: ImageProps) => {
       <div className="absolute italic font-mono bottom-2 right-2 z-15 text-white text-opacity-60 bg-black bg-opacity-20 px-2 py-1 rounded">
         <a
           href="https://jnyprz.com"
-          className="hover:text-pink-500"
+          className="hover:text-brand"
           aria-label="Johnny Perez Portfolio"
           target="_blank"
         >

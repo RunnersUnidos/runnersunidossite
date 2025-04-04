@@ -29,7 +29,7 @@ const GalleryComponent = () => {
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-screen">
-        <span className="loading loading-dots loading-lg text-pink-500"></span>
+        <span className="loading loading-dots loading-lg text-brand"></span>
       </div>
     );
   }
@@ -37,12 +37,12 @@ const GalleryComponent = () => {
   return (
     <div className="min-h-screen bg-neutral-light/5 py-16">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        {/* <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-primary mb-4">{t('title')}</h1>
           <p className="font-sans text-neutral-dark text-lg">
             {t('paragraph')}
           </p>
-        </div>
+        </div> */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {images?.slice(2).map((image) => (
             <GalleryEffect
@@ -54,7 +54,7 @@ const GalleryComponent = () => {
         </div>
         <div className="text-center mt-12">
           <Link
-            className="bg-pink-300 text-black hover:bg-pink-700 transition duration-200 ease-in-out py-3 px-8 rounded-lg font-semibold shadow-md transform hover:scale-105"
+            className="bg-blue-300 text-black hover:bg-teal-700 transition duration-200 ease-in-out py-3 px-8 rounded-lg font-semibold shadow-md transform hover:scale-105"
             href={`/${locale}/events`}
           >
             {t('moreevents')}

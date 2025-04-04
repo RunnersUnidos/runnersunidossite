@@ -30,12 +30,12 @@ const LaFamiliaSection = () => {
           <div className="font-sans flex flex-col sm:flex-row gap-4">
             <Link
               href={`${locale}/gallery`}
-              className="btn bg-transparent border-pink-500 hover:bg-pink-500 text-black"
+              className="btn bg-transparent border-blue-500 hover:bg-blue-500 text-black"
             >
               {t('button1')}
             </Link>
             <Link
-              className="font-sans border-black bg-pink-500 hover:bg-transparent btn btn-outline text-black"
+              className="font-sans border-black bg-blue-500 hover:bg-transparent btn btn-outline text-black"
               href={`${locale}/joinus`}
             >
               {t('button2')}
