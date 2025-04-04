@@ -10,7 +10,7 @@ const Calendar = () => {
       <div className="w-full max-w-6xl">
         <iframe
           className="w-full h-[600px] md:h-[800px]"
-          src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FChicago&showPrint=0&title=Runners%20Unidos%20Calendar&src=cnVubmVyc3VuaWRvc2RhbGxhc0BnbWFpbC5jb20&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%230B8043"
+          src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FChicago&showPrint=0&title=Runners%20Unidos%20Calendar&mode=AGENDA&src=cnVubmVyc3VuaWRvc2RhbGxhc0BnbWFpbC5jb20&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%230B8043"
           style={{ border: 'solid 1px #777' }}
         ></iframe>
       </div>
