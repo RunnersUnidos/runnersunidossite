@@ -98,5 +98,9 @@
   "OurMission": {
     "title": "¡Nuestra Misión!",
     "paragraph": "Nos asociamos con Univision para hablar sobre RunnersUnidos y nuestra misión de inspirar a nuestra comunidad a adoptar a correr y elevar su viaje de fitness."
+  },
+  "Calendar": {
+    "title": "¡Próximos Eventos!",
+    "paragraph": "Mantente al día con todos los eventos y actividades de Runners Unidos."
   }
 }
