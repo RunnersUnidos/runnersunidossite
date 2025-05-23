@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { user } from '@nextui-org/react';
+import { FaApple } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 const ScheduleSection = () => {
   const router = useRouter();
   const center = {
@@ -19,12 +21,19 @@ const ScheduleSection = () => {
   };
 
   const t = useTranslations('RunSchedule');
-  const handleGetDirections = () => {
+  const handleGetAppleDirections = () => {
+
+    const location = encodeURIComponent('110 W commerce st, Dallas, TX'); // Replace with your location
+    window.location.href = `http://maps.apple.com/?q=${location}`;
+  };
+
+
+  const handleGetGoogleDirections=()=>{
     window.open(
       `https://www.google.com/maps/dir/?api=1&destination=${center.lat},${center.lng}`,
       '_blank'
     );
-  };
+  }
 
   return (
     <section className="container mx-auto px-4 py-16 bg-neutral-light/5">
@@ -41,12 +50,26 @@ const ScheduleSection = () => {
               <h2 className="font-bold text-lg">{t('blocktitle')}</h2>
               <p className="text-neutral">{t('blockparagraph')}</p>
             </div>
-            <button
-              className="bg-pink-500 font-sans btn  hover:bg-transparent border border-pink-500 text-black px-6 py-3 rounded-lg transition-colors duration-200 w-full"
-              onClick={handleGetDirections}
-            >
-              {t('button')}
-            </button>
+            <div className='flex lg:flex-row justify-center items-center gap-6 flex-col text-center'>
+<button
+          onClick={handleGetAppleDirections}
+          className="bg-pink-600 text-white hover:bg-pink-700 transition-all duration-300 
+                       py-4 px-8 rounded-lg font-bold text-lg shadow-md 
+                       hover:shadow-lg transform hover:scale-105 flex items-center gap-2 text-center"
+        >
+          {t('button')}
+          <FaApple className='text-xl' />
+        </button>
+        <button
+          onClick={handleGetGoogleDirections}
+          className="bg-pink-600 text-white hover:bg-pink-700 transition-all duration-300 
+          py-4 px-8 rounded-lg font-bold text-lg shadow-md 
+          hover:shadow-lg transform hover:scale-105 flex items-center gap-2"
+          >
+          {t('button')}
+          <FcGoogle className='text-xl' />
+        </button>
+          </div>
           </div>
         </div>
 

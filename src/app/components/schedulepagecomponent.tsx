@@ -6,6 +6,8 @@ import Trail2 from '@/public/StraveRun2.jpg';
 import { Motion } from '../animations/Motion';
 import { useTranslations } from 'next-intl';
 import OverlookTrail from '@/public/OverLookTrailPhoto.jpg'
+import { FaApple } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 const SchedulePageComponent = () => {
   const center = {
     lat: 32.774678231491606,
@@ -13,12 +15,19 @@ const SchedulePageComponent = () => {
   };
   const t = useTranslations('ShedulePage');
 
-  const handleGetDirections = () => {
+  const handleGetAppleDirections = () => {
 
     const location = encodeURIComponent('110 W commerce st, Dallas, TX'); // Replace with your location
     window.location.href = `http://maps.apple.com/?q=${location}`;
   };
 
+
+  const handleGetGoogleDirections=()=>{
+    window.open(
+      `https://www.google.com/maps/dir/?api=1&destination=${center.lat},${center.lng}`,
+      '_blank'
+    );
+  }
   return (
     <div className="max-w-7xl mx-auto px-6 py-12">
       <div className="text-center space-y-8 mb-16">
@@ -45,43 +54,55 @@ const SchedulePageComponent = () => {
           </address>
         </div>
 
-        <button
-          onClick={handleGetDirections}
+<div className='flex lg:flex-row justify-center items-center gap-6 flex-col text-center'>
+<button
+          onClick={handleGetAppleDirections}
           className="bg-pink-600 text-white hover:bg-pink-700 transition-all duration-300 
                        py-4 px-8 rounded-lg font-bold text-lg shadow-md 
-                       hover:shadow-lg transform hover:scale-105"
+                       hover:shadow-lg transform hover:scale-105 flex items-center gap-2 text-center"
         >
           {t('button')}
+          <FaApple className='text-xl' />
         </button>
+        <button
+          onClick={handleGetGoogleDirections}
+          className="bg-pink-600 text-white hover:bg-pink-700 transition-all duration-300 
+          py-4 px-8 rounded-lg font-bold text-lg shadow-md 
+          hover:shadow-lg transform hover:scale-105 flex items-center gap-2"
+          >
+          {t('button')}
+          <FcGoogle className='text-xl' />
+        </button>
+          </div>
       </div>
 
       {/* Trail Images Section */}
       <div className="text-center space-y-8">
         <h2 className="text-4xl font-bold ">{t('title2')}</h2>
-        <div className="flex flex-col md:flex-row justify-center gap-8">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-8">
           <Motion>
-          <div className="relative w-full md:w-1/2 lg:w-1/3">
-            <Image
-              src={Trail.src}
-              alt="Trinity Overlook Trail"
-              className="rounded-xl shadow-lg transform hover:scale-105 transition duration-300"
-              height={400}
-              width={400}
-            />
-          </div>
-          </Motion>
-          </div>
-          <Motion>
-          <div className="relative w-full md:w-1/2 lg:w-1/3">
-            <Image
-              src={Trail2.src}
-              alt="Trinity Overlook Trail"
-              className="rounded-xl shadow-lg transform hover:scale-105 transition duration-300"
-              height={400}
-              width={400}
+            <div className="relative w-full ">
+              <Image
+                src={Trail.src}
+                alt="Trinity Overlook Trail"
+                className="rounded-xl shadow-lg transform hover:scale-105 transition duration-300"
+                height={400}
+                width={400}
               />
+            </div>
+          </Motion>
+          <Motion>
+            <div className="relative w-full ">
+              <Image
+                src={Trail2.src}
+                alt="Trinity Overlook Trail"
+                className="rounded-xl shadow-lg transform hover:scale-105 transition duration-300"
+                height={400}
+                width={400}
+              />
+            </div>
+          </Motion>
         </div>
-              </Motion>
       </div>
     </div>
   );
