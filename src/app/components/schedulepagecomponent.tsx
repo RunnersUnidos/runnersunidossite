@@ -24,7 +24,7 @@ const SchedulePageComponent = () => {
 
     setTimeout(() => {
       window.open(webUrl, '_blank');
-    }, 500);
+    }, 2000);
   };
 
   return (
