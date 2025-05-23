@@ -15,16 +15,8 @@ const SchedulePageComponent = () => {
 
   const handleGetDirections = () => {
 
-    const appUrl = `comgooglemaps://?daddr=${center.lat},${center.lng}`;
-    const webUrl = `https://www.google.com/maps/dir/?api=1&destination=${center.lat},${center.lng}`;
-    
-
-    window.location.href = appUrl;
-    
-
-  if(!appUrl){
-    window.location.href= webUrl
-  }
+    const location = encodeURIComponent('110 W commerce st, Dallas, TX'); // Replace with your location
+    window.location.href = `http://maps.apple.com/?q=${location}`;
   };
 
   return (
