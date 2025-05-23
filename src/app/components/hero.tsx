@@ -10,7 +10,7 @@ const HomeHero = () => {
   const t = useTranslations('Hero');
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center h-screen bg-[#f05e16]">
       <Image
         src={RunnersImage.src}
         alt="Runners Image"
