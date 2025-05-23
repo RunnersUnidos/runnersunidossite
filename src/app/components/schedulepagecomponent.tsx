@@ -3,8 +3,9 @@ import React from 'react';
 import Trail from '@/public/TrailStrava.jpg';
 import Image from 'next/image';
 import Trail2 from '@/public/StraveRun2.jpg';
-import { useTranslations } from 'next-intl';
 
+import { useTranslations } from 'next-intl';
+import OverlookTrail from '@/public/OverLookTrailPhoto.jpg'
 const SchedulePageComponent = () => {
   const center = {
     lat: 32.774678231491606,
@@ -13,10 +14,17 @@ const SchedulePageComponent = () => {
   const t = useTranslations('ShedulePage');
 
   const handleGetDirections = () => {
-    window.open(
-      `https://www.google.com/maps/dir/?api=1&destination=${center.lat},${center.lng}`,
-      '_blank'
-    );
+
+    const appUrl = `comgooglemaps://?daddr=${center.lat},${center.lng}`;
+    const webUrl = `https://www.google.com/maps/dir/?api=1&destination=${center.lat},${center.lng}`;
+    
+
+    window.location.href = appUrl;
+    
+
+    setTimeout(() => {
+      window.open(webUrl, '_blank');
+    }, 500);
   };
 
   return (
@@ -26,15 +34,16 @@ const SchedulePageComponent = () => {
           {t('title')}
         </h2>
 
-        <div className="space-y-4 max-w-2xl mx-auto">
-          <p className="text-xl md:text-2xl text-black font-medium">
+        <div className="space-y-4 max-w-2xl mx-auto font-bold font-sans">
+          <p className="text-xl md:text-2xl text-black ">
             🏃 {t('paragraph1')} 🏃‍♀️
           </p>
           <p className="text-xl text-black">{t('paragraph2')}</p>
           <p className="text-lg text-black italic">{t('paragraph3')}</p>
         </div>
 
-        <div className="bg-pink-50 rounded-xl p-6 mt-8 inline-block">
+        <div className="bg-pink-50 rounded-xl p-6 mt-8 inline-block flex flex-col justify-center items-center gap-6">
+          <Image alt="OverLook Trail Image" src={OverlookTrail} height={400} width={400} className=' text-center' />
           <address className="text-xl text-gray-700 not-italic space-y-2">
             <p className="font-semibold">{t('address1')}</p>
             <p>📍 {t('address2')}</p>
