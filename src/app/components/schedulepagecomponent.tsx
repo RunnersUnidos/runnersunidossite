@@ -22,9 +22,9 @@ const SchedulePageComponent = () => {
     window.location.href = appUrl;
     
 
-    setTimeout(() => {
-      window.open(webUrl, '_blank');
-    }, 1000);
+  if(!appUrl){
+    window.location.href= webUrl
+  }
   };
 
   return (
