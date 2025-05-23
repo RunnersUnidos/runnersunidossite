@@ -5,10 +5,12 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { user } from '@nextui-org/react';
+import { useLocale } from 'next-intl';
 import { FaApple } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 const ScheduleSection = () => {
   const router = useRouter();
+  const locale = useLocale();
   const center = {
     lat: 32.774678231491606, // Your latitude
     lng: -96.82203693078834, // Your longitude
@@ -42,14 +44,16 @@ const ScheduleSection = () => {
         <div className="text-neutral-dark">
           <h1 className="mb-8 text-5xl font-bold">{t('title')}</h1>
           <div className="font-sans space-y-4">
-            <ul className="text-2xl">
+            <ul className="text-2xl mb-6">
               <li>Trinity Overlook Trail</li>
               <li> 📌 110 W Commerce Street</li>
             </ul>
-            <div className="p-4 border-l-4 border-secondary bg-orange-400 shadow-md">
+            <Link href={`${locale}/schedule`}>
+            <div className="p-4 border-l-4 border-secondary bg-orange-400 shadow-md cursor-pointer"  >
               <h2 className="font-bold text-lg">{t('blocktitle')}</h2>
               <p className="text-neutral">{t('blockparagraph')}</p>
             </div>
+            </Link>
             <div className='flex lg:flex-row justify-center items-center gap-6 flex-col text-center'>
 <button
           onClick={handleGetAppleDirections}
