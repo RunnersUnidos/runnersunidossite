@@ -3,7 +3,7 @@ import React from 'react';
 import Trail from '@/public/TrailStrava.jpg';
 import Image from 'next/image';
 import Trail2 from '@/public/StraveRun2.jpg';
-
+import { Motion } from '../animations/Motion';
 import { useTranslations } from 'next-intl';
 import OverlookTrail from '@/public/OverLookTrailPhoto.jpg'
 const SchedulePageComponent = () => {
@@ -43,7 +43,10 @@ const SchedulePageComponent = () => {
         </div>
 
         <div className="bg-pink-50 rounded-xl p-6 mt-8 inline-block flex flex-col justify-center items-center gap-6">
+          <Motion>
+
           <Image alt="OverLook Trail Image" src={OverlookTrail} height={400} width={400} className=' text-center' />
+          </Motion>
           <address className="text-xl text-gray-700 not-italic space-y-2">
             <p className="font-semibold">{t('address1')}</p>
             <p>📍 {t('address2')}</p>
@@ -64,6 +67,7 @@ const SchedulePageComponent = () => {
       <div className="text-center space-y-8">
         <h2 className="text-4xl font-bold ">{t('title2')}</h2>
         <div className="flex flex-col md:flex-row justify-center gap-8">
+          <Motion>
           <div className="relative w-full md:w-1/2 lg:w-1/3">
             <Image
               src={Trail.src}
@@ -73,6 +77,9 @@ const SchedulePageComponent = () => {
               width={400}
             />
           </div>
+          </Motion>
+          </div>
+          <Motion>
           <div className="relative w-full md:w-1/2 lg:w-1/3">
             <Image
               src={Trail2.src}
@@ -80,9 +87,9 @@ const SchedulePageComponent = () => {
               className="rounded-xl shadow-lg transform hover:scale-105 transition duration-300"
               height={400}
               width={400}
-            />
-          </div>
+              />
         </div>
+              </Motion>
       </div>
     </div>
   );
