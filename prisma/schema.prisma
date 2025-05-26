@@ -60,3 +60,10 @@ model FutureEvents {
     link String?
     imageUrl  String
 }
+
+model Miles {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  miles     Float
+  createdAt DateTime @default(now())
+}

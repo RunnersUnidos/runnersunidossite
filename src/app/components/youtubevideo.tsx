@@ -20,7 +20,7 @@ const YoutubeVideo = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             className="w-full aspect-video"
           />
-          <p className="font-sans mt-4 text-xl text-center">{t('paragraph')}</p>
+          <p className="font-sans mt-4 text-xl text-center tracking-tighter opacity-70">{t('paragraph')}</p>
         </div>
 
         <div className="flex flex-col items-center">
@@ -35,7 +35,7 @@ const YoutubeVideo = () => {
             allowFullScreen
             className="w-full aspect-video"
           />
-          <p className="font-sans mt-4 text-xl text-center">{t('paragraph1')}</p>
+          <p className="font-sans mt-4 text-xl text-center tracking-tighter opacity-70">{t('paragraph1')}</p>
         </div>
       </div>
     </section>

@@ -10,7 +10,7 @@ interface Image {
 }
 const EventSection = () => {
   const t = useTranslations('DiaDeLosMuertos');
-  const locale = useLocale();
+  const locale = useLocale(); 
   return (
     <section className="container mx-auto px-4 py-16">
       <div className="grid lg:grid-cols-2 gap-8 items-center">

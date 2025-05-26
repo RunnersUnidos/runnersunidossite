@@ -18,6 +18,7 @@ export const pathnames = {
   '/es/events': '/eventos',
   '/es/shop': '/tienda',
   '/es/gallery': '/galeria',
+  '/es/nationalrunday': '/díanacionaldelacarrera',
 } satisfies Pathnames<typeof locales>;
 
 export const localePrefix: LocalePrefix<Locales> = 'always';
