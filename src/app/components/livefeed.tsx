@@ -20,13 +20,23 @@ export default function LiveFeed() {
   const [newName, setNewName] = useState<string>('');
 
   const fetchMiles = async () => {
-    const res = await fetch('/api/miles');
+    const res = await fetch('/api/miles', {
+      cache: 'no-store',
+      headers: {
+        'Cache-Control': 'no-cache',
+      },
+    });
     const data = await res.json();
     setEntries(data);
   };
 
   const fetchTotalMiles = async () => {
-    const res = await fetch('/api/miles/total');
+    const res = await fetch('/api/miles/total', {
+      cache: 'no-store',
+      headers: {
+        'Cache-Control': 'no-cache',
+      },
+    });
     const data: TotalMiles = await res.json();
     setTotalMiles(data.totalMiles);
   };
@@ -39,14 +49,14 @@ export default function LiveFeed() {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Cache-Control': 'no-cache',
       },
       body: JSON.stringify({ name: newName, miles: newMiles }),
     });
 
     setNewName('');
     setNewMiles(0);
-    fetchMiles();
-    fetchTotalMiles();
+    await Promise.all([fetchMiles(), fetchTotalMiles()]);
   };
 
   useEffect(() => {

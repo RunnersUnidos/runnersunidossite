@@ -1,6 +1,9 @@
 import { NextResponse } from 'next/server';
 import prisma from '../../prisma'
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 export async function POST(req: Request) {
   const { name, miles } = await req.json();
 
@@ -15,20 +18,27 @@ export async function POST(req: Request) {
     },
   });
 
-
   console.log("miles submit", entry)
-  return NextResponse.json(entry);
+  return NextResponse.json(entry, {
+    headers: {
+      'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+      'Pragma': 'no-cache',
+      'Expires': '0',
+    },
+  });
 }
 
-
-
-
-
 export async function GET() {
-    const entries = await prisma.miles.findMany({
-      orderBy: { createdAt: 'desc' },
-      take: 20,
-    });
-  
-    return NextResponse.json(entries);
-  }
+  const entries = await prisma.miles.findMany({
+    orderBy: { createdAt: 'desc' },
+    take: 20,
+  });
+
+  return NextResponse.json(entries, {
+    headers: {
+      'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+      'Pragma': 'no-cache',
+      'Expires': '0',
+    },
+  });
+}
