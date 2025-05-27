@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from "react";
-
+import AnimatedNumber from '../animations/AnimatedNumber'
 interface MileEntry {
   id: string;
   name: string;
@@ -72,11 +72,11 @@ export default function LiveFeed() {
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-8">
       {/* Total Miles Display */}
-      <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-8 shadow-xl">
+      <div className="bg-transparent rounded-2xl p-8 shadow-xl">
         <div className="text-center">
           <h2 className="text-4xl font-bold text-black mb-2">Total Miles</h2>
           <div className="text-8xl font-bold text-black font-[Prospekt] tracking-tight">
-            {totalMiles.toFixed(1)}
+            <AnimatedNumber value={totalMiles} />
           </div>
         </div>
       </div>
