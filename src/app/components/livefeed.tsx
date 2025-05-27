@@ -56,6 +56,7 @@ export default function LiveFeed() {
 
     setNewName('');
     setNewMiles(0);
+    window.scrollTo(0,0)
     await Promise.all([fetchMiles(), fetchTotalMiles()]);
   };
 
