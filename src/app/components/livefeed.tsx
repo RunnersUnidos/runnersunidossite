@@ -112,7 +112,7 @@ export default function LiveFeed() {
       </div>
 
       {/* Recent Runs */}
-      <div className="bg-white rounded-xl p-6 shadow-lg">
+      {/* <div className="bg-white rounded-xl p-6 shadow-lg">
         <h3 className="text-2xl font-semibold text-gray-800 mb-4">Recent Runs</h3>
         <div className="space-y-3">
           {entries.map(entry => (
@@ -133,7 +133,7 @@ export default function LiveFeed() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
