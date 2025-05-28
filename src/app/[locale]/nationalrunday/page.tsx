@@ -9,7 +9,9 @@ export default function RunnersDayPage() {
     <main className="p-6 event-bg h-auto ">
       <div className="relative z-10">
         <h1 className="text-3xl font-bold mb-6">International Runners Day 🏃‍♀️</h1>
+        
         <LiveFeed />
+        
         {/* <SubmitMilesForm /> */}
       </div>
     </main>

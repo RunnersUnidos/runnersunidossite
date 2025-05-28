@@ -1,5 +1,5 @@
 'use client';
-
+import LogoTicker from "./logos";
 import { useEffect, useState } from "react";
 import AnimatedNumber from '../animations/AnimatedNumber'
 interface MileEntry {
@@ -71,16 +71,18 @@ export default function LiveFeed() {
   }, []);
 
   return (
-    <div className="max-w-4xl mx-auto p-6 space-y-8">
+    <div className="max-w-screen mx-auto p-6 space-y-8">
       {/* Total Miles Display */}
-      <div className="bg-transparent rounded-2xl p-8 shadow-xl">
+     
         <div className="text-center">
-          <h2 className="text-4xl font-bold text-black mb-2">Total Miles</h2>
-          <div className="text-8xl font-bold text-black font-[Prospekt] tracking-tight">
+          <h2 className="text-4xl font-bold text-black mb-2">Total Miles Ran Today!</h2>
+          <div className="text-[8rem] font-bold text-black font-[Prospekt] tracking-tight">
+            <LogoTicker/>
             <AnimatedNumber value={totalMiles} />
+            <LogoTicker/>
           </div>
         </div>
-      </div>
+    
 
       {/* Submit Miles Form */}
       <div className="bg-white rounded-xl p-6 shadow-lg">
