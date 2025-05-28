@@ -80,7 +80,9 @@ export default function LiveFeed() {
  
           <div className="flex justify-center items-center flex-col text-[12rem] font-bold text-black font-[Prospekt] tracking-tight">
             <LogoTicker/>
-            <AnimatedNumber value={totalMiles} />
+            <div className="bg-gradient-to-b from-pink-400 to-pink-800 bg-clip-text text-transparent drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)]">
+              <AnimatedNumber value={totalMiles} />
+            </div>
             <LogoTicker/>
           </div>
         </div>
