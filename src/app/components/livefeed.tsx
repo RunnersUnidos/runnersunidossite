@@ -18,6 +18,7 @@ export default function LiveFeed() {
   const [totalMiles, setTotalMiles] = useState<number>(0);
   const [newMiles, setNewMiles] = useState<number>(0);
   const [newName, setNewName] = useState<string>('');
+  const [isFormSubmitted, setIsFormSubmitted] = useState<boolean>(false);
 
   const fetchMiles = async () => {
     const res = await fetch('/api/miles', {
@@ -56,6 +57,7 @@ export default function LiveFeed() {
 
     setNewName('');
     setNewMiles(0);
+    setIsFormSubmitted(true);
     window.scrollTo(0,0)
     await Promise.all([fetchMiles(), fetchTotalMiles()]);
   };
@@ -71,12 +73,12 @@ export default function LiveFeed() {
   }, []);
 
   return (
-    <div className="max-w-screen mx-auto p-6 space-y-8">
+    <div className=" p-6 space-y-8">
       {/* Total Miles Display */}
      
-        <div className="text-center">
+        <div className="flex justify-center flex-col items-center">
           <h2 className="text-4xl font-bold text-black mb-2">Total Miles Ran Today!</h2>
-          <div className="text-[8rem] font-bold text-black font-[Prospekt] tracking-tight">
+          <div className="flex justify-center items-center flex-col text-[12rem] font-bold text-black font-[Prospekt] tracking-tight">
             <LogoTicker/>
             <AnimatedNumber value={totalMiles} />
             <LogoTicker/>
@@ -85,37 +87,39 @@ export default function LiveFeed() {
     
 
       {/* Submit Miles Form */}
-      <div className="bg-white rounded-xl p-6 shadow-lg">
-        <h3 className="text-2xl font-semibold text-gray-800 mb-4">Submit Your Miles</h3>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <input
-              type="text"
-              value={newName}
-              onChange={(e) => setNewName(e.target.value)}
-              placeholder="Your Name"
-              className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            />
-            <input
-              type="number"
-              value={newMiles || ''}
-              onChange={(e) => setNewMiles(parseFloat(e.target.value))}
-              placeholder="Miles"
-              step="0.1"
-              className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            />
-          </div>
-          <button
-            type="submit"
-            className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Submit Miles
-          </button>
-        </form>
-      </div>
+      {!isFormSubmitted && (
+        <div className="bg-white rounded-xl p-6 shadow-lg">
+          <h3 className="text-2xl font-semibold text-gray-800 mb-4">Submit Your Miles</h3>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <input
+                type="text"
+                value={newName}
+                onChange={(e) => setNewName(e.target.value)}
+                placeholder="Your Name"
+                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+              <input
+                type="number"
+                value={newMiles || ''}
+                onChange={(e) => setNewMiles(parseFloat(e.target.value))}
+                placeholder="Miles"
+                step="0.1"
+                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+            </div>
+            <button
+              type="submit"
+              className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            >
+              Submit Miles
+            </button>
+          </form>
+        </div>
+      )}
 
       {/* Recent Runs */}
-      {/* <div className="bg-white rounded-xl p-6 shadow-lg">
+       <div className="bg-white rounded-xl p-6 shadow-lg">
         <h3 className="text-2xl font-semibold text-gray-800 mb-4">Recent Runs</h3>
         <div className="space-y-3">
           {entries.map(entry => (
@@ -136,7 +140,7 @@ export default function LiveFeed() {
             </div>
           ))}
         </div>
-      </div> */}
+      </div> 
     </div>
   );
 }
