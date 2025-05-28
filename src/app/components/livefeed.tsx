@@ -90,7 +90,7 @@ export default function LiveFeed() {
 
       {/* Submit Miles Form */}
       {!isFormSubmitted && (
-        <div className="bg-white rounded-xl p-6 shadow-lg">
+        <div className="bg-transparent rounded-xl p-6 shadow-lg">
           <h3 className="text-2xl font-semibold text-gray-800 mb-4">Submit Your Miles</h3>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -112,7 +112,7 @@ export default function LiveFeed() {
             </div>
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              className="w-full bg-pink-600 text-white py-3 rounded-lg font-semibold hover:bg-pink-700 transition-colors"
             >
               Submit Miles
             </button>
@@ -121,16 +121,16 @@ export default function LiveFeed() {
       )}
 
       {/* Recent Runs */}
-       <div className="bg-white rounded-xl p-6 shadow-lg">
+       <div className="bg-transparent rounded-xl p-6 shadow-lg ">
         <h3 className="text-2xl font-semibold text-gray-800 mb-4">Recent Runs</h3>
-        <div className="space-y-3">
+        <div className="space-y-3 rounded-md ">
           {entries.map(entry => (
             <div
               key={entry.id}
-              className="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+              className="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors "
             >
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+              <div className="flex items-center space-x-3 rounded-sm">
+                <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center rounded-md">
                   <span className="text-blue-600 font-semibold">{entry.name[0]}</span>
                 </div>
                 <span className="font-medium text-gray-800">{entry.name}</span>
