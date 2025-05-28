@@ -10,15 +10,15 @@ const images = [
   { id: 1, src: RunnersUnidosLogo },
   { id: 2, src: HokaLogo },
   { id: 3, src: KairoLogo },
-  { id: 4, src: RunnersUnidosLogo },
-  { id: 5, src: HokaLogo },
-  { id: 6, src: KairoLogo },
-  { id: 7, src: RunnersUnidosLogo },
-  { id: 8, src: HokaLogo },
-  { id: 9, src: KairoLogo },
-  { id: 10, src: RunnersUnidosLogo },
-  { id: 11, src: HokaLogo },
-  { id: 12, src: KairoLogo },
+  // { id: 4, src: RunnersUnidosLogo },
+  // { id: 5, src: HokaLogo },
+  // { id: 6, src: KairoLogo },
+  // { id: 7, src: RunnersUnidosLogo },
+  // { id: 8, src: HokaLogo },
+  // { id: 9, src: KairoLogo },
+  // { id: 10, src: RunnersUnidosLogo },
+  // { id: 11, src: HokaLogo },
+  // { id: 12, src: KairoLogo },
 ];
 
 const LogoTicker = () => {
@@ -29,7 +29,7 @@ const LogoTicker = () => {
           <motion.div
             className="flex flex-none gap-16 pr-16 "
             transition={{
-              duration: 16,
+              duration: 6,
               ease: 'linear',
               repeat: Infinity,
             }}
