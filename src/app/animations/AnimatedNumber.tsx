@@ -13,7 +13,22 @@ function AnimatedNumber({ value }: { value: number }) {
     spring.set(value);
   }, [spring, value]);
 
-  return <motion.span>{display}</motion.span>;
+  return (
+    <motion.span
+      key={value}
+      initial={{ scale: 1 }}
+      animate={{
+        scale: [1, 1.1, 1],
+        rotate: [-2, 2, -2, 2, 0],
+      }}
+      transition={{
+        duration: 0.5,
+        ease: "easeInOut",
+      }}
+    >
+      {display}
+    </motion.span>
+  );
 }
 
 export default AnimatedNumber;
