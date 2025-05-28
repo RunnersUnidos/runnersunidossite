@@ -77,7 +77,7 @@ export default function LiveFeed() {
       {/* Total Miles Display */}
      
         <div className="flex justify-center flex-col items-center">
-          <h2 className="text-4xl font-bold text-black mb-2">Total Miles Ran Today!</h2>
+ 
           <div className="flex justify-center items-center flex-col text-[12rem] font-bold text-black font-[Prospekt] tracking-tight">
             <LogoTicker/>
             <AnimatedNumber value={totalMiles} />
