@@ -105,5 +105,16 @@
   "Calendar": {
     "title": "¡Próximos Eventos!",
     "paragraph": "Mantente al día con todos los eventos y actividades de Runners Unidos."
+  },
+  "RunDay": {
+    "formtitle": "¡Envía tus Millas!",
+    "formbutton": "Enviar",
+    "formview": "Estrellas Internacionales de Correr!"
+  },
+  "GlobalRunDay": {
+    "title": "¡El Día Global de Correr está aquí!",
+    "paragraph": "¡Únete a nosotros mientras nos unimos para correr tantas millas como podamos juntos! Cada paso cuenta, y traemos la energía con obsequios, un terapeuta de masajes en el lugar, y marcas increíbles de bienestar uniéndose a nosotros para celebrar el movimiento y la comunidad.",
+        "paragraph1": "Trinity Overlook Trail • MIÉRCOLES 4 DE JUNIO - 7PM ¡Todos los niveles son bienvenidos! - ¡ven solo o trae a tus amigos! ¡Mostremos al mundo el poder de correr!",
+        "button1": "¡Envía tus Millas el Día del Evento!"
   }
 }

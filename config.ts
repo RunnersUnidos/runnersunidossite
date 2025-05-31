@@ -13,7 +13,7 @@ export const pathnames = {
   '/events/cedarridge': '/events/cedarridge',
   '/events/beerun': '/events/beerrun',
   '/gallery': '/gallery',
-  '/nationalrunday': '/nationalrunday',
+  '/runday': '/runday',
   '/es/schedule': '/horario',
   '/es/joinus': '/unete',
   '/es/events': '/eventos',

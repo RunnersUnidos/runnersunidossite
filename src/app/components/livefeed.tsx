@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import AnimatedNumber from '../animations/AnimatedNumber'
 import FadeAnimation from '../animations/FadeAnimation'
 import { AnimatePresence } from 'framer-motion'
+import { useTranslations,useLocale } from "next-intl";
 
 interface MileEntry {
   id: string;
@@ -22,6 +23,9 @@ export default function LiveFeed() {
   const [newMiles, setNewMiles] = useState<number>(0);
   const [newName, setNewName] = useState<string>('');
   const [isFormSubmitted, setIsFormSubmitted] = useState<boolean>(false);
+
+  const t = useTranslations('RunDay');
+  const locale = useLocale();
 
   const fetchMiles = async () => {
     const res = await fetch('/api/miles', {
@@ -94,7 +98,7 @@ export default function LiveFeed() {
       {/* Submit Miles Form */}
       {!isFormSubmitted && (
         <div className="bg-gradient-to-r from-orange-500 to-white rounded-xl p-6 shadow-lg">
-          <h3 className="text-2xl font-semibold text-gray-800 mb-4">Submit Your Miles</h3>
+          <h3 className="text-2xl font-semibold text-gray-800 mb-4">   {t('formtitle')}</h3>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input
@@ -117,7 +121,7 @@ export default function LiveFeed() {
               type="submit"
               className="w-full bg-pink-600 text-white py-3 rounded-lg font-semibold hover:bg-pink-700 transition-colors"
             >
-              Submit Miles
+             {t('formbutton')}
             </button>
           </form>
         </div>
@@ -125,7 +129,7 @@ export default function LiveFeed() {
   <LogoTicker/>
       {/* Recent Runs */}
        <div className="bg-gradient-to-r from-orange-500 to-white rounded-xl p-6 shadow-lg ">
-        <h3 className="text-2xl font-semibold text-gray-800 mb-4">Recent Runs</h3>
+        <h3 className="text-2xl font-semibold text-gray-800 mb-4">{t('formview')}</h3>
         <div className="space-y-3 ">
           <AnimatePresence>
             {entries.map((entry, index) => (

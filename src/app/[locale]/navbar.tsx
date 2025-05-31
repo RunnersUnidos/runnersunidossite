@@ -22,7 +22,7 @@ import { useTranslations } from 'next-intl';
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
-  const menuItems = ['Schedule', 'Events', 'Gallery', 'NationalRunDay'];
+  const menuItems = ['Schedule', 'Events', 'Gallery', 'RunDay'];
   const t = useTranslations('NavBar');
   const isActive = (path: string) => {
     return pathname === path ? 'border-b-2 text-brand border-current ' : '';
@@ -77,7 +77,7 @@ const NavBar = () => {
           </Link>
         </NavbarItem>
         <NavbarItem>
-        <Link href="/nationalrunday" className={`${isActive('/nationalrunday')}`}>
+        <Link href="/runday" className={`${isActive('/runday')}`}>
             {t('RunDay')}
           </Link>
         </NavbarItem>

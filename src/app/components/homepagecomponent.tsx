@@ -11,6 +11,7 @@ import { Suspense } from 'react';
 import PurchaseShirt from './puchaseshirt';
 import YoutubeVideo from './youtubevideo';
 import Calendar from '../components/calendar';
+import RunDay from './runday';
 
 const HomePageComponent = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -38,7 +39,10 @@ const HomePageComponent = () => {
       ) : (
         <HomeHero />
       )}
-      <div className="bg-gradient-to-b from-[#f05e16] to-white/40">
+        <div className="bg-gradient-to-b from-[#f05e16] to-white/40">
+        <RunDay />
+      </div>
+      <div className="bg-gradient-to-t from-[#f05e16] to-white/40 ">
         <LaFamiliaSection />
       </div>
 
