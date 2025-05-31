@@ -34,7 +34,7 @@ const RunDay = () => {
       <div className="text-black">
         <h1 className="mb-4 text-5xl font-bold">{t('title')}</h1>
         <p className="font-sans mb-8 text-xl">{t('paragraph')}</p>
-        <p className="font-sans mb-8 text-xl">{t('paragraph1')}</p>
+        <p className="font-sans font-bold mb-8 text-xl">{t('paragraph1')}</p>
         <div className="font-sans flex flex-col sm:flex-row gap-4">
           <Link
             href={`${locale}/runday`}
