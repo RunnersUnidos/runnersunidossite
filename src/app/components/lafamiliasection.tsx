@@ -34,12 +34,12 @@ const LaFamiliaSection = () => {
             >
               {t('button1')}
             </Link>
-            {/* <Link
+            <Link
               className="font-sans border-black bg-blue-500 hover:bg-transparent btn btn-outline text-black"
-              href={`${locale}/joinus`}
+              href={`${locale}/schedule`}
             >
               {t('button2')}
-            </Link> */}
+            </Link>
           </div>
         </div>
       </div>
