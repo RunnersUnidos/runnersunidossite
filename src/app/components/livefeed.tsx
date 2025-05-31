@@ -2,6 +2,9 @@
 import LogoTicker from "./logos";
 import { useEffect, useState } from "react";
 import AnimatedNumber from '../animations/AnimatedNumber'
+import FadeAnimation from '../animations/FadeAnimation'
+import { AnimatePresence } from 'framer-motion'
+
 interface MileEntry {
   id: string;
   name: string;
@@ -78,7 +81,7 @@ export default function LiveFeed() {
      
         <div className="flex justify-center flex-col items-center">
  
-          <div className="flex justify-center items-center flex-col text-[12rem] font-bold text-black font-[Prospekt] tracking-tight">
+          <div className="flex justify-center items-center flex-col text-[12rem] font-bold text-black font-[Prospekt] ">
             <LogoTicker/>
             <div className="bg-gradient-to-b from-pink-400 to-pink-800 bg-clip-text text-transparent drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)]">
               <AnimatedNumber value={totalMiles} />
@@ -90,7 +93,7 @@ export default function LiveFeed() {
 
       {/* Submit Miles Form */}
       {!isFormSubmitted && (
-        <div className="bg-transparent rounded-xl p-6 shadow-lg">
+        <div className="bg-gradient-to-r from-orange-500 to-white rounded-xl p-6 shadow-lg">
           <h3 className="text-2xl font-semibold text-gray-800 mb-4">Submit Your Miles</h3>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -99,7 +102,7 @@ export default function LiveFeed() {
                 value={newName}
                 onChange={(e) => setNewName(e.target.value)}
                 placeholder="Your Name"
-                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-full focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
               <input
                 type="number"
@@ -107,7 +110,7 @@ export default function LiveFeed() {
                 onChange={(e) => setNewMiles(parseFloat(e.target.value))}
                 placeholder="Miles"
                 step="0.1"
-                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-full focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
             <button
@@ -123,24 +126,27 @@ export default function LiveFeed() {
       {/* Recent Runs */}
        <div className="bg-transparent rounded-xl p-6 shadow-lg ">
         <h3 className="text-2xl font-semibold text-gray-800 mb-4">Recent Runs</h3>
-        <div className="space-y-3 rounded-md ">
-          {entries.map(entry => (
-            <div
-              key={entry.id}
-              className="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors "
-            >
-              <div className="flex items-center space-x-3 rounded-sm">
-                <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center rounded-md">
-                  <span className="text-blue-600 font-semibold">{entry.name[0]}</span>
+        <div className="space-y-3 ">
+          <AnimatePresence>
+            {entries.map((entry, index) => (
+              <FadeAnimation key={entry.id} delay={index * 0.1}>
+                <div
+                  className="flex items-center justify-between p-4 bg-gray-50 rounded-full hover:bg-gray-100 transition-colors"
+                >
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 bg-blue-100 border rounded-full flex items-center justify-center ">
+                      <span className="text-blue-600 font-semibold ">{entry.name[0]}</span>
+                    </div>
+                    <span className="font-medium text-gray-800">{entry.name}</span>
+                  </div>
+                  <div className="text-right">
+                    <span className="text-lg font-bold text-blue-600">{entry.miles}</span>
+                    <span className="text-gray-500 ml-1">miles</span>
+                  </div>
                 </div>
-                <span className="font-medium text-gray-800">{entry.name}</span>
-              </div>
-              <div className="text-right">
-                <span className="text-lg font-bold text-blue-600">{entry.miles}</span>
-                <span className="text-gray-500 ml-1">miles</span>
-              </div>
-            </div>
-          ))}
+              </FadeAnimation>
+            ))}
+          </AnimatePresence>
         </div>
       </div> 
     </div>

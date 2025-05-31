@@ -5,7 +5,8 @@
     "Join Us": "Únete",
     "Shop": "Tienda",
     "Events": "Eventos",
-    "Gallery": "Galería"
+    "Gallery": "Galería",
+         "RunDay": "DiaDeCorrer"
   },
   "Footer": {
     "Home": "Inicio",
@@ -13,7 +14,8 @@
     "Join Us": "Únete",
     "Shop": "Tienda",
     "Events": "Eventos",
-    "Gallery": "Galería"
+    "Gallery": "Galería",
+           "RunDay": "DiaDeCorrer"
   },
   "Hero": {
     "HeroTitle": "Una comunidad de corredores que se unen para compartir millas, historias y tradiciones."
