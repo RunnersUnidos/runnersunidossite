@@ -61,7 +61,7 @@ export default function LiveFeed() {
     setNewName('');
     setNewMiles(0);
     setIsFormSubmitted(true);
-    window.scrollTo(0,0)
+    // window.scrollTo(0,0)
     await Promise.all([fetchMiles(), fetchTotalMiles()]);
   };
 
@@ -86,7 +86,7 @@ export default function LiveFeed() {
             <div className="bg-gradient-to-b from-pink-400 to-pink-800 bg-clip-text text-transparent drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)]">
               <AnimatedNumber value={totalMiles} />
             </div>
-            <LogoTicker/>
+            
           </div>
         </div>
     
@@ -122,9 +122,9 @@ export default function LiveFeed() {
           </form>
         </div>
       )}
-
+  <LogoTicker/>
       {/* Recent Runs */}
-       <div className="bg-transparent rounded-xl p-6 shadow-lg ">
+       <div className="bg-gradient-to-r from-orange-500 to-white rounded-xl p-6 shadow-lg ">
         <h3 className="text-2xl font-semibold text-gray-800 mb-4">Recent Runs</h3>
         <div className="space-y-3 ">
           <AnimatePresence>
