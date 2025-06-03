@@ -81,7 +81,7 @@ export default function LiveFeed() {
   }, []);
 
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden ">
       {/* Total Miles Display */}
      
         <div className="flex justify-center flex-col items-center">
@@ -137,9 +137,9 @@ export default function LiveFeed() {
           </form>
         </div>
       )}
-  <LogoTicker/>
+
       {/* Recent Runs */}
-       <div className="bg-gradient-to-r from-orange-500 to-white rounded-xl p-6 shadow-lg ">
+       <div className="bg-gradient-to-r from-orange-500 to-white rounded-xl p-6 shadow-lg mt-[2rem]">
         <h3 className="text-2xl font-semibold text-gray-800 mb-4">{t('formview')}</h3>
         <div className="space-y-3 ">
           <AnimatePresence>
