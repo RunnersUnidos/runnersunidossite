@@ -81,7 +81,7 @@ export default function LiveFeed() {
   }, []);
 
   return (
-    <div className="">
+    <div className="overflow-hidden">
       {/* Total Miles Display */}
      
         <div className="flex justify-center flex-col items-center">
