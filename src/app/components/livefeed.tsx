@@ -152,10 +152,10 @@ export default function LiveFeed() {
                     <div className="w-10 h-10 bg-blue-100 border rounded-full flex items-center justify-center ">
                       <span className="text-blue-600 font-semibold ">{entry.name[0]}</span>
                     </div>
-                    <span className="font-medium text-gray-800">{entry.name}</span>
+                    <span className="font-bold text-gray-800 text-[20px] ">{entry.name}</span>
                   </div>
                   <div className="text-right">
-                    <span className="text-lg font-bold text-blue-600">{entry.miles}</span>
+                    <span className="text-[25px] font-bold text-blue-600 font-sans">{entry.miles}</span>
                     <span className="text-gray-500 ml-1">miles</span>
                   </div>
                 </div>
