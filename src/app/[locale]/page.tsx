@@ -24,7 +24,7 @@ export const metadata = {
     url: 'https://runnersunidos.com',
     images: [
       {
-        url: 'https://runnerunidos.s3.us-east-2.amazonaws.com/LogoNOBG.png',
+        url: 'https://galleryevent.s3.us-east-2.amazonaws.com/Images/stacked.png',
         width: 1200,
         height: 630,
         alt: 'Runners Unidos - Community Running Together',

@@ -12,7 +12,7 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://runnerunidos.s3.us-east-2.amazonaws.com/LogoNOBG.png',
+        url: 'https://galleryevent.s3.us-east-2.amazonaws.com/Images/stacked.png',
         alt: 'Featured Events by Runners Unidos',
         width: 1200,
         height: 630,
