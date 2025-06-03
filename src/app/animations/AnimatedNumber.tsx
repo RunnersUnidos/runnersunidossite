@@ -25,6 +25,7 @@ function AnimatedNumber({ value }: { value: number }) {
         duration: 0.5,
         ease: "easeInOut",
       }}
+   
     >
       {display}
     </motion.span>

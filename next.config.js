@@ -9,6 +9,7 @@ const nextConfig = {
     serverActions: true,
   },
   images: {
+    unoptimized: true,
     domains: [
       'images.pexels.com',
       'runnerunidos.s3.us-east-2.amazonaws.com',
