@@ -12,7 +12,7 @@ import {
 import { PiInstagramLogoLight } from 'react-icons/pi';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
-import Logo from '@/public/LOGOLONG.png';
+import Logo from '@/public/RunDayLogos/RunnersUnidosLine.png';
 import { Link } from '@/src/app/navigation';
 import { useLocale } from 'next-intl';
 import { AppPathnames } from '@/config';
