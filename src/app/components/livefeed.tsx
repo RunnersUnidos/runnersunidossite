@@ -87,7 +87,6 @@ export default function LiveFeed() {
         <div className="flex justify-center flex-col items-center">
  
           <div className="flex justify-center items-center flex-col text-[12rem] font-bold text-black font-[Prospekt]">
-            <LogoTicker/>
             <div className="flex flex-col items-center relative">
               <Image 
                 src={GlobalLogo.src} 
@@ -95,18 +94,21 @@ export default function LiveFeed() {
                 width={500} 
                 height={500} 
                 className=" object-contain opacity-50" 
-              />
+                />
               <div className="bg-gradient-to-b from-pink-400 to-pink-800 bg-clip-text text-transparent drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)] absolute -bottom-[150px]">
                 <AnimatedNumber value={totalMiles} />
               </div>
             </div>
+          </div>
+          <div className="mt-[4rem]">
+                <LogoTicker/>
           </div>
         </div>
     
 
       {/* Submit Miles Form */}
       {!isFormSubmitted && (
-        <div className="bg-gradient-to-r from-orange-500 to-white rounded-xl p-6 shadow-lg mt-[6rem]">
+        <div className="bg-gradient-to-r from-orange-500 to-white rounded-xl p-6 shadow-lg lg:mt-[2rem]">
           <h3 className="text-2xl font-semibold text-gray-800 mb-4">   {t('formtitle')}</h3>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
