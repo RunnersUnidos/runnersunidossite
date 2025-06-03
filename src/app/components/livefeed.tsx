@@ -139,7 +139,7 @@ export default function LiveFeed() {
       )}
 
       {/* Recent Runs */}
-       <div className="bg-gradient-to-r from-orange-500 to-white rounded-xl p-6 shadow-lg mt-[2rem]">
+       <div className="bg-gradient-to-r from-orange-500 to-white rounded-xl p-6 shadow-lg mt-[5px]">
         <h3 className="text-2xl font-semibold text-gray-800 mb-4">{t('formview')}</h3>
         <div className="space-y-3 ">
           <AnimatePresence>
