@@ -13,8 +13,7 @@ interface Image {
 const DiaDelosMuertos = () => {
   const { data: images, isLoading } = useQuery({
     queryKey: ['diaimages'],
-    queryFn: () => getDiaImages(),
-    staleTime: 3600000,
+    queryFn: () => getDiaImages()
   });
 
   const locale = useLocale();

@@ -33,7 +33,7 @@ const GalleryEffect = ({ imageUrl, id, priority = false }: ImageProps) => {
         loading={priority ? 'eager' : 'lazy'}
         className="object-cover transform hover:scale-105 transition duration-300 ease-in-out"
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        quality={85}
+        quality={100}
         style={{
           opacity: inView ? 1 : 0,
           transition: 'opacity 0.8s ease-in-out',
