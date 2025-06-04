@@ -15,6 +15,7 @@ const CedarRidge = () => {
   const { data: images, isLoading } = useQuery({
     queryKey: ['diaimages'],
     queryFn: () => getCedarRidgeImages(),
+    staleTime: 3600000,
   });
   const t = useTranslations('CedarRidge');
   const [visibleImages, setVisibleImages] = useState(3);

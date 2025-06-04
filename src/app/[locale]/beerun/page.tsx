@@ -15,6 +15,7 @@ const BeerRun = () => {
   const { data: images, isLoading } = useQuery({
     queryKey: ['beerimages'],
     queryFn: () => getBeerRunImages(),
+    staleTime: 3600000,
   });
 
   const t = useTranslations('BeerRun');

@@ -14,6 +14,7 @@ const DiaDelosMuertos = () => {
   const { data: images, isLoading } = useQuery({
     queryKey: ['diaimages'],
     queryFn: () => getDiaImages(),
+    staleTime: 3600000,
   });
 
   const locale = useLocale();

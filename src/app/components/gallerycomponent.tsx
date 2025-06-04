@@ -7,6 +7,7 @@ import Link from 'next/link';
 import GalleryEffect from './GalleryEffect';
 import { useInView } from 'react-intersection-observer';
 import { useTranslations, useLocale } from 'next-intl';
+
 interface Image {
   id: string;
   title: string | null;
@@ -17,6 +18,7 @@ const GalleryComponent = () => {
   const { data: images, isLoading } = useQuery({
     queryKey: ['images'],
     queryFn: () => getGalleryImages(),
+    staleTime: 3600000, // Cache for 1 hour
   });
 
   const t = useTranslations('Gallery');
@@ -25,6 +27,16 @@ const GalleryComponent = () => {
     triggerOnce: true,
     threshold: 0.1,
   });
+
+  // Preload images
+  React.useEffect(() => {
+    if (images) {
+      images.slice(2).forEach((image) => {
+        const img = new window.Image();
+        img.src = image.imageUrl;
+      });
+    }
+  }, [images]);
 
   if (isLoading) {
     return (
@@ -44,11 +56,12 @@ const GalleryComponent = () => {
           </p>
         </div> */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {images?.slice(2).map((image) => (
+          {images?.slice(2).map((image, index) => (
             <GalleryEffect
               key={image.id ?? ''}
               imageUrl={image.imageUrl}
               id={image.id ?? ''}
+              priority={index < 6} // Prioritize loading first 6 images
             />
           ))}
         </div>
